@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spice Processing Solutions – Modern Pulveriser</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="stylesheet" href="css/Style.css"/>
+  <link rel="stylesheet" href="css/spice-processing_5.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/header-fixed.css">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+
+
+
+<body>
+
+
+
+<!-- ══════════ HEADER ══════════ -->
+<header id="site-header">
+  <div class="header-inner">
+
+    <!-- Logo -->
+    <a href="trial.html" class="logo-btn">
+      <img src="images/LOGO.jpg" alt="Modern Pulveriser Logo" class="logo-img">
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav aria-label="Main navigation" class="nav-main-wrap">
+      <ul class="nav-main" id="desktop-nav">
+
+        <li><a href="trial.html">Home</a></li>
+
+        <li><a href="STORYY.html">About Us</a></li>
+
+        <!-- Industries dropdown -->
+        <li id="nav-industries">
+          <button onclick="toggleDropdown('nav-industries')" aria-expanded="false" aria-haspopup="true">
+            Industries
+            <svg class="caret" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <ul class="dropdown" role="menu">
+            <li><a href="spicesnew.html">Spice processing</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="industry-ayurveda.html">Ayurveda & Herbal</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="industry-chemical.html">Chemical</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="industry-pharma.html">Pharmaceutical</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="industry-minerals.html">Minerals & Mining</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="industry-pigments.html">Pigments & Dyes</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="industry-agri.html">Agricultural Products</a></li>
+          </ul>
+        </li>
+
+        <!-- Products dropdown -->
+        <li id="nav-products">
+          <button onclick="toggleDropdown('nav-products')" aria-expanded="false" aria-haspopup="true">
+            Products
+            <svg class="caret" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <ul class="dropdown dropdown-wide" role="menu">
+            <li><a href="hammer.html">Hammer Mill</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="ribbon-blender.html">Ribbon Blender</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="hammer-crusher.html">Hammer Crusher</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="vibro-sifter.html">Vibro Sifter</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="impact-pulveriser.html">Impact Pulveriser</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="screw-conveyor.html">Screw Conveyor</a></li>
+          </ul>
+        </li>
+
+        <!-- CTA -->
+        <ol>
+          <a href="newcontact.html" class="btn-cta">
+            Contact Us
+            <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </ol>
+
+      </ul>
+    </nav>
+
+    <!-- Hamburger -->
+    <button class="hamburger" id="hamburger" onclick="toggleDrawer()" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+</header>
+
+<!-- ══════════ MOBILE OVERLAY ══════════ -->
+<div class="drawer-overlay" id="drawer-overlay" onclick="toggleDrawer()"></div>
+
+<!-- ══════════ MOBILE DRAWER ══════════ -->
+<nav class="drawer" id="drawer" aria-label="Mobile navigation">
+  <div class="drawer-head">
+    <a href="index.html" class="logo-btn">
+      <!-- <img src="images/LOGO.jpg" alt="Modern Pulveriser Logo" class="logo-img"> -->
+    </a>
+    <!-- <button class="drawer-close" onclick="toggleDrawer()" aria-label="Close menu">✕</button> -->
+  </div>
+
+  <ul class="drawer-nav">
+    <br>
+    <br>
+    <li><a href="trial.html">Home</a></li>
+    <li><a href="STORYY.html">About Us</a></li>
+
+    <li id="d-industries">
+      <button class="drawer-toggle" onclick="toggleDrawerSub('d-industries')" aria-expanded="false">
+        Industries
+        <svg class="drawer-caret" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <ul class="drawer-sub">
+        <li><a href="spicesnew.html"><span class="sub-dot"></span>Spice Processing </a></li>
+        <li><a href="industry-ayurveda.html"><span class="sub-dot"></span>Ayurveda & Herbal</a></li>
+        <li><a href="industry-chemical.html"><span class="sub-dot"></span>Chemical</a></li>
+        <li><a href="industry-pharma.html"><span class="sub-dot"></span>Pharmaceutical</a></li>
+        <li><a href="industry-minerals.html"><span class="sub-dot"></span>Minerals & Mining</a></li>
+        <li><a href="industry-pigments.html"><span class="sub-dot"></span>Pigments & Dyes</a></li>
+        <li><a href="industry-agri.html"><span class="sub-dot"></span>Agricultural Products</a></li>
+      </ul>
+    </li>
+
+    <li id="d-products">
+      <button class="drawer-toggle" onclick="toggleDrawerSub('d-products')" aria-expanded="false">
+        Products
+        <svg class="drawer-caret" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <ul class="drawer-sub">
+        <li><a href="hammer.html"><span class="sub-dot"></span>Hammer Mill</a></li>
+        <li><a href="ribbon-blender.html"><span class="sub-dot"></span>Ribbon Blender</a></li>
+        <li><a href="hammer-crusher.html"><span class="sub-dot"></span>Hammer Crusher</a></li>
+        <li><a href="vibro-sifter.html"><span class="sub-dot"></span>Vibro Sifter</a></li>
+        <li><a href="impact-pulveriser.html"><span class="sub-dot"></span>Impact Pulveriser</a></li>
+        <li><a href="screw-conveyor.html"><span class="sub-dot"></span>Screw Conveyor</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <div class="drawer-footer">
+    <a href="newcontact.html" class="btn-cta-drawer">
+      Contact Us
+      <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </div>
+</nav>
+
+<script>
+  /* ── Scroll effect: transparent → solid ── */
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 20);
+  }, { passive: true });
+
+  /* ── Desktop dropdowns: hover (CSS) + click (JS) ── */
+  function toggleDropdown(id) {
+    const li = document.getElementById(id);
+    const isOpen = li.classList.contains('open');
+    document.querySelectorAll('.nav-main > li.open').forEach(el => {
+      el.classList.remove('open');
+      const btn = el.querySelector('button');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      li.classList.add('open');
+      const btn = li.querySelector('button');
+      if (btn) btn.setAttribute('aria-expanded', 'true');
+    }
+  }
+
+  // Close on outside click
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.nav-main > li')) {
+      document.querySelectorAll('.nav-main > li.open').forEach(el => {
+        el.classList.remove('open');
+        const btn = el.querySelector('button');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.nav-main > li.open').forEach(el => {
+        el.classList.remove('open');
+        const btn = el.querySelector('button');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      });
+      if (document.getElementById('drawer').classList.contains('open')) toggleDrawer();
+    }
+  });
+
+  /* ── Mobile drawer ── */
+  const drawer = document.getElementById('drawer');
+  const overlay = document.getElementById('drawer-overlay');
+  const hamburger = document.getElementById('hamburger');
+
+  function toggleDrawer() {
+    const isOpen = drawer.classList.contains('open');
+    drawer.classList.toggle('open');
+    overlay.classList.toggle('visible');
+    hamburger.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', String(!isOpen));
+    document.body.style.overflow = isOpen ? '' : 'hidden';
+  }
+
+  function toggleDrawerSub(id) {
+    const li = document.getElementById(id);
+    const isOpen = li.classList.contains('d-open');
+    document.querySelectorAll('.drawer-nav > li.d-open').forEach(el => {
+      if (el.id !== id) {
+        el.classList.remove('d-open');
+        const b = el.querySelector('.drawer-toggle');
+        if (b) b.setAttribute('aria-expanded', 'false');
+      }
+    });
+    li.classList.toggle('d-open', !isOpen);
+    const btn = li.querySelector('.drawer-toggle');
+    if (btn) btn.setAttribute('aria-expanded', String(!isOpen));
+  }
+</script>
+
+
+</body>
+
+</body>
+</html>
+
+
+
+
+
+
+
+  <!-- =====================
+       HERO
+  ===================== -->
+  <section class="sp-hero">
+    <div class="sp-hero__scrim"></div>
+    <img class="sp-hero__bg" src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=1800&auto=format&fit=crop&q=80" alt="Spices" />
+    <div class="sp-wrap sp-hero__inner">
+      <div class="sp-hero__text">
+        <span class="sp-eyebrow">Spice Industry Solutions</span>
+        <h1 class="sp-hero__h1">Spice Processing<br /><span>Solutions</span></h1>
+        <p class="sp-hero__lead">Precision Grinding &amp; Mixing Equipment for the Spice Industry</p>
+        <p class="sp-hero__body">From turmeric and chilli to seasoning blends and specialty spices, our machinery delivers consistent particle size, high production efficiency, and reliable performance for spice manufacturers worldwide.</p>
+        <div class="sp-hero__btns">
+          <a href="contact.html" class="sp-btn sp-btn--solid">Request a Quote</a>
+          <a href="dumproduct.html" class="sp-btn sp-btn--ghost">View Machines</a>
+        </div>
+      </div>
+      <div class="sp-hero__stats">
+        <div class="sp-hstat">
+          <strong>60+</strong>
+          <span>Years Manufacturing</span>
+        </div>
+        <div class="sp-hstat">
+          <strong>SS304</strong>
+          <span>Food-Grade Available</span>
+        </div>
+        <div class="sp-hstat">
+          <strong>4+</strong>
+          <span>Spice Applications</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       OVERVIEW
+  ===================== -->
+  <section class="sp-section">
+    <div class="sp-wrap sp-twocol">
+      <div class="sp-twocol__text">
+        <span class="sp-eyebrow">Industry Overview</span>
+        <h2>Serving the Spice<br />Processing Industry</h2>
+        <p>The spice industry requires specialized processing equipment capable of handling a wide variety of raw materials while maintaining product quality, colour, aroma, and consistency.</p>
+        <p>At <strong>Modern Pulveriser</strong>, we manufacture grinding and mixing solutions for spice processors, masala manufacturers, seasoning producers, and food ingredient companies.</p>
+        <p>Our equipment supports applications ranging from coarse grinding to ultra-fine pulverization and homogeneous blending.</p>
+      </div>
+      <div class="sp-twocol__img">
+        <!-- <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=900&auto=format&fit=crop&q=80" alt="Processing plant" /> -->
+         <img src="https://i.pinimg.com/736x/5b/09/fe/5b09fe53b0bfd5cd245744c60b40542d.jpg" alt="Processing plant" />
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       MATERIALS
+  ===================== -->
+  <section class="sp-section sp-section--alt">
+    <div class="sp-wrap">
+      <div class="sp-sechead">
+        <span class="sp-eyebrow">Applications</span>
+        <h2>Materials Commonly Processed</h2>
+      </div>
+      <div class="sp-mats">
+        <div class="sp-mat" style="--mat-img:url(data:image/jpeg;base64,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)">
+          <div class="sp-mat__photo"></div>
+          <span>Turmeric</span>
+        </div>
+        <div class="sp-mat" style="--mat-img:url('https://images.unsplash.com/photo-1583119022894-919a68a3d0e3?w=300&auto=format&fit=crop&q=80')">
+          <div class="sp-mat__photo"></div>
+          <span>Chilli</span>
+        </div>
+        <div class="sp-mat" style="--mat-img:url('https://t3.ftcdn.net/jpg/00/02/42/92/360_F_2429251_acdW1GQwKpqEk7zsOPQaSTU0tGHIop.jpg')">
+          <div class="sp-mat__photo"></div>
+          <span>Coriander</span>
+        </div>
+        <div class="sp-mat" style="--mat-img:url('data:image/jpeg;base64,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')">
+          <div class="sp-mat__photo"></div>
+          <span>Cumin</span>
+        </div>
+        <div class="sp-mat" style="--mat-img:url('https://img.magnific.com/free-photo/sweet-dehydrated-black-blueberry_1368-5465.jpg?semt=ais_hybrid&w=740&q=80')">
+          <div class="sp-mat__photo"></div>
+          <span>Black Pepper</span>
+        </div>
+        <div class="sp-mat" style="--mat-img:url('https://t4.ftcdn.net/jpg/01/02/58/91/360_F_102589163_hk02O92vzEYP0rZbVyvDTbkje1GaUDk1.jpg')">
+          <div class="sp-mat__photo"></div>
+          <span>Spice Blends</span>
+        </div>
+        <div class="sp-mat" style="--mat-img:url('https://plus.unsplash.com/premium_photo-1669130744503-4939a5bcef43?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8c2Vhc29uaW5nfGVufDB8fDB8fHww')">
+          <div class="sp-mat__photo"></div>
+          <span>Seasoning Mixes</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       MACHINES
+  ===================== -->
+  <section id="sp-machines" class="sp-section">
+    <div class="sp-wrap">
+      <div class="sp-sechead sp-sechead--row">
+        <div>
+          <span class="sp-eyebrow">Machines for This Industry</span>
+          <h2>Recommended Machines</h2>
+        </div>
+        <a href="dumproduct.html" class="sp-btn sp-btn--ghost">Explore All Machines</a>
+      </div>
+      <div class="sp-machines">
+        <article class="sp-mcard">
+          <div class="sp-mcard__img"><img src="https://i.pinimg.com/736x/40/d5/11/40d51142b8ca8a64fbc84cd2972ce797.jpg" alt="Hammer Mill" /></div>
+          <div class="sp-mcard__body">
+            <h3>Hammer Mill</h3>
+            <p>For coarse to medium grinding applications.</p>
+            <a href="hammer.html" class="sp-mcard__link">View Details →</a>
+          </div>
+        </article>
+        <article class="sp-mcard">
+          <div class="sp-mcard__img"><img src="https://i.pinimg.com/736x/f4/73/b0/f473b0f670ca30fb054a5d36dc28ac1b.jpg" alt="Impact Pulveriser" /></div>
+          <div class="sp-mcard__body">
+            <h3>Impact Pulveriser</h3>
+            <p>For fine grinding and consistent particle size.</p>
+            <a href="#" class="sp-mcard__link">View Details →</a>
+          </div>
+        </article>
+        <article class="sp-mcard">
+          <div class="sp-mcard__img"><img src="https://i.pinimg.com/736x/88/77/39/887739210e55d61f1a11103c6c956b8d.jpg" alt="Vibro Sifter" /></div>
+          <div class="sp-mcard__body">
+            <h3>Vibro Sifter</h3>
+            <p>For ultra-fine screening and particle classification.</p>
+            <a href="#" class="sp-mcard__link">View Details →</a>
+          </div>
+        </article>
+        <article class="sp-mcard">
+          <div class="sp-mcard__img"><img src="images\ee3c7bdd9eeb716d6721aeaa15f9ad95.jpg" alt="Ribbon Blender" /></div>
+          <div class="sp-mcard__body">
+            <h3>Ribbon Blender</h3>
+            <p>For uniform spice mixing and seasoning preparation.</p>
+            <a href="#" class="sp-mcard__link">View Details →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       WHY CHOOSE US
+  ===================== -->
+  <section class="sp-section sp-section--alt">
+    <div class="sp-wrap sp-twocol sp-twocol--rev">
+      <div class="sp-twocol__text">
+        <span class="sp-eyebrow">Why Choose Us ? </span>
+        <h2>Why Spice Manufacturers Choose Our Equipment</h2>
+        <ul class="sp-whylist">
+          <!-- <li><span class="sp-tick">✓</span>Robust Industrial Construction</li>
+          <li><span class="sp-tick">✓</span>Wear-Resistant Grinding Components</li>
+          <li><span class="sp-tick">✓</span>Food-Grade SS304 Construction Available</li>
+          <li><span class="sp-tick">✓</span>Consistent Particle Size Distribution</li>
+          <li><span class="sp-tick">✓</span>Custom-Built Solutions</li>
+          <li><span class="sp-tick">✓</span>Low Maintenance Design</li>
+          <li><span class="sp-tick">✓</span>High Production Efficiency</li> -->
+          <li>Robust Industrial Construction</li>
+          <li>Wear-Resistant Grinding Components</li>
+          <li>Food-Grade SS304 Construction Available</li>
+          <li>Consistent Particle Size Distribution</li>
+          <li>Custom-Built Solutions</li>
+          <li>Low Maintenance Design</li>
+          <li>High Production Efficiency</li>
+        </ul>
+      </div>
+      <div class="sp-twocol__img">
+        <img src="https://i.pinimg.com/736x/00/42/a6/0042a68e3e346dcca33063725b4cc2c2.jpg" alt="Machinery" />
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       PROCESS FLOW
+  ===================== -->
+  <section class="sp-section">
+    <div class="sp-wrap">
+      <div class="sp-sechead">
+        <span class="sp-eyebrow">Process Flow</span>
+        <h2>Typical Spice Processing Line</h2>
+      </div>
+      <div class="sp-flow">
+        <div class="sp-fstep">
+          <div class="sp-fstep__dot sp-fstep__dot--accent">01</div>
+          <p>Raw Material</p>
+        </div>
+        <div class="sp-fstep__arrow">→</div>
+        <div class="sp-fstep">
+          <div class="sp-fstep__dot">02</div>
+          <p>Cleaning &amp; Sorting</p>
+        </div>
+        <div class="sp-fstep__arrow">→</div>
+        <div class="sp-fstep">
+          <div class="sp-fstep__dot sp-fstep__dot--accent">03</div>
+          <p>Grinding / Pulverization</p>
+        </div>
+        <div class="sp-fstep__arrow">→</div>
+        <div class="sp-fstep">
+          <div class="sp-fstep__dot">04</div>
+          <p>Classification</p>
+        </div>
+        <div class="sp-fstep__arrow">→</div>
+        <div class="sp-fstep">
+          <div class="sp-fstep__dot sp-fstep__dot--accent">05</div>
+          <p>Blending</p>
+        </div>
+        <div class="sp-fstep__arrow">→</div>
+        <div class="sp-fstep">
+          <div class="sp-fstep__dot">06</div>
+          <p>Packaging</p>
+        </div>
+      </div>
+      <p class="sp-flow__note">Our machinery can be integrated into complete processing lines based on your production requirements.</p>
+    </div>
+  </section>
+
+  <!-- =====================
+       FEATURES
+  ===================== -->
+  <section class="sp-section sp-section--alt">
+    <div class="sp-wrap">
+      <div class="sp-sechead">
+        <span class="sp-eyebrow">Performance</span>
+        <h2>Designed for Industrial Performance</h2>
+      </div>
+      <div class="sp-feats">
+        <div class="sp-feat">
+          <div class="sp-feat__icon">⚙</div>
+          <h4>High Throughput Capacity</h4>
+          <p>Built for continuous high-volume production without compromising output quality.</p>
+        </div>
+        <div class="sp-feat">
+          <div class="sp-feat__icon">🛡</div>
+          <h4>Wear Resistant Components</h4>
+          <p>Hardened grinding parts engineered to withstand abrasive spice materials.</p>
+        </div>
+        <div class="sp-feat">
+          <div class="sp-feat__icon">🔄</div>
+          <h4>Continuous Operation</h4>
+          <p>Designed for long shift runs with minimal downtime and easy maintenance access.</p>
+        </div>
+        <div class="sp-feat">
+          <div class="sp-feat__icon">📊</div>
+          <h4>Consistent Product Quality</h4>
+          <p>Uniform particle size and blend distribution batch after batch.</p>
+        </div>
+        <div class="sp-feat">
+          <div class="sp-feat__icon">🏗</div>
+          <h4>Heavy Duty Construction</h4>
+          <p>Robust steel fabrication for demanding industrial environments.</p>
+        </div>
+        <div class="sp-feat">
+          <div class="sp-feat__icon">🧹</div>
+          <h4>Easy Cleaning &amp; Maintenance</h4>
+          <p>Tool-free access panels and smooth internal surfaces for quick changeover.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       FAQ
+  ===================== -->
+  <section class="sp-section">
+    <div class="sp-wrap">
+      <div class="sp-sechead">
+        <span class="sp-eyebrow">FAQs</span>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="sp-faqs">
+        <details class="sp-faq">
+          <summary>What is the best machine for grinding turmeric?</summary>
+          <p>Impact Pulverisers and Air Classifying Mills are commonly used depending on the required fineness.</p>
+        </details>
+        <details class="sp-faq">
+          <summary>Can your machines be manufactured in SS304?</summary>
+          <p>Yes, food-contact parts can be supplied in SS304 and SS316.</p>
+        </details>
+        <details class="sp-faq">
+          <summary>Do you provide complete spice processing solutions?</summary>
+          <p>Yes, we can recommend equipment based on your capacity and product requirements.</p>
+        </details>
+        <details class="sp-faq">
+          <summary>Can the machine handle multiple spices?</summary>
+          <p>Yes, with proper cleaning procedures, the same machine can process different spices.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       CTA
+  ===================== -->
+  <section id="sp-contact" class="sp-cta">
+    <div class="sp-cta__scrim"></div>
+    <img class="sp-cta__bg" src="https://i.pinimg.com/736x/71/43/c7/7143c764f56774e6b576d13220229af7.jpg" alt="" />
+    <div class="sp-wrap sp-cta__inner">
+      <div class="sp-cta__text">
+        <span class="sp-eyebrow" style="color:#e85d04">Get In Touch</span>
+        <h2 style="color:#fff">Looking for Spice Processing Equipment?</h2>
+        <p style="color:rgba(255,255,255,.7)">Whether you are setting up a new plant or upgrading an existing production line, our team can help you select the right grinding and mixing solution.</p>
+      </div>
+      <div class="sp-cta__btns">
+        <a href="#" class="sp-btn sp-btn--orange">Request a Quote →</a>
+        <a href="#" class="sp-btn sp-btn--ghost-light">📞 Talk to an Expert</a>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ============ FOOTER ============ -->
+<footer class="mp-footer">
+  <div class="mp-footer-container">
+    <div class="mp-footer-brand-block">
+      <span class="mp-logo-text">Modern <span>Pulveriser</span></span>
+      <p>Designing and manufacturing grinding, crushing and material-handling systems since 1951 .</p>
+    </div>
+
+    <div class="mp-footer-section">
+      <h4>Phone</h4>
+      <a href="tel:+919582250536">+91 9582250536</a>
+      <a href="tel:+919810023411">+91 9810023411</a>
+    </div>
+
+    <div class="mp-footer-section">
+      <h4>Email</h4>
+      <a href="mailto:info@modernpulveriser.com">info@modernpulveriser.com</a>
+      <a href="mailto:vermasiddharth85@gmail.com">vermasiddharth85@gmail.com</a>
+    </div>
+
+    <div class="mp-footer-section">
+      <h4>Address</h4>
+      <p>98-A, Pocket-K, Sheikh Sarai,<br>Phase-2, New Delhi – 110017</p>
+    </div>
+  </div>
+
+  <div class="mp-footer-bottom">
+    <span>© 2026 Modern Pulveriser. All rights reserved.</span>
+    <img src="images/LOGO.jpg" alt="MP Logo" class="mp-footer-logo">
+  </div>
+</footer>
+
+
+</body>
+</html>

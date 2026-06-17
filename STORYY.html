@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Story - Modern Pulveriser</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="stylesheet" href="css/Style.css"/>
+  <link rel="stylesheet" href="css/header-fixed.css"/>
+  <link rel="stylesheet" href="css/index.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+<style>
+
+:root {
+  --blue:   #2b35af;
+  --blue2:  #1e2680;
+  --orange: #e85d04;
+  --dark:   #1c1c2e;
+  --bg:     #f5f5fb;
+  --bgalt:  #eaeaf5;
+  --white:  #ffffff;
+  --text:   #2a2a3d;
+  --muted:  #6b6b8a;
+  --border: #d8d8ef;
+  --max:    1100px;
+  --font:   'Poppins', sans-serif;
+}
+
+
+:root {
+  --os-blue:      #2b35af;
+  --os-blue-dark: #1e2580;
+  --os-blue-deep: #14185a;
+  --os-orange:    #e85d04;
+  --os-charcoal:  #1c1c2e;
+  --os-white:     #ffffff;
+  --os-bgalt:     #f4f4fa;
+  --os-border:    #e2e2ef;
+  --os-text:      #444458;
+  --os-muted:     #8888a8;
+  --os-radius-lg: 14px;
+}
+
+.os-wrap {
+  width: 92%;
+  max-width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.os-eyebrow {
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--os-orange);
+  margin-bottom: .55rem;
+}
+
+/* ════════════════════════════════════════════
+   HERO
+   ════════════════════════════════════════════ */
+.os-hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 0 0 20px 20px;
+}
+.os-hero__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.os-hero__scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    115deg,
+    rgba(41, 46, 143, 0.95) 0%,
+    rgba(43,53,175,.82) 50%,
+    rgba(20,24,90,.55) 100%
+  );
+  z-index: 1;
+}
+.os-hero__inner {
+  position: relative;
+  z-index: 2;
+  padding: 110px 0 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+.os-hero__h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(2.6rem, 9vw, 5rem);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: 7px;
+  color: var(--os-white);
+  margin: .4rem 0 1rem;
+}
+.os-hero__h1 span { color: var(--os-orange); }
+.os-hero__lead {
+  font-family: 'Poppins', sans-serif;
+  color: rgba(255,255,255,.75);
+  font-size: .95rem;
+  line-height: 1.8;
+  max-width: 560px;
+  margin: 0;
+}
+.os-hero__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem 2.4rem;
+  border-top: 1px solid rgba(255,255,255,.15);
+  padding-top: 1.4rem;
+}
+.os-hstat strong {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--os-orange);
+  line-height: 1;
+}
+.os-hstat span {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: .68rem;
+  color: rgba(255,255,255,.55);
+  margin-top: .25rem;
+  letter-spacing: .05em;
+}
+
+/* ════════════════════════════════════════════
+   ABOUT + MISSION/VISION
+   ════════════════════════════════════════════ */
+.os-intro {
+  background: var(--os-bgalt);
+  padding: 56px 0;
+}
+.os-intro-inner {
+  width: 92%;
+  max-width: 1160px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-radius: var(--os-radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--os-border);
+}
+
+.os-about {
+  padding: 2.2rem 1.6rem;
+  background: var(--os-white);
+}
+.os-about__h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  color: var(--os-charcoal);
+  line-height: 1.25;
+  margin: 0 0 1rem;
+}
+.os-about p {
+  font-family: 'Poppins', sans-serif;
+  font-size: .88rem;
+  line-height: 1.85;
+  color: var(--os-text);
+  margin-bottom: .9rem;
+}
+.os-about p:last-child { margin-bottom: 0; }
+
+.os-mv {
+  padding: 2.2rem 1.6rem;
+  background: var(--os-blue);
+  color: var(--os-white);
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+  justify-content: center;
+}
+.os-mv--orange { background: var(--os-orange); }
+
+.os-mv__label {
+  font-family: 'Poppins', sans-serif;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.7);
+}
+.os-mv h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0;
+}
+.os-mv p {
+  font-family: 'Poppins', sans-serif;
+  font-size: .85rem;
+  line-height: 1.75;
+  color: rgba(255,255,255,.82);
+  margin: 0;
+}
+
+/* ════════════════════════════════════════════
+   BREAKPOINT — tablet ≥ 640px
+   ════════════════════════════════════════════ */
+@media (min-width: 640px) {
+  .os-hero { min-height: 64vh; }
+  .os-hero__inner { padding: 120px 0 64px; }
+
+  .os-intro { padding: 72px 0; }
+  .os-about,
+  .os-mv { padding: 2.6rem 2.2rem; }
+}
+
+/* ════════════════════════════════════════════
+   BREAKPOINT — desktop ≥ 900px
+   ════════════════════════════════════════════ */
+@media (min-width: 900px) {
+  .os-hero { min-height: 95vh; border-radius: 0 0 28px 28px; }
+  .os-hero__inner { padding: 140px 0 80px; }
+  .os-hero__lead { font-size: 1rem; }
+
+  .os-intro-inner {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .os-about {
+    flex: 1.3;
+    padding: 3rem 2.8rem;
+    border-right: 1px solid var(--os-border);
+  }
+  .os-mv {
+    flex: 1;
+    padding: 3rem 2.4rem;
+  }
+}
+.os-vision {
+  background: var(--blue2);
+}
+
+/* ══════════════
+   CORE VALUES BAR
+══════════════ */
+.os-corevals {
+  background: var(--white);
+  padding: 56px 20px;
+}
+.os-corevals-inner { max-width: var(--max); margin: 0 auto; }
+
+.os-section-eyebrow {
+  display: block;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.os-section-title {
+  text-align: center;
+  font-size: clamp(22px, 3.5vw, 32px);
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 6px;
+}
+.os-section-divider {
+  width: 48px; height: 3px;
+  background: var(--orange);
+  border-radius: 2px;
+  margin: 0 auto 40px;
+}
+
+.cv-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+.cv-item {
+  text-align: center;
+  padding: 24px 12px;
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  transition: border-color .2s, box-shadow .2s, transform .2s;
+}
+.cv-item:hover {
+  border-color: var(--blue);
+  box-shadow: 0 6px 20px rgba(43,53,175,.1);
+  transform: translateY(-4px);
+}
+.cv-icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+  display: block;
+}
+.cv-item h4 {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+.cv-item p {
+  font-size: 11.5px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ══════════════
+   JOURNEY + STATS
+══════════════ */
+.os-journey-wrap {
+  background: var(--bgalt);
+  padding: 56px 20px;
+}
+.os-journey-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* horizontal icon timeline */
+.os-journey-left {}
+.os-journey-left .os-section-title,
+.os-journey-left .os-section-eyebrow { text-align: left; }
+.os-journey-left .os-section-divider { margin-left: 0; margin-right: auto; }
+
+.htl {
+  position: relative;
+  padding-top: 24px;
+}
+.htl-line {
+  position: absolute;
+  top: 38px;
+  left: 18px;
+  right: 18px;
+  height: 2px;
+  background: var(--blue);
+  z-index: 0;
+}
+.htl-items {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  position: relative;
+  z-index: 1;
+}
+.htl-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.htl-dot {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--blue);
+  border: 3px solid var(--white);
+  box-shadow: 0 0 0 2px var(--blue);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 10px;
+  transition: background .2s;
+}
+.htl-dot svg { width: 16px; height: 16px; fill: none; stroke: #fff; stroke-width: 2; }
+.htl-item:last-child .htl-dot { background: var(--orange); box-shadow: 0 0 0 2px var(--orange); }
+.htl-year { font-size: 14px; font-weight: 800; color: var(--blue); line-height: 1; margin-bottom: 4px; }
+.htl-item:last-child .htl-year { color: var(--orange); }
+.htl-label { font-size: 10.5px; color: var(--muted); font-weight: 500; line-height: 1.4; padding: 0 4px; }
+
+/* stats at a glance */
+.os-stats-right {}
+.os-stats-right .os-section-title,
+.os-stats-right .os-section-eyebrow { text-align: left; }
+.os-stats-right .os-section-divider { margin-left: 0; }
+
+.glance-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px;
+}
+.glance-item {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 18px 14px;
+  text-align: center;
+  transition: border-color .2s, box-shadow .2s;
+}
+.glance-item:hover {
+  border-color: var(--orange);
+  box-shadow: 0 4px 16px rgba(232,93,4,.1);
+}
+.glance-icon { font-size: 22px; margin-bottom: 8px; display: block; }
+.glance-num {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--blue);
+  display: block;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.glance-label {
+  font-size: 11px;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+/* ══════════════
+   TIMELINE (zigzag existing style)
+══════════════ */
+.timeline-section {
+  background: #ffffff;
+  padding: 56px 20px;
+}
+.timeline-section .os-section-title,
+.timeline-section .os-section-eyebrow { text-align: center; }
+.timeline-section .os-section-divider { margin: 0 auto 48px; }
+
+.timeline {
+  position: relative;
+  max-width: 680px;
+  margin: 0 auto;
+  background: #fff;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%; top: 0; bottom: 0;
+  width: 2px;
+  background: var(--blue);
+  transform: translateX(-50%);
+  transform-origin: top;
+  animation: tlDraw 1.2s ease forwards;
+}
+@keyframes tlDraw {
+  from { clip-path: inset(0 0 100% 0); }
+  to   { clip-path: inset(0 0 0% 0); }
+}
+
+.tl-row {
+  display: grid;
+  grid-template-columns: 1fr 32px 1fr;
+  align-items: center;
+  margin-bottom: 36px;
+}
+.tl-row:last-child { margin-bottom: 0; }
+.tl-connector { display: flex; align-items: center; justify-content: center; }
+
+.tl-dot {
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: var(--blue);
+  border: 2px solid var(--white);
+  box-shadow: 0 0 0 2px var(--blue);
+  z-index: 2; position: relative;
+}
+.tl-dot-active {
+  background: var(--orange);
+  box-shadow: 0 0 0 2px var(--orange), 0 0 10px rgba(232,93,4,.5);
+  width: 18px; height: 18px;
+  animation: tlPulse 2s ease-in-out infinite;
+}
+@keyframes tlPulse {
+  0%,100% { box-shadow: 0 0 0 2px var(--orange), 0 0 0 6px rgba(232,93,4,.2); }
+  50%      { box-shadow: 0 0 0 2px var(--orange), 0 0 0 12px rgba(232,93,4,0); }
+}
+
+.tl-card {
+  border: 1.5px solid var(--blue);
+  border-radius: 6px;
+  padding: 12px 18px;
+  background: var(--white);
+  transition: box-shadow .22s, transform .22s;
+}
+.tl-card:hover { box-shadow: 3px 3px 0 var(--blue); transform: translate(-2px,-2px); }
+.tl-card-latest { border-color: var(--orange); }
+.tl-card-latest:hover { box-shadow: 3px 3px 0 var(--orange); }
+
+.tl-year { font-size: 20px; font-weight: 800; color: var(--blue); line-height: 1.1; }
+.tl-card-latest .tl-year { color: var(--orange); }
+.tl-name { font-size: 12px; font-weight: 600; color: var(--text); margin-top: 2px; }
+.tl-sub  { font-size: 11px; color: var(--muted); font-style: italic; }
+
+.tl-left .tl-card { text-align: right; }
+.tl-right .tl-card { text-align: left; }
+
+.tl-row.os-reveal:nth-child(2) { transition-delay: .1s; }
+.tl-row.os-reveal:nth-child(3) { transition-delay: .2s; }
+.tl-row.os-reveal:nth-child(4) { transition-delay: .3s; }
+.tl-row.os-reveal:nth-child(5) { transition-delay: .4s; }
+.tl-row.os-reveal:nth-child(6) { transition-delay: .5s; }
+
+/* ══════════════
+   WHAT WE DO + FACILITY
+══════════════ */
+.os-wwd {
+  background: var(--bgalt);
+  padding: 56px 20px;
+}
+.os-wwd-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+.os-wwd-col .os-section-title,
+.os-wwd-col .os-section-eyebrow { text-align: left; }
+.os-wwd-col .os-section-divider { margin-left: 0; }
+
+.product-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+.chip {
+  padding: 7px 16px;
+  border: 1.5px solid var(--blue);
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--blue);
+  background: var(--white);
+  transition: background .2s, color .2s;
+}
+.chip:hover { background: var(--blue); color: var(--white); }
+
+.os-wwd-col p {
+  font-size: 13.5px;
+  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 14px;
+}
+
+.facility-imgs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 20px;
+}
+.fac-img {
+  /* border-radius: 8px; */
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  background: linear-gradient(135deg, #d8d8ef 0%, #c0c0dc 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.fac-img::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: inherit;
+}
+/* Each facility box gets a unique tint */
+.fac-img:nth-child(1) { background: linear-gradient(135deg,#c8d4f0,#a8b8e0); }
+.fac-img:nth-child(2) { background: linear-gradient(135deg,#d4e0c8,#b8cca8); }
+.fac-img:nth-child(3) { background: linear-gradient(135deg,#f0d4c8,#e0b8a8); }
+.fac-img:nth-child(4) { background: linear-gradient(135deg,#d4c8f0,#b8a8e0); }
+.fac-label {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: rgba(28,28,46,.7);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+  padding: 6px;
+  letter-spacing: .5px;
+}
+
+.facility-capabilities {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 14px;
+}
+.fc-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--text);
+  font-weight: 500;
+  padding: 8px 12px;
+  background: var(--white);
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+.fc-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--orange);
+  flex-shrink: 0;
+}
+
+/* ══════════════
+   OUR VALUES (zigzag)
+══════════════ */
+.os-values {
+  background: var(--white);
+  padding: 56px 20px;
+}
+.os-values-inner { max-width: var(--max); margin: 0 auto; }
+
+.values-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 0;
+}
+.val-card {
+  border: 1.5px solid var(--border);
+  border-left: 4px solid var(--blue);
+  border-radius: 8px;
+  padding: 24px 22px;
+  background: var(--white);
+  transition: border-left-color .2s, box-shadow .2s, transform .2s;
+}
+.val-card:hover {
+  border-left-color: var(--orange);
+  box-shadow: 0 6px 22px rgba(43,53,175,.09);
+  transform: translateY(-3px);
+}
+.val-num {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--blue);
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+.val-card h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+.val-card p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+.val-card:nth-child(1) { transition-delay: .05s; }
+.val-card:nth-child(2) { transition-delay: .1s; }
+.val-card:nth-child(3) { transition-delay: .15s; }
+.val-card:nth-child(4) { transition-delay: .2s; }
+.val-card:nth-child(5) { transition-delay: .25s; }
+.val-card:nth-child(6) { transition-delay: .3s; }
+
+/* ══════════════
+   FOUNDER MESSAGE
+══════════════ */
+.os-founder {
+  background: var(--bgalt);
+  padding: 56px 20px;
+}
+.os-founder-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 56px;
+  align-items: center;
+}
+.founder-photo {
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 3/4;
+  background: linear-gradient(160deg, #c8d0e8 0%, #a0aacc 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+}
+/* silhouette placeholder */
+.founder-photo::after {
+  content: '';
+  position: absolute;
+  bottom: 18%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  background: rgba(43,53,175,.25);
+}
+.founder-photo-label {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 14px 16px;
+  background: rgba(28,28,46,.7);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+}
+.founder-quote {
+  padding: 20px 0;
+}
+.quote-mark {
+  font-size: 64px;
+  line-height: .8;
+  color: var(--orange);
+  font-family: Georgia, serif;
+  margin-bottom: 8px;
+  display: block;
+}
+.founder-quote blockquote {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--text);
+  font-style: italic;
+  border-left: 3px solid var(--orange);
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+.founder-sig {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--blue);
+}
+.founder-sig span {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+/* ══════════════
+   CTA BANNER
+══════════════ */
+.os-cta {
+  background: var(--dark);
+  padding: 56px 20px;
+}
+.os-cta-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+.os-cta h2 {
+  font-size: clamp(20px, 3vw, 30px);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+.os-cta p {
+  font-size: 14px;
+  color: rgba(255,255,255,.6);
+  max-width: 500px;
+}
+.os-cta-btns {
+  display: flex;
+  gap: 14px;
+  flex-shrink: 0;
+}
+.cta-primary {
+  padding: 13px 28px;
+  background: var(--orange);
+  color: var(--white);
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 5px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background .2s, transform .2s;
+}
+.cta-primary:hover { background: #261fb3; transform: translateY(-2px); }
+.cta-secondary {
+  padding: 13px 28px;
+  border: 1.5px solid rgba(255,255,255,.35);
+  color: var(--white);
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 5px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: border-color .2s, background .2s;
+}
+.cta-secondary:hover { border-color: var(--white); background: rgba(255,255,255,.07); }
+
+/* ══════════════
+   RESPONSIVE
+══════════════ */
+@media (max-width: 900px) {
+  .os-intro-inner { grid-template-columns: 1fr; }
+  .os-about { border-right: none; border-bottom: 1px solid var(--border); padding: 32px 0; }
+  .os-mv { padding: 28px 24px; }
+  .os-journey-inner { grid-template-columns: 1fr; gap: 40px; }
+  .htl-items { grid-template-columns: repeat(5,1fr); }
+  .glance-grid { grid-template-columns: repeat(3,1fr); }
+  .cv-grid { grid-template-columns: repeat(3,1fr); }
+  .os-wwd-inner { grid-template-columns: 1fr; gap: 40px; }
+  .os-founder-inner { grid-template-columns: 1fr; }
+  .founder-photo { aspect-ratio: 16/9; max-height: 300px; }
+  .stats-container { grid-template-columns: repeat(2,1fr); }
+  .os-cta-inner { flex-direction: column; text-align: center; }
+  .os-cta p { max-width: 100%; }
+  .os-cta-btns { justify-content: center; }
+  .values-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .cv-grid { grid-template-columns: repeat(2,1fr); }
+  .htl-items { grid-template-columns: 1fr; gap: 0; }
+  .htl-line { display: none; }
+  .timeline::before { left: 16px; }
+  .tl-row { grid-template-columns: 16px 1fr; }
+  .tl-left, .tl-right { }
+  .tl-left .tl-spacer, .tl-right .tl-spacer { display: none; }
+  .tl-left .tl-card, .tl-right .tl-card { text-align: left; }
+  .tl-connector { justify-content: flex-start; }
+  /* reorder: dot | card */
+  .tl-left  { grid-template-areas: "dot card"; }
+  .tl-right { grid-template-areas: "dot card"; }
+  .tl-left  .tl-connector, .tl-right .tl-connector { grid-area: dot; }
+  .tl-left  .tl-card,      .tl-right .tl-card      { grid-area: card; }
+  .facility-imgs { grid-template-columns: 1fr 1fr; }
+  .facility-capabilities { grid-template-columns: 1fr; }
+  .glance-grid { grid-template-columns: repeat(2,1fr); }
+  .stats-container { grid-template-columns: 1fr 1fr; }
+  .os-cta-btns { flex-direction: column; width: 100%; }
+  .cta-primary, .cta-secondary { text-align: center; }
+}
+</style>
+</head>
+<body>
+<!-- ══════════ HEADER ══════════ -->
+<header id="site-header">
+  <div class="header-inner">
+
+    <!-- Logo -->
+    <a href="trial.html" class="logo-btn">
+      <img src="images/LOGO.jpg" alt="Modern Pulveriser Logo" class="logo-img">
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav aria-label="Main navigation" class="nav-main-wrap">
+      <ul class="nav-main" id="desktop-nav">
+
+        <li><a href="trial.html">Home</a></li>
+
+        <li><a href="STORYY.html">About Us</a></li>
+
+        <!-- Industries dropdown -->
+        <li id="nav-industries">
+          <button onclick="toggleDropdown('nav-industries')" aria-expanded="false" aria-haspopup="true">
+            Industries
+            <svg class="caret" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <ul class="dropdown" role="menu">
+            <li><a href="spicesnew.html">Spice processing</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="industry-ayurveda.html">Ayurveda & Herbal</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="industry-chemical.html">Chemical</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="industry-pharma.html">Pharmaceutical</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="industry-minerals.html">Minerals & Mining</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="industry-pigments.html">Pigments & Dyes</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="industry-agri.html">Agricultural Products</a></li>
+          </ul>
+        </li>
+
+        <!-- Products dropdown -->
+        <li id="nav-products">
+          <button onclick="toggleDropdown('nav-products')" aria-expanded="false" aria-haspopup="true">
+            Products
+            <svg class="caret" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <ul class="dropdown dropdown-wide" role="menu">
+            <li><a href="hammer.html">Hammer Mill</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="ribbon-blender.html">Ribbon Blender</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="hammer-crusher.html">Hammer Crusher</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="vibro-sifter.html">Vibro Sifter</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="impact-pulveriser.html">Impact Pulveriser</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="screw-conveyor.html">Screw Conveyor</a></li>
+          </ul>
+        </li>
+
+        <!-- CTA -->
+        <ol>
+          <a href="newcontact.html" class="btn-cta">
+            Contact Us
+            <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </ol>
+
+      </ul>
+    </nav>
+
+    <!-- Hamburger -->
+    <button class="hamburger" id="hamburger" onclick="toggleDrawer()" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+</header>
+
+<!-- ══════════ MOBILE OVERLAY ══════════ -->
+<div class="drawer-overlay" id="drawer-overlay" onclick="toggleDrawer()"></div>
+
+<!-- ══════════ MOBILE DRAWER ══════════ -->
+<nav class="drawer" id="drawer" aria-label="Mobile navigation">
+  <div class="drawer-head">
+    <a href="index.html" class="logo-btn">
+      <!-- <img src="images/LOGO.jpg" alt="Modern Pulveriser Logo" class="logo-img"> -->
+    </a>
+    <!-- <button class="drawer-close" onclick="toggleDrawer()" aria-label="Close menu">✕</button> -->
+  </div>
+
+  <ul class="drawer-nav">
+    <br>
+    <br>
+    <li><a href="trial.html">Home</a></li>
+    <li><a href="STORYY.html">About Us</a></li>
+
+    <li id="d-industries">
+      <button class="drawer-toggle" onclick="toggleDrawerSub('d-industries')" aria-expanded="false">
+        Industries
+        <svg class="drawer-caret" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <ul class="drawer-sub">
+        <li><a href="spicesnew.html"><span class="sub-dot"></span>Spice Processing </a></li>
+        <li><a href="industry-ayurveda.html"><span class="sub-dot"></span>Ayurveda & Herbal</a></li>
+        <li><a href="industry-chemical.html"><span class="sub-dot"></span>Chemical</a></li>
+        <li><a href="industry-pharma.html"><span class="sub-dot"></span>Pharmaceutical</a></li>
+        <li><a href="industry-minerals.html"><span class="sub-dot"></span>Minerals & Mining</a></li>
+        <li><a href="industry-pigments.html"><span class="sub-dot"></span>Pigments & Dyes</a></li>
+        <li><a href="industry-agri.html"><span class="sub-dot"></span>Agricultural Products</a></li>
+      </ul>
+    </li>
+
+    <li id="d-products">
+      <button class="drawer-toggle" onclick="toggleDrawerSub('d-products')" aria-expanded="false">
+        Products
+        <svg class="drawer-caret" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <ul class="drawer-sub">
+        <li><a href="hammer.html"><span class="sub-dot"></span>Hammer Mill</a></li>
+        <li><a href="ribbon-blender.html"><span class="sub-dot"></span>Ribbon Blender</a></li>
+        <li><a href="hammer-crusher.html"><span class="sub-dot"></span>Hammer Crusher</a></li>
+        <li><a href="vibro-sifter.html"><span class="sub-dot"></span>Vibro Sifter</a></li>
+        <li><a href="impact-pulveriser.html"><span class="sub-dot"></span>Impact Pulveriser</a></li>
+        <li><a href="screw-conveyor.html"><span class="sub-dot"></span>Screw Conveyor</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <div class="drawer-footer">
+    <a href="newcontact.html" class="btn-cta-drawer">
+      Contact Us
+      <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </div>
+</nav>
+
+<script>
+  /* ── Scroll effect: transparent → solid ── */
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 20);
+  }, { passive: true });
+
+  /* ── Desktop dropdowns: hover (CSS) + click (JS) ── */
+  function toggleDropdown(id) {
+    const li = document.getElementById(id);
+    const isOpen = li.classList.contains('open');
+    document.querySelectorAll('.nav-main > li.open').forEach(el => {
+      el.classList.remove('open');
+      const btn = el.querySelector('button');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      li.classList.add('open');
+      const btn = li.querySelector('button');
+      if (btn) btn.setAttribute('aria-expanded', 'true');
+    }
+  }
+
+  // Close on outside click
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.nav-main > li')) {
+      document.querySelectorAll('.nav-main > li.open').forEach(el => {
+        el.classList.remove('open');
+        const btn = el.querySelector('button');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.nav-main > li.open').forEach(el => {
+        el.classList.remove('open');
+        const btn = el.querySelector('button');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      });
+      if (document.getElementById('drawer').classList.contains('open')) toggleDrawer();
+    }
+  });
+
+  /* ── Mobile drawer ── */
+  const drawer = document.getElementById('drawer');
+  const overlay = document.getElementById('drawer-overlay');
+  const hamburger = document.getElementById('hamburger');
+
+  function toggleDrawer() {
+    const isOpen = drawer.classList.contains('open');
+    drawer.classList.toggle('open');
+    overlay.classList.toggle('visible');
+    hamburger.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', String(!isOpen));
+    document.body.style.overflow = isOpen ? '' : 'hidden';
+  }
+
+  function toggleDrawerSub(id) {
+    const li = document.getElementById(id);
+    const isOpen = li.classList.contains('d-open');
+    document.querySelectorAll('.drawer-nav > li.d-open').forEach(el => {
+      if (el.id !== id) {
+        el.classList.remove('d-open');
+        const b = el.querySelector('.drawer-toggle');
+        if (b) b.setAttribute('aria-expanded', 'false');
+      }
+    });
+    li.classList.toggle('d-open', !isOpen);
+    const btn = li.querySelector('.drawer-toggle');
+    if (btn) btn.setAttribute('aria-expanded', String(!isOpen));
+  }
+</script>
+
+  <section class="os-hero">
+    <div class="os-hero__scrim"></div>
+    <img class="os-hero__bg" src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=1800&auto=format&fit=crop&q=80" alt="Modern Pulveriser manufacturing floor" />
+    <img class="os-hero__bg" src="c:\Users\vansh\Downloads\Gemini_Generated_Image_a10cl5a10cl5a10c.png" alt="Modern Pulveriser manufacturing floor" />
+    <div class="os-wrap os-hero__inner">
+      <!-- <span class="os-eyebrow">Since 1998 &middot; New Delhi, India</span> -->
+      <h1 class="os-hero__h1">OUR <span>STORY</span></h1>
+      <!-- <p class="os-hero__lead">
+        From a small workshop in Sheikh Sarai to machinery running in factories across India and beyond —
+        this is how Modern Pulveriser was built, one machine at a time.
+      </p> -->
+      <div class="os-hero__stats">
+        <div class="os-hstat">
+          <strong>70+</strong>
+          <span>Years of Manufacturing</span>
+        </div>
+        <div class="os-hstat">
+          <strong>1000+</strong>
+          <span>Machines Delivered</span>
+        </div>
+        <div class="os-hstat">
+          <strong>10+</strong>
+          <span>Industries Served</span>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+<!-- ─────────────── INTRO + MISSION / VISION ─────────────── -->
+<section class="os-intro">
+  <div class="os-intro-inner">
+    <div class="os-about os-reveal">
+      <p>For over 62 years, Modern Engineering has been dedicated to manufacturing the highest quality machines, including Hammer Mills, Impact Pulverisers, Vibro Sifters, Hammer Crushers, Ribbon Blenders and more.</p>
+      <br>
+      <p>Our machines are tailor-made to meet the specific requirements of our customers. We take pride in the fact that our machines have been supplied to various industries, both domestically and internationally, working to the complete satisfaction of our valued customers.</p>
+    </div>
+    <div class="os-mv os-reveal">
+      <div class="os-mv-label">Our Mission</div>
+      <span class="os-mv-icon">🎯</span>
+      <h3>Built to Perform</h3>
+      <p>To engineer and deliver high-performance processing machinery that enhances productivity, ensures consistency, and creates long-term value for our customers.</p>
+    </div>
+    <div class="os-mv os-vision os-reveal">
+      <div class="os-mv-label">Our Vision</div>
+      <span class="os-mv-icon">🌐</span>
+      <h3>Recognised Globally</h3>
+      <p>To become a globally recognised engineering partner known for innovation, quality, and commitment to powering industries with reliable processing solutions.</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="stats-section">
+        <div class="stats-container">
+            <div class="stat-box">
+                <h2 class="stat-number" data-target="10000" data-suffix="+">0</h2>
+                <p>Installations</p>
+            </div>
+            <div class="stat-box">
+                <h2 class="stat-number" data-target="70" data-suffix="+ Years">0</h2>
+                <p>Experience</p>
+            </div>
+            <div class="stat-box">
+                <h2 class="stat-number" data-target="200" data-suffix="+">0</h2>
+                <p>Happy Customers</p>
+            </div>
+            <div class="stat-box">
+                <h2 class="stat-number" data-target="10" data-suffix="+">0</h2>
+                <p>Countries</p>
+            </div>
+        </div>
+</section>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const counters = document.querySelectorAll('.stat-number');
+            const duration = 2000;
+
+            const formatNumber = (num) => {
+                return num.toLocaleString('en-US');
+            };
+
+            const animateCounter = (counter) => {
+                if (counter.dataset.animated) return;
+                counter.dataset.animated = 'true';
+
+                const target = parseInt(counter.dataset.target);
+                const suffix = counter.dataset.suffix || '';
+                let startTime = null;
+
+                const step = (timestamp) => {
+                    if (!startTime) startTime = timestamp;
+                    const progress = timestamp - startTime;
+                    const percentage = Math.min(progress / duration, 1);
+                    const eased = percentage * (2 - percentage);
+                    const value = Math.floor(eased * target);
+
+                    counter.textContent = formatNumber(value) + suffix;
+
+                    if (percentage < 1) {
+                        requestAnimationFrame(step);
+                    } else {
+                        counter.textContent = formatNumber(target) + suffix;
+                    }
+                };
+
+                requestAnimationFrame(step);
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target
+                            .querySelectorAll('.stat-number')
+                            .forEach(animateCounter);
+
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            const section = document.querySelector('.stats-section');
+            observer.observe(section);
+        });
+    </script>
+
+
+<!-- ─────────────── WHAT WE DO + FACILITY ─────────────── -->
+<section class="os-wwd">
+  <div class="os-wwd-inner">
+
+    <div class="os-wwd-col">
+      <span class="os-section-eyebrow">Product Portfolio</span>
+      <h2 class="os-section-title">What We Do</h2>
+      <div class="os-section-divider"></div>
+      <p>
+Modern Engineering manufactures a comprehensive range of industrial processing machinery engineered for efficiency, durability, and long-term performance. From rugged size-reduction equipment to precision material-handling systems, every machine we build is designed to perform reliably under continuous, high-load industrial conditions.
+Whether it is grinding, pulverising, classifying, blending, screening, or complete process integration — we provide dependable solutions that help manufacturers achieve consistent product quality, reduced downtime, and higher operational efficiency across diverse industries. Backed by decades of engineering expertise, our equipment is built not just to meet today's production demands, but to stand the test of time.</p>
+      <br>
+      
+      <p>Whether it is grinding, pulverising, classifying, blending, or complete process integration — we provide dependable solutions that help manufacturers achieve consistent product quality and higher operational efficiency.</p>
+      
+    </div>
+
+    <div class="os-wwd-col">
+      <span class="os-section-eyebrow">Infrastructure</span>
+      <h2 class="os-section-title">Our Manufacturing Facility</h2>
+      <div class="os-section-divider"></div>
+      <p>Our state-of-the-art facility is equipped with advanced machinery and skilled professionals to ensure precision, quality and consistency in every machine we build.</p>
+      <div class="facility-imgs">
+        <div class="fac-img"><div class="fac-label">Advanced Machining</div></div>
+        <div class="fac-img"><div class="fac-label">Fabrication Shop</div></div>
+        <div class="fac-img"><div class="fac-label">Assembly Area</div></div>
+        <div class="fac-img"><div class="fac-label">Quality Testing</div></div>
+      </div>
+      <!-- <div class="facility-capabilities">
+        <div class="fc-item"><div class="fc-dot"></div>In-house Design & Engineering</div>
+        <div class="fc-item"><div class="fc-dot"></div>Precision Fabrication</div>
+        <div class="fc-item"><div class="fc-dot"></div>Quality Assembly</div>
+        <div class="fc-item"><div class="fc-dot"></div>Performance Testing</div>
+        <div class="fc-item"><div class="fc-dot"></div>On-time Delivery</div>
+        <div class="fc-item"><div class="fc-dot"></div>After-Sales Service</div>
+      </div> -->
+    </div>
+
+  </div>
+</section>
+
+<!-- ─────────────── OUR VALUES ─────────────── -->
+<section class="os-values">
+  <div class="os-values-inner">
+    <span class="os-section-eyebrow">Our Principles</span>
+    <h2 class="os-section-title">Our Values</h2>
+    <div class="os-section-divider"></div>
+    <div class="values-grid">
+      <div class="val-card os-reveal">
+        <div class="val-num">01</div>
+        <h3>Quality Without Compromise</h3>
+        <p>Every machine is manufactured with strict attention to performance, durability, and reliability to ensure long-term value for our customers.</p>
+      </div>
+      <div class="val-card os-reveal">
+        <div class="val-num">02</div>
+        <h3>Customer First</h3>
+        <p>We listen, understand, and build solutions around the unique requirements of every customer and industry we serve.</p>
+      </div>
+      <div class="val-card os-reveal">
+        <div class="val-num">03</div>
+        <h3>Engineering Excellence</h3>
+        <p>Decades of technical expertise guide every design, process, and innovation that leaves our manufacturing facility.</p>
+      </div>
+      <div class="val-card os-reveal">
+        <div class="val-num">04</div>
+        <h3>Integrity &amp; Trust</h3>
+        <p>We believe strong business relationships are built through transparency, honesty, and consistently delivering on our commitments.</p>
+      </div>
+      <div class="val-card os-reveal">
+        <div class="val-num">05</div>
+        <h3>Continuous Improvement</h3>
+        <p>As technology and industries evolve, we continuously refine our products and processes to provide better solutions and greater efficiency.</p>
+      </div>
+      <div class="val-card os-reveal">
+        <div class="val-num">06</div>
+        <h3>Long-Term Partnerships</h3>
+        <p>Our success is measured by the success of our customers. We focus on building relationships that last for generations, not just transactions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─────────────── CTA BANNER ─────────────── -->
+<section class="os-cta">
+  <div class="os-cta-inner os-reveal">
+    <div>
+      <h2>Let's Build Something Great Together</h2>
+      <p>Whether you are setting up a new plant or expanding an existing facility, we are here to provide the right solution for your needs.</p>
+    </div>
+    <div class="os-cta-btns">
+      <a href="newcontact.html" class="cta-primary">Request a Quote →</a>
+      <a href="tel:+919810023411" class="cta-secondary">☎    Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="mp-footer">
+  <div class="mp-footer-container">
+    <div class="mp-footer-brand-block">
+      <span class="mp-logo-text">Modern <span>Pulveriser</span></span>
+      <p>Designing and manufacturing grinding, crushing and material-handling systems since 1951 .</p>
+    </div>
+
+    <div class="mp-footer-section">
+      <h4>Phone</h4>
+      <a href="tel:+919582250536">+91 9582250536</a>
+      <a href="tel:+919810023411">+91 9810023411</a>
+    </div>
+
+    <div class="mp-footer-section">
+      <h4>Email</h4>
+      <a href="mailto:info@modernpulveriser.com">info@modernpulveriser.com</a>
+      <a href="mailto:vermasiddharth85@gmail.com">vermasiddharth85@gmail.com</a>
+    </div>
+
+    <div class="mp-footer-section">
+      <h4>Address</h4>
+      <p>98-A, Pocket-K, Sheikh Sarai,<br>Phase-2, New Delhi – 110017</p>
+    </div>
+  </div>
+
+  <div class="mp-footer-bottom">
+    <span>© 2026 Modern Pulveriser. All rights reserved.</span>
+    <img src="images/LOGO.jpg" alt="MP Logo" class="mp-footer-logo">
+  </div>
+</footer>
+
+
+<!-- ─────────────── SCRIPTS ─────────────── -->
+<script>
+// Scroll reveal
+(function(){
+  const els = document.querySelectorAll('.os-reveal');
+  const obs = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }
+    });
+  },{threshold:.12});
+  els.forEach(el=>obs.observe(el));
+})();
+
+// Animated counters
+document.addEventListener('DOMContentLoaded',()=>{
+  const counters = document.querySelectorAll('.stat-number');
+  const dur = 2000;
+  const fmt = n => n.toLocaleString('en-US');
+  const animate = c => {
+    if(c.dataset.animated) return;
+    c.dataset.animated='true';
+    const target=parseInt(c.dataset.target);
+    const suffix=c.dataset.suffix||'';
+    let t0=null;
+    const step=ts=>{
+      if(!t0)t0=ts;
+      const prog=Math.min((ts-t0)/dur,1);
+      const eased=prog*(2-prog);
+      c.textContent=fmt(Math.floor(eased*target))+suffix;
+      if(prog<1)requestAnimationFrame(step);
+      else c.textContent=fmt(target)+suffix;
+    };
+    requestAnimationFrame(step);
+  };
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.querySelectorAll('.stat-number').forEach(animate); obs.unobserve(e.target); }
+    });
+  },{threshold:.5});
+  const sec=document.querySelector('.stats-section');
+  if(sec) obs.observe(sec);
+});
+</script>
+<script src="js/script.js"></script>
+</body>
+</html>

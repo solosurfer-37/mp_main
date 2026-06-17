@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Modern Pulveriser</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="stylesheet" href="css/Style.css"/>
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/header-fixed.css">
+</head>
+<body>
+<!-- ══════════ HEADER ══════════ -->
+<header id="site-header">
+  <div class="header-inner">
+
+    <!-- Logo -->
+    <a href="trial.html" class="logo-btn">
+      <img src="images/LOGO.jpg" alt="Modern Pulveriser Logo" class="logo-img">
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav aria-label="Main navigation" class="nav-main-wrap">
+      <ul class="nav-main" id="desktop-nav">
+
+        <li><a href="trial.html">Home</a></li>
+
+        <li><a href="STORYY.html">About Us</a></li>
+
+        <!-- Industries dropdown -->
+        <li id="nav-industries">
+          <button onclick="toggleDropdown('nav-industries')" aria-expanded="false" aria-haspopup="true">
+            Industries
+            <svg class="caret" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <ul class="dropdown" role="menu">
+            <li><a href="spicesnew.html">Spice processing</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="industry-ayurveda.html">Ayurveda & Herbal</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="industry-chemical.html">Chemical</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="industry-pharma.html">Pharmaceutical</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="industry-minerals.html">Minerals & Mining</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="industry-pigments.html">Pigments & Dyes</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="industry-agri.html">Agricultural Products</a></li>
+          </ul>
+        </li>
+
+        <!-- Products dropdown -->
+        <li id="nav-products">
+          <button onclick="toggleDropdown('nav-products')" aria-expanded="false" aria-haspopup="true">
+            Products
+            <svg class="caret" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <ul class="dropdown dropdown-wide" role="menu">
+            <li><a href="hammer.html">Hammer Mill</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="ribbon-blender.html">Ribbon Blender</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="hammer-crusher.html">Hammer Crusher</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="vibro-sifter.html">Vibro Sifter</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="impact-pulveriser.html">Impact Pulveriser</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="screw-conveyor.html">Screw Conveyor</a></li>
+          </ul>
+        </li>
+
+        <!-- CTA -->
+        <ol>
+          <a href="newcontact.html" class="btn-cta">
+            Contact Us
+            <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </ol>
+
+      </ul>
+    </nav>
+
+    <!-- Hamburger -->
+    <button class="hamburger" id="hamburger" onclick="toggleDrawer()" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+</header>
+
+<!-- ══════════ MOBILE OVERLAY ══════════ -->
+<div class="drawer-overlay" id="drawer-overlay" onclick="toggleDrawer()"></div>
+
+<!-- ══════════ MOBILE DRAWER ══════════ -->
+<nav class="drawer" id="drawer" aria-label="Mobile navigation">
+  <div class="drawer-head">
+    <a href="index.html" class="logo-btn">
+      <!-- <img src="images/LOGO.jpg" alt="Modern Pulveriser Logo" class="logo-img"> -->
+    </a>
+    <!-- <button class="drawer-close" onclick="toggleDrawer()" aria-label="Close menu">✕</button> -->
+  </div>
+
+  <ul class="drawer-nav">
+    <br>
+    <br>
+    <li><a href="trial.html">Home</a></li>
+    <li><a href="STORYY.html">About Us</a></li>
+
+    <li id="d-industries">
+      <button class="drawer-toggle" onclick="toggleDrawerSub('d-industries')" aria-expanded="false">
+        Industries
+        <svg class="drawer-caret" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <ul class="drawer-sub">
+        <li><a href="spicesnew.html"><span class="sub-dot"></span>Spice Processing </a></li>
+        <li><a href="industry-ayurveda.html"><span class="sub-dot"></span>Ayurveda & Herbal</a></li>
+        <li><a href="industry-chemical.html"><span class="sub-dot"></span>Chemical</a></li>
+        <li><a href="industry-pharma.html"><span class="sub-dot"></span>Pharmaceutical</a></li>
+        <li><a href="industry-minerals.html"><span class="sub-dot"></span>Minerals & Mining</a></li>
+        <li><a href="industry-pigments.html"><span class="sub-dot"></span>Pigments & Dyes</a></li>
+        <li><a href="industry-agri.html"><span class="sub-dot"></span>Agricultural Products</a></li>
+      </ul>
+    </li>
+
+    <li id="d-products">
+      <button class="drawer-toggle" onclick="toggleDrawerSub('d-products')" aria-expanded="false">
+        Products
+        <svg class="drawer-caret" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <ul class="drawer-sub">
+        <li><a href="hammer.html"><span class="sub-dot"></span>Hammer Mill</a></li>
+        <li><a href="ribbon-blender.html"><span class="sub-dot"></span>Ribbon Blender</a></li>
+        <li><a href="hammer-crusher.html"><span class="sub-dot"></span>Hammer Crusher</a></li>
+        <li><a href="vibro-sifter.html"><span class="sub-dot"></span>Vibro Sifter</a></li>
+        <li><a href="impact-pulveriser.html"><span class="sub-dot"></span>Impact Pulveriser</a></li>
+        <li><a href="screw-conveyor.html"><span class="sub-dot"></span>Screw Conveyor</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <div class="drawer-footer">
+    <a href="newcontact.html" class="btn-cta-drawer">
+      Contact Us
+      <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </div>
+</nav>
+
+<script>
+  /* ── Scroll effect: transparent → solid ── */
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 20);
+  }, { passive: true });
+
+  /* ── Desktop dropdowns: hover (CSS) + click (JS) ── */
+  function toggleDropdown(id) {
+    const li = document.getElementById(id);
+    const isOpen = li.classList.contains('open');
+    document.querySelectorAll('.nav-main > li.open').forEach(el => {
+      el.classList.remove('open');
+      const btn = el.querySelector('button');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      li.classList.add('open');
+      const btn = li.querySelector('button');
+      if (btn) btn.setAttribute('aria-expanded', 'true');
+    }
+  }
+
+  // Close on outside click
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.nav-main > li')) {
+      document.querySelectorAll('.nav-main > li.open').forEach(el => {
+        el.classList.remove('open');
+        const btn = el.querySelector('button');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.nav-main > li.open').forEach(el => {
+        el.classList.remove('open');
+        const btn = el.querySelector('button');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      });
+      if (document.getElementById('drawer').classList.contains('open')) toggleDrawer();
+    }
+  });
+
+  /* ── Mobile drawer ── */
+  const drawer = document.getElementById('drawer');
+  const overlay = document.getElementById('drawer-overlay');
+  const hamburger = document.getElementById('hamburger');
+
+  function toggleDrawer() {
+    const isOpen = drawer.classList.contains('open');
+    drawer.classList.toggle('open');
+    overlay.classList.toggle('visible');
+    hamburger.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', String(!isOpen));
+    document.body.style.overflow = isOpen ? '' : 'hidden';
+  }
+
+  function toggleDrawerSub(id) {
+    const li = document.getElementById(id);
+    const isOpen = li.classList.contains('d-open');
+    document.querySelectorAll('.drawer-nav > li.d-open').forEach(el => {
+      if (el.id !== id) {
+        el.classList.remove('d-open');
+        const b = el.querySelector('.drawer-toggle');
+        if (b) b.setAttribute('aria-expanded', 'false');
+      }
+    });
+    li.classList.toggle('d-open', !isOpen);
+    const btn = li.querySelector('.drawer-toggle');
+    if (btn) btn.setAttribute('aria-expanded', String(!isOpen));
+  }
+</script>
+  <!-- ══ CONTACT HERO STRIP ══ -->
+  <section class="ct-hero">
+    <div class="ct-hero-inner">
+      <div class="ct-eyebrow">Get In Touch</div>
+      <h1>Let's Talk <em>Business</em></h1>
+      <p>Have a project in mind or need a quote? Our team is ready to help you find the right grinding solution for your needs.</p>
+    </div>
+  </section>
+
+  <!-- ══ MAIN CONTACT SECTION ══ -->
+  <section class="ct-main">
+    <div class="ct-container">
+
+      <!-- Row 1: Info + Form side by side -->
+      <div class="ct-top-row">
+
+        <!-- Contact Info Card -->
+        <div class="ct-info-card">
+          <div class="ct-card-label">Our Details</div>
+          <h2>Contact Information</h2>
+          <p class="ct-card-sub">Reach out through any of the channels below — we typically respond within 24 hours.</p>
+<br>
+          <div class="ct-info-list">
+
+            <div class="ct-info-item">
+              <div class="ct-info-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.6 4.87 2 2 0 0 1 3.57 2.69h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 10.09a16 16 0 0 0 6 6l.72-.72a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.28 17.5"/></svg>
+              </div>
+              <div class="ct-info-body">
+                <span class="ct-info-label">Phone</span>
+                <a href="tel:+919582250536">+91 95822 50536</a>
+                <a href="tel:+919810023411">+91 98100 23411</a>
+              </div>
+            </div>
+
+            <div class="ct-info-item">
+              <div class="ct-info-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="ct-info-body">
+                <span class="ct-info-label">Email</span>
+                <a href="mailto:info@modernpulveriser.com">info@modernpulveriser.com</a>
+                <a href="mailto:vermasiddharth85@gmail.com">vermasiddharth85@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="ct-info-item">
+              <div class="ct-info-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="ct-info-body">
+                <span class="ct-info-label">Address</span>
+                <a>98-A, Pocket-K, Sheikh Sarai,<br>Phase-2, New Delhi – 110017</a>
+              </div>
+            </div>
+
+          </div>
+<br>
+          <!-- Quick response note -->
+          <div class="ct-response-note">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Typical response time: within 24 hours
+          </div>
+        </div>
+
+        <!-- Contact Form Card -->
+        <div class="ct-form-card">
+          <div class="ct-card-label">Send a Message</div>
+          <h2>We'd Love to Hear From You</h2>
+          <p class="ct-card-sub">Fill in the form and we'll get back to you with the information you need.</p>
+
+          <form action="https://formspree.io/f/mblqrgol" method="POST" class="ct-form">
+            <div class="ct-form-row">
+              <div class="ct-field">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="e.g. Rahul Singh" required>
+              </div>
+              <div class="ct-field">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+              </div>
+            </div>
+            <div class="ct-field">
+              <label for="phone">Phone Number <span class="ct-optional">(optional)</span></label>
+              <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX">
+            </div>
+            <div class="ct-field">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="e.g. Quote for Hammer Mill">
+            </div>
+            <div class="ct-field">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell us about your requirements, quantities, or any questions..." required></textarea>
+            </div>
+            <button type="submit" class="ct-submit">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Send Message
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Row 2: Map full width -->
+      <div class="ct-map-row">
+        <div class="ct-map-header">
+          <div>
+            <div class="ct-card-label">Find Us</div>
+            <h2>Our Location</h2>
+          </div>
+          <a href="https://www.google.com/maps?q=98-A,+Pocket-K,+Sheikh+Sarai,+Phase-2,+New+Delhi-110017" target="_blank" class="ct-directions-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+            Get Directions
+          </a>
+        </div>
+        <div class="ct-map-wrap">
+          <iframe
+            src="https://www.google.com/maps?q=98-A,+Pocket-K,+Sheikh+Sarai,+Phase-2,+New+Delhi-110017&output=embed"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            title="Modern Pulveriser Location">
+          </iframe>
+        </div>
+        <div class="ct-map-address">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          98-A, Pocket-K, Sheikh Sarai, Phase-2, New Delhi – 110017
+        </div>
+      </div>
+
+    </div>
+  </section>
+<!-- ============ FOOTER ============ -->
+<footer class="mp-footer">
+  <div class="mp-footer-container">
+    <div class="mp-footer-brand-block">
+      <span class="mp-logo-text">Modern <span>Pulveriser</span></span>
+      <p>Designing and manufacturing grinding, crushing and material-handling systems since 1951 .</p>
+    </div>
+
+    <div class="mp-footer-section">
+      <h4>Phone</h4>
+      <a href="tel:+919582250536">+91 9582250536</a>
+      <a href="tel:+919810023411">+91 9810023411</a>
+    </div>
+
+    <div class="mp-footer-section">
+      <h4>Email</h4>
+      <a href="mailto:info@modernpulveriser.com">info@modernpulveriser.com</a>
+      <a href="mailto:vermasiddharth85@gmail.com">vermasiddharth85@gmail.com</a>
+    </div>
+
+    <div class="mp-footer-section">
+      <h4>Address</h4>
+      <p>98-A, Pocket-K, Sheikh Sarai,<br>Phase-2, New Delhi – 110017</p>
+    </div>
+  </div>
+
+  <div class="mp-footer-bottom">
+    <span>© 2026 Modern Pulveriser. All rights reserved.</span>
+    <img src="images/LOGO.jpg" alt="MP Logo" class="mp-footer-logo">
+  </div>
+</footer>
+
+  <!-- YOUR EXISTING FOOTER -->
+  <script src="js/script.js"></script>
+</body>
+</html>
