@@ -189,7 +189,7 @@
 .sp-hero__body {
   font-family: 'Poppins', sans-serif;
   color: rgba(255,255,255,.72);
-  font-size: .92rem;
+  font-size: .98rem;
   line-height: 1.75;
   margin-bottom: 1.8rem;
   max-width: 520px;
@@ -237,6 +237,7 @@
 .sp-twocol__text h2 {
   font-family: 'Poppins', sans-serif;
   font-size: clamp(1.6rem, 4vw, 2.2rem);
+  font-size: 0.98;
   font-weight: 700;
   line-height: 1.2;
   color: var(--sp-charcoal);
@@ -245,7 +246,7 @@
 .sp-twocol__text p {
   font-family: 'Poppins', sans-serif;
   color: var(--sp-text);
-  font-size: .9rem;
+  font-size: .88rem;
   line-height: 1.75;
   margin-bottom: .85rem;
 }
@@ -289,7 +290,7 @@
 }
 .sp-mat span {
   font-family: 'Poppins', sans-serif;
-  font-size: .74rem;
+  font-size: .7rem;
   font-weight: 600;
   color: var(--sp-charcoal);
   text-align: center;
@@ -333,13 +334,13 @@
 .sp-mcard__body h3 {
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--sp-blue);
   margin-bottom: .3rem;
 }
 .sp-mcard__body p {
   font-family: 'Poppins', sans-serif;
-  font-size: .82rem;
+  font-size: .88rem;
   color: var(--sp-muted);
   margin-bottom: .9rem;
 }
@@ -441,7 +442,7 @@
 }
 .sp-fstep p {
   font-family: 'Poppins', sans-serif;
-  font-size: .82rem;
+  font-size: .88rem;
   font-weight: 500;
   color: var(--sp-charcoal);
   margin: 0;
@@ -457,7 +458,7 @@
 .sp-flow__note {
   font-family: 'Poppins', sans-serif;
   text-align: center;
-  font-size: .82rem;
+  font-size: .88rem;
   color: var(--sp-muted);
   max-width: 540px;
   margin: 0 auto;
@@ -486,19 +487,19 @@
 }
 .sp-feat__icon {
   font-size: 1.8rem;
-  margin-bottom: .75rem;
+  margin-bottom: .8rem;
   display: block;
 }
 .sp-feat h4 {
   font-family: 'Poppins', sans-serif;
-  font-size: .9rem;
-  font-weight: 700;
+  font-size: .98rem;
+  font-weight: 600;
   color: var(--sp-charcoal);
   margin-bottom: .4rem;
 }
 .sp-feat p {
   font-family: 'Poppins', sans-serif;
-  font-size: .8rem;
+  font-size: .88rem;
   color: var(--sp-muted);
   margin: 0;
   line-height: 1.6;
@@ -551,7 +552,7 @@
   padding: 0 1.2rem 1.1rem;
   border-top: 1px solid var(--sp-border);
   padding-top: .9rem;
-  font-size: .84rem;
+  font-size: .88rem;
   color: var(--sp-text);
   margin: 0;
 }
@@ -597,7 +598,7 @@
 .sp-cta__text p {
   font-family: 'Poppins', sans-serif;
   color: rgba(255,255,255,.68);
-  font-size: .9rem;
+  font-size: .88rem;
   margin: 0;
 }
 .sp-cta__btns {
