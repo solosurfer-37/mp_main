@@ -1,4 +1,7 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap'); */
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
 :root {
   --blue:        #261fb3;
   --blue-light:  #eef0fb;
@@ -37,6 +40,7 @@ html { scroll-behavior: smooth; }
   background: var(--white);
   border-bottom: 1px solid var(--line);
 }
+
 /* ══ HERO TOP: heading + desc left | specs + CTAs right ══ */
 .hero-top {
   padding: 36px 18px 32px;
@@ -795,7 +799,19 @@ html { scroll-behavior: smooth; }
 }
 
 @media (min-width: 900px) { .option-item p { font-size: 0.93rem; line-height: 1.65; } }
+.opt-icon img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  display: block;
+}
 
+@media (min-width: 900px) {
+  .opt-icon img {
+    width: 24px;
+    height: 24px;
+  }
+}
 /* ─────────────────────────────────
    FEATURES
 ───────────────────────────────── */
@@ -877,6 +893,23 @@ html { scroll-behavior: smooth; }
 
 @media (min-width: 900px) { .feature-item p { font-size: 0.93rem; line-height: 1.68; } }
 
+.feat-icon {
+  width: 23px;
+  height: 23px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  display: block;
+}
+
+@media (min-width: 900px) {
+  .feat-icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 14px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 /* ─────────────────────────────────
    APPLICATIONS
 ───────────────────────────────── */
