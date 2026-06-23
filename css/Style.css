@@ -3609,7 +3609,8 @@ html, body {
   margin: 0 auto;
   /* background: linear-gradient(135deg, #0a0e27 0%, #12173d 60%, #2a2f7a 100%); */
   background: linear-gradient(135deg, #261fb3 0%, #251fb3 60%, #12173d 100%);
-  /* border-radius: 24px; */
+  border-radius: 24px;
+  border-radius: 10px;
   padding: 40px 30px;
   height: 250px;
 }
