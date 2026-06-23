@@ -10,11 +10,34 @@
   <link rel="stylesheet" href="css/Style.css"/>
   <link rel="stylesheet" href="css/header-fixed.css"/>
   <link rel="stylesheet" href="css/index.css"/>
+  <link rel="stylesheet" href="css/spice-processing_5.css"/>
+  
+  
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
 
 <style>
 
 :root {
+   --mp-blue:       #2b35af;
+      --mp-blue-dk:    #1e2580;
+      --mp-blue-deep:  #14185a;
+      --mp-orange:     #e85d04;
+      --mp-orange-dk:  #c94f00;
+      --mp-charcoal:   #1c1c2e;
+      --mp-paper:      #f4f3ef;
+      --mp-white:      #ffffff;
+      --mp-border:     #ddddf0;
+      --mp-muted:      #6b6b8a;
+      --mp-light-bg:   #f0f0f8;
+ 
+      --r-sm:  6px;
+      --r-md:  12px;
+      --r-lg:  16px;
+ 
+      --shadow-sm:  0 2px 10px rgba(43,53,175,.08);
+      --shadow-md:  0 6px 28px rgba(43,53,175,.12);
+      --shadow-lg:  0 12px 48px rgba(43,53,175,.16);
   --blue:   #2b35af;
   --blue2:  #1e2680;
   --orange: #e85d04;
@@ -175,7 +198,7 @@
 }
 .os-about p {
   font-family: 'Poppins', sans-serif;
-  font-size: .88rem;
+  font-size: .98rem;
   line-height: 1.85;
   color: var(--os-text);
   margin-bottom: .9rem;
@@ -195,8 +218,8 @@
 
 .os-mv__label {
   font-family: 'Poppins', sans-serif;
-  font-size: .68rem;
-  font-weight: 700;
+  font-size: 1.72rem;
+  font-weight: 800;
   letter-spacing: .18em;
   text-transform: uppercase;
   color: rgba(255,255,255,.7);
@@ -210,7 +233,7 @@
 }
 .os-mv p {
   font-family: 'Poppins', sans-serif;
-  font-size: .85rem;
+  font-size: .98rem;
   line-height: 1.75;
   color: rgba(255,255,255,.82);
   margin: 0;
@@ -332,7 +355,7 @@
   max-width: var(--max);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr; */
   gap: 60px;
   align-items: start;
 }
@@ -545,7 +568,7 @@
 .chip:hover { background: var(--blue); color: var(--white); }
 
 .os-wwd-col p {
-  font-size: 13.5px;
+  font-size: 0.98rem;
   line-height: 1.8;
   color: var(--text);
   margin-bottom: 14px;
@@ -558,7 +581,7 @@
   margin-top: 20px;
 }
 .fac-img {
-  /* border-radius: 8px; */
+  border-radius: 10px;
   overflow: hidden;
   aspect-ratio: 4/3;
   background: linear-gradient(135deg, #d8d8ef 0%, #c0c0dc 100%);
@@ -651,13 +674,13 @@
   margin-bottom: 8px;
 }
 .val-card h3 {
-  font-size: 15px;
+  font-size: 0.98rem;
   font-weight: 700;
   color: var(--dark);
   margin-bottom: 8px;
 }
 .val-card p {
-  font-size: 13px;
+  font-size: 0.88rem;
   color: var(--muted);
   line-height: 1.65;
 }
@@ -848,7 +871,462 @@
   .os-cta-btns { flex-direction: column; width: 100%; }
   .cta-primary, .cta-secondary { text-align: center; }
 }
+
+
+
+
+
 </style>
+
+
+
+  <style>
+ 
+   
+ 
+    /* ═══════════════════════════════════
+       RESET + BASE
+    ═══════════════════════════════════ */
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--mp-paper);
+      color: var(--mp-charcoal);
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; }
+ 
+    /* ═══════════════════════════════════
+       LAYOUT WRAPPER
+    ═══════════════════════════════════ */
+    .oj-wrap {
+      width: 92%;
+      max-width: 1500px;
+      margin: 0 auto;
+      
+    }
+ 
+    /* ═══════════════════════════════════
+       EYEBROW
+    ═══════════════════════════════════ */
+    .oj-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      font-family: 'Poppins', sans-serif;
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: #e85d04;
+      margin-bottom: 1.1rem;
+    }
+    
+ 
+    /* ═══════════════════════════════════
+       HERO SECTION
+    ═══════════════════════════════════ */
+    .oj-hero {
+      position: relative;
+      background: var(--mp-white);
+      padding: 40px 0 24px;
+      overflow: hidden;
+      height: 320px;
+    }
+ 
+    /* faint factory silhouette bg — CSS only */
+    .oj-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: 
+        linear-gradient(to right, rgba(244,243,239,1) 45%, rgba(244,243,239,0.3) 100%);
+      z-index: 1;
+    }
+    .oj-hero__bg-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: right center;
+      filter: grayscale(1) opacity(.13);
+      z-index: 0;
+    }
+ 
+    .oj-hero__inner {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+    }
+ 
+    .oj-hero__left { max-width: 600px; min-width: 1000px ; }
+ 
+    .oj-hero__h1 {
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 800;
+      line-height: 1.08;
+      color: #ffffff;
+      margin-bottom: 1rem;
+    }
+    .oj-hero__h1 span { color: #e85d04; }
+ 
+    .oj-hero__rule {
+      width: 40px;
+      height: 3px;
+      background: var(--mp-orange);
+      border-radius: 2px;
+      margin-bottom: 1.1rem;
+    }
+ 
+    .oj-hero__sub {
+      font-size: .95rem;
+      font-weight: 500 ;
+      color: #e8e8f5;
+      line-height: 1.75;
+      max-width: 600px;
+      width: 600px;
+    }
+ 
+    /* Stats card */
+    .oj-stats-card {
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: var(--r-lg);
+      box-shadow: var(--shadow-md);
+      padding: 1.4rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem 2.2rem;
+      align-self: flex-start;
+    }
+ 
+    .oj-stat {
+      display: flex;
+      align-items: center;
+      gap: .7rem;
+    }
+    .oj-stat__icon {
+      width: 36px;
+      height: 36px;
+      color: var(--mp-blue);
+      flex-shrink: 0;
+    }
+    .oj-stat__num {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--mp-charcoal);
+      line-height: 1;
+    }
+    .oj-stat__lbl {
+      font-size: .68rem;
+      color: var(--mp-muted);
+      font-weight: 500;
+      margin-top: .15rem;
+    }
+ 
+    /* ═══════════════════════════════════
+       TIMELINE SECTION
+    ═══════════════════════════════════ */
+    .oj-timeline-section {
+      padding: 62px 0 60px;
+      background: #e8e8f5;
+    }
+ 
+    /* ── horizontal year rail ── */
+    .oj-rail {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(6, 1.5fr);
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3rem;
+      padding: 0 12px;
+    }
+ 
+    /* the connecting line sits at vertical center */
+    .oj-rail::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 12px;
+      right: 12px;
+      height: 2px;
+      transform: translateY(-50%);
+      background: linear-gradient(to right, var(--mp-blue) 0%, var(--mp-border) 100%);
+      z-index: 0;
+    }
+ 
+    .oj-rail-stop {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;          /* space between year label and dot */
+      position: relative;
+      z-index: 1;
+    }
+ 
+    .oj-rail-stop__year {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--mp-blue);
+      line-height: 1;
+      letter-spacing: -.01em;
+    }
+ 
+    .oj-rail-stop__dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--mp-blue);
+      border: 3px solid var(--mp-paper);
+      box-shadow: 0 0 0 2px var(--mp-blue);
+      transition: transform .22s, background .22s, box-shadow .22s;
+      flex-shrink: 0;
+    }
+    .oj-rail-stop:hover .oj-rail-stop__dot {
+      transform: scale(1.4);
+      background: var(--mp-orange);
+      box-shadow: 0 0 0 2px var(--mp-orange);
+    }
+    .oj-rail-stop:hover .oj-rail-stop__year {
+      color: var(--mp-orange);
+      transition: color .22s;
+    }
+ 
+    /* ── cards row ── */
+    .oj-cards {
+      display: grid;
+      grid-template-columns: repeat(6, 1.5fr);
+      gap: 1rem;
+    }
+ 
+    .oj-card {
+      background: var(--mp-white);
+      border: 1.5px solid var(--mp-border);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+      cursor: default;
+    }
+    .oj-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--mp-blue);
+    }
+    .oj-card--active {
+      border-color: var(--mp-blue);
+      box-shadow: var(--shadow-md);
+    }
+    .oj-card--today .oj-card__year { color: var(--mp-orange); }
+    .oj-card--today .oj-card__icon-ring { background: var(--mp-orange); }
+ 
+    /* image */
+    .oj-card__img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      background: var(--mp-light-bg);
+      position: relative;
+    }
+    .oj-card__img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .4s ease;
+    }
+    .oj-card:hover .oj-card__img img { transform: scale(1.06); }
+ 
+    /* floating icon */
+    .oj-card__icon-wrap {
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+    .oj-card__icon-ring {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--mp-blue);
+      border: 3px solid var(--mp-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(43,53,175,.25);
+    }
+    .oj-card__icon-ring svg {
+      width: 18px;
+      height: 18px;
+      color: var(--mp-white);
+    }
+ 
+    /* body */
+    .oj-card__body {
+      padding: 2rem 1rem 1.3rem;
+      text-align: center;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .oj-card__year {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--mp-blue);
+      line-height: 1;
+      margin-bottom: .3rem;
+    }
+    .oj-card__title {
+      font-size: .88rem;
+      font-weight: 600;
+      color: var(--mp-charcoal);
+      margin-bottom: .5rem;
+      line-height: 1.25;
+    }
+    .oj-card__rule {
+      width: 24px;
+      height: 2px;
+      background: var(--mp-orange);
+      border-radius: 1px;
+      margin: 0 auto .65rem;
+    }
+    .oj-card__desc {
+      font-size: .8rem;
+      color: var(--mp-muted);
+      line-height: 1.65;
+    }
+ 
+    /* ═══════════════════════════════════
+       QUOTE BANNER
+    ═══════════════════════════════════ */
+    .oj-banner {
+      background: linear-gradient(105deg, var(--mp-blue-deep) 0%, var(--mp-blue) 60%, var(--mp-blue-dk) 100%);
+      padding: 40px 0;
+    }
+    .oj-banner__inner {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .oj-banner__quote {
+      flex: 1;
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+    }
+    .oj-banner__mark {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 4rem;
+      font-weight: 800;
+      color: var(--mp-orange);
+      line-height: .7;
+      flex-shrink: 0;
+      margin-top: 4px;
+    }
+    .oj-banner__text {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(.88rem, 1.6vw, 1.05rem);
+      color: rgba(255,255,255,.85);
+      line-height: 1.7;
+    }
+    .oj-banner__text span { color: var(--mp-orange); font-weight: 600; }
+ 
+    .oj-banner__divider {
+      width: 1px;
+      height: 64px;
+      background: rgba(255,255,255,.2);
+      flex-shrink: 0;
+    }
+ 
+    .oj-banner__trust {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-shrink: 0;
+    }
+    .oj-banner__shield {
+      width: 48px;
+      height: 48px;
+      color: var(--mp-orange);
+      flex-shrink: 0;
+    }
+    .oj-banner__trust-text {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    .oj-banner__trust-text strong {
+      display: block;
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--mp-white);
+      line-height: 1.2;
+    }
+    .oj-banner__trust-text span {
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--mp-orange);
+    }
+
+ 
+    /* ═══════════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════════ */
+    @media (min-width: 900px) {
+      .oj-hero__inner {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 3rem;
+      }
+      .oj-stats-card {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 2rem;
+      }
+    }
+ 
+    @media (max-width: 1100px) {
+      .oj-cards { grid-template-columns: repeat(3, 1fr); }
+      .oj-rail { display: none; }
+    }
+    @media (max-width: 700px) {
+      .oj-cards { grid-template-columns: repeat(2, 1fr); }
+      .oj-banner__inner { flex-direction: column; }
+      .oj-banner__divider { width: 60px; height: 1px; }
+    }
+    @media (max-width: 440px) {
+      .oj-cards { grid-template-columns: 1fr; }
+    }
+ 
+    /* ── scroll reveal (minimal, respects prefers-reduced-motion) ── */
+    @media (prefers-reduced-motion: no-preference) {
+      .oj-card {
+        opacity: 0;
+        transform: translateY(28px);
+        transition: opacity .5s ease, transform .5s ease, box-shadow .28s ease, border-color .28s ease;
+      }
+      .oj-card.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .oj-card:hover { transform: translateY(-6px); }
+ 
+      .oj-stats-card {
+        opacity: 0;
+        transform: translateY(16px);
+        transition: opacity .5s ease .2s, transform .5s ease .2s;
+      }
+      .oj-stats-card.visible { opacity: 1; transform: translateY(0); }
+    }
+ 
+  </style>
+
 </head>
 <body>
 <!-- ══════════ HEADER ══════════ -->
@@ -1081,13 +1559,13 @@
     <div class="os-hero__scrim"></div>
     <img class="os-hero__bg" src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=1800&auto=format&fit=crop&q=80" alt="Modern Pulveriser manufacturing floor" />
     <img class="os-hero__bg" src="c:\Users\vansh\Downloads\Gemini_Generated_Image_a10cl5a10cl5a10c.png" alt="Modern Pulveriser manufacturing floor" />
-    <div class="os-wrap os-hero__inner">
-      <!-- <span class="os-eyebrow">Since 1998 &middot; New Delhi, India</span> -->
-      <h1 class="os-hero__h1">OUR <span>STORY</span></h1>
-      <!-- <p class="os-hero__lead">
-        From a small workshop in Sheikh Sarai to machinery running in factories across India and beyond —
-        this is how Modern Pulveriser was built, one machine at a time.
-      </p> -->
+    <!-- <div class="os-wrap os-hero__inner">
+      <span class="os-eyebrow">Our Journey &middot; New Delhi, India</span>
+      <h1 class="os-hero__h1">70+ Years of<span>Engineering Excellence</span></h1>
+      <p class="os-hero__lead">
+        From a small workshop in 1951 to a trusted name in grinding solutions,
+        our journey is built on innovation, quality and trust.
+      </p>
       <div class="os-hero__stats">
         <div class="os-hstat">
           <strong>70+</strong>
@@ -1102,7 +1580,26 @@
           <span>Industries Served</span>
         </div>
       </div>
+    </div> -->
+    <div class="oj-wrap oj-hero__inner">
+ 
+    <div class="oj-hero__left">
+      <p class="oj-eyebrow">Our Journey</p>
+      <h1 class="oj-hero__h1">
+        70+ Years of<br>
+        <span>Engineering</span> Excellence
+      </h1>
+      <div class="oj-hero__rule"></div>
+      <p class="oj-hero__sub">
+        From a small workshop in 1951 to a trusted name in grinding solutions,
+        our journey is built on innovation, quality and trust.
+      </p>
     </div>
+ 
+  </div>
+
+    
+
   </section>
  
 <!-- ─────────────── INTRO + MISSION / VISION ─────────────── -->
@@ -1247,6 +1744,18 @@ Whether it is grinding, pulverising, classifying, blending, screening, or comple
   </div>
 </section>
 
+<section>
+
+
+
+
+
+
+
+
+
+
+
 <!-- ─────────────── OUR VALUES ─────────────── -->
 <section class="os-values">
   <div class="os-values-inner">
@@ -1287,6 +1796,163 @@ Whether it is grinding, pulverising, classifying, blending, screening, or comple
     </div>
   </div>
 </section>
+<!-- 
+<section class="os-journey-wrap">
+  <div class="os-journey-inner">
+ 
+    <div class="os-journey-left">
+      <span class="os-section-eyebrow">Since 1951</span>
+      <h2 class="os-section-title">Our Journey</h2>
+      <div class="os-section-divider"></div>
+      <div class="htl">
+        <div class="htl-line"></div>
+        <div class="htl-items">
+          <div class="htl-item os-reveal">
+            <div class="htl-dot">
+              <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <div class="htl-year">1951</div>
+            <div class="htl-label">Company Founded</div>
+          </div>
+          <div class="htl-item os-reveal">
+            <div class="htl-dot">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+            </div>
+            <div class="htl-year">1966</div>
+            <div class="htl-label">MDH Machine Order</div>
+          </div>
+          <div class="htl-item os-reveal">
+            <div class="htl-dot">
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="htl-year">1987</div>
+            <div class="htl-label">Expanded to Delhi</div>
+          </div>
+          <div class="htl-item os-reveal">
+            <div class="htl-dot">
+              <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <div class="htl-year">2001</div>
+            <div class="htl-label">Significant Growth</div>
+          </div>
+          <div class="htl-item os-reveal">
+            <div class="htl-dot">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+            </div>
+            <div class="htl-year">2026</div>
+            <div class="htl-label">Growing Globally</div>
+          </div>
+        </div>
+        <br>
+      </div>
+    </div>
+ 
+   
+  </div>
+</section> -->
+
+
+ 
+<!-- ═══════════════════════════════════
+     TIMELINE
+═══════════════════════════════════ -->
+<section class="oj-timeline-section">
+  <div class="oj-wrap">
+    <span class="os-section-eyebrow">A LEGACY OF EXCELLENCE</span>
+    <h2 class="os-section-title">Our Timeline</h2>
+    <div class="os-section-divider"></div>
+
+
+    <!-- Year rail (desktop only) -->
+    <nav class="oj-rail" aria-label="Timeline years">
+      <div class="oj-rail-stop"><span class="oj-rail-stop__year">1951</span><div class="oj-rail-stop__dot"></div></div>
+      <div class="oj-rail-stop"><span class="oj-rail-stop__year">1966</span><div class="oj-rail-stop__dot"></div></div>
+      <div class="oj-rail-stop"><span class="oj-rail-stop__year">1978</span><div class="oj-rail-stop__dot"></div></div>
+      <div class="oj-rail-stop"><span class="oj-rail-stop__year">2010</span><div class="oj-rail-stop__dot"></div></div>
+      <div class="oj-rail-stop"><span class="oj-rail-stop__year">2025</span><div class="oj-rail-stop__dot"></div></div>
+      <div class="oj-rail-stop"><span class="oj-rail-stop__year">Today</span><div class="oj-rail-stop__dot"></div></div>
+    </nav>
+
+
+    <div class="about-cards">
+        <article class="sp-mcardd">
+          <div class="sp-mcard__img"><img src="https://i.pinimg.com/736x/40/d5/11/40d51142b8ca8a64fbc84cd2972ce797.jpg" alt="Hammer Mill" /></div>
+          <div class="sp-mcard__body">
+            <div class="oj-card__year">1951</div>
+          <div class="oj-card__title">Company Founded</div>
+            <p>Modern Pulveriser was established with a vision to deliver reliable and efficient grinding solutions.</p>
+            
+          </div>
+        </article>
+        <article class="sp-mcardd">
+          <div class="sp-mcard__img"><img src="https://i.pinimg.com/736x/f4/73/b0/f473b0f670ca30fb054a5d36dc28ac1b.jpg" alt="Impact Pulveriser" /></div>
+          <div class="sp-mcard__body">
+            <div class="oj-card__year">1966</div>
+          <div class="oj-card__title">MDH Machine Order</div>
+            <p>Expanded our manufacturing facility and increased production capacity to meet growing demand.</p>
+            
+          </div>
+        </article>
+        <article class="sp-mcardd">
+          <div class="sp-mcard__img"><img src="https://i.pinimg.com/736x/88/77/39/887739210e55d61f1a11103c6c956b8d.jpg" alt="Vibro Sifter" /></div>
+          <div class="sp-mcard__body">
+            <div class="oj-card__year">1978</div>
+          <div class="oj-card__title">Manufacturing Expansion</div>
+            <p>Expanded our manufacturing facility and increased production capacity to meet growing demand.</p>
+            
+          </div>
+        </article>
+        <article class="sp-mcardd">
+          <div class="sp-mcard__img"><img src="images\ee3c7bdd9eeb716d6721aeaa15f9ad95.jpg" alt="Ribbon Blender" /></div>
+          <div class="sp-mcard__body">
+            <div class="oj-card__year">2010</div>
+          <div class="oj-card__title">Technology Upgrade</div>
+            <p>Modernised our processes with advanced technology and precision engineering capabilities.</p>
+            
+          </div>
+        </article>
+        <article class="sp-mcardd">
+          <div class="sp-mcard__img"><img src="images\ee3c7bdd9eeb716d6721aeaa15f9ad95.jpg" alt="Ribbon Blender" /></div>
+          <div class="sp-mcard__body">
+            <div class="oj-card__year">2024</div>
+          <div class="oj-card__title">Third Generation Leadership</div>
+            <p>Continuing our legacy with innovation, digital transformation and customer-centric solutions.</p>
+            
+          </div>
+        </article>
+        <article class="sp-mcardd">
+          <div class="sp-mcard__img"><img src="images\ee3c7bdd9eeb716d6721aeaa15f9ad95.jpg" alt="Ribbon Blender" /></div>
+          <div class="sp-mcard__body">
+            <div class="oj-card__year">Today</div>
+          <div class="oj-card__title">Stronger Than Ever</div>
+            <p>Proudly serving industries across India with reliable machines and lasting relationships.</p>
+           
+          </div>
+        </article>
+      </div>
+    
+  </div>
+</section>
+ 
+ 
+<script>
+  /* Scroll reveal — staggered per card */
+  const cards = document.querySelectorAll('.oj-card, .oj-stats-card');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const delay = el.classList.contains('oj-stats-card') ? 0
+          : Array.from(el.parentElement.children).indexOf(el) * 80;
+        setTimeout(() => el.classList.add('visible'), delay);
+        observer.unobserve(el);
+      }
+    });
+  }, { threshold: 0.12 });
+ 
+  cards.forEach(c => observer.observe(c));
+</script>
+
 
 
 <!-- ─────────────── CTA BANNER ─────────────── -->
