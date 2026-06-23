@@ -457,12 +457,12 @@
   gap: 8px;
   font-size: 1.18rem;
   color: #000;
-  font-weight: 200;
+  font-weight: 300;
 }
 .ct-map-address svg { color: var(--orange); flex-shrink: 0;}
 @media (min-width:900px ){
  .ct-map-address {
-  font-weight: 100;
+  font-weight: 400;
 } 
 }
 

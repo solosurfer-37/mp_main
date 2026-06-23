@@ -38,13 +38,16 @@ body {
   background: transparent;
   border-bottom: 1px solid transparent;
   transition: background var(--transition), box-shadow var(--transition), border-color var(--transition);
-  transition: background 0.9s cubic-bezier(.4,0,.2,1), box-shadow 0.8s ease, border-color 0.8s ease;
+  transition: background 2s cubic-bezier(.4,0,.2,1), box-shadow 0.8s ease, border-color 0.8s ease;
+  
 }
 #site-header.scrolled {
   background: var(--navy);
   background: linear-gradient(#261FB3,#5b5bdb);
+  background: #261FB3;
   border-bottom-color: rgba(255,255,255,.07);
   box-shadow: var(--shadow);
+  
 }
 
 .header-inner {
@@ -100,8 +103,11 @@ body {
 }
 .nav-main >ol{
   background: #E4572E;
+  border-radius: 5px;
 }
-
+.nav-main >ol:hover{
+  background: #E4572E;
+}
 .nav-main > li > a:hover,
 .nav-main > li > button:hover,
 .nav-main > li.active > a,
@@ -193,10 +199,12 @@ body {
 
 .btn-cta:hover {
   background: var(--accent-hover);
-  transform: translateY(-1px);
+  transform: translateX(-2px);
   background: #E4572E;
 }
 .btn-cta svg { width: 14px; height: 14px; }
+
+
 
 /* ─── HAMBURGER ─── */
 .hamburger {
