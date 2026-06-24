@@ -30,7 +30,7 @@ html { scroll-behavior: smooth; }
 @media (min-width: 900px) {
   .container {
     max-width: 1080px;
-    padding: 0 48px;
+  padding: 0 48px
   }
 }
 /* ─────────────────────────────────
@@ -1992,5 +1992,6 @@ html { scroll-behavior: smooth; }
     height: 100%;
   }
 }
+
 
 

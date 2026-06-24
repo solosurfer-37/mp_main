@@ -13,7 +13,7 @@
   --sp-orange:     #e85d04;
   --sp-orange-dk:  #c94f00;
   --sp-charcoal:   #1c1c2e;
-  --sp-white:      #ffffff;
+  --sp-white:      #f4f3ef;
   --sp-light:      #f4f4fa;
   --sp-border:     #e2e2ef;
   --sp-text:       #444458;
@@ -328,7 +328,7 @@
   gap: 1.4rem;
 }
 .sp-mcard {
-  background: var(--sp-white);
+  background: #fff;
   border: 1px solid var(--sp-border);
   border-radius: var(--sp-radius-lg);
   overflow: hidden;
@@ -359,7 +359,7 @@
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  color: var(--sp-blue);
+  color: #000;
   margin-bottom: .3rem;
 }
 .sp-mcard__body p {
@@ -843,3 +843,5 @@
   text-decoration: none;
   border-radius: 8px;
 }
+
+

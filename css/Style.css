@@ -3594,8 +3594,9 @@ html, body {
 
 .stats-section {
   /* background: linear-gradient(135deg, #0a0e27 0%, #12173d 60%, #2a2f7a 100%); */
-  background: #fff;
+  background: var(--paper);
   padding: 60px 40px;
+  
 }
 
 .stats-container {

@@ -48,7 +48,7 @@ a{ color:inherit; }
 
 .mp-section-head{ margin-bottom:56px; }
 .mp-section-head h2{
-  font-size:clamp(1.9rem, 3.6vw, 2.7rem);
+  font-size: clamp(1.6rem, 4vw, 2.3rem);
   font-weight:600;
   line-height:1.18;
   color: #261FB3;
@@ -236,6 +236,7 @@ a{ color:inherit; }
 .mp-intro{
   padding:110px 6vw;
   display:grid; grid-template-columns:0.85fr 1.15fr; gap:80px; align-items:start;
+  background: var(--paper);
 }
 .mp-intro-left h2{ font-size:clamp(1.9rem, 3.4vw, 2.8rem); font-weight:600; line-height:1.18; }
 .mp-intro-left h2 em{  color:var(--blue); font-weight:500; }
@@ -284,7 +285,7 @@ a{ color:inherit; }
     
 }
 
-.mp-spec-section .mp-section-head h2{ color:#f4f3ef; }
+.mp-spec-section .mp-section-head h2{ color:#f4f3ef; font-size: clamp(1.6rem, 4vw, 2.3rem);}
 .mp-spec-section .mp-section-head h2 em{ color:var(--orange); }
 
 
@@ -388,10 +389,10 @@ a{ color:inherit; }
 /* ============================================================
    WHY CHOOSE US
    ============================================================ */
-.mp-why-section{ padding:70px 6vw; background:var(--paper-deep); }
+.mp-why-section{ padding:70px 6vw; background:var(--paper); }
 
 .mp-why-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:1px; background:var(--line); border:2px solid var(--line); border-radius: 10px; }
-.mp-why-card{ background:var(--paper-deep); padding:40px 34px; border-radius: 10px; }
+.mp-why-card{ background:var(--paper); padding:40px 34px; border-radius: 10px; }
 .mp-why-card .mp-why-mark{
   font-family:'Poppins', sans-serif; font-size:2.2rem; font-weight:600;
   color:var(--blue);  margin-bottom:18px; line-height:1;
@@ -408,7 +409,7 @@ a{ color:inherit; }
 /* ============================================================
    INDUSTRIES — horizontal scroll, CSS snap, no JS arrows
    ============================================================ */
-.mp-industries-section{ padding:90px 0 110px 6vw; overflow:hidden; }
+.mp-industries-section{ padding:90px 0 110px 6vw; overflow:hidden; background: #e8e8f5; }
 .mp-industries-section .mp-section-head{ padding-right:6vw; }
 
 .mp-industry-track-wrap{ position:relative; }
@@ -434,13 +435,13 @@ a{ color:inherit; }
   font-family:'Poppins', sans-serif; font-size:0.7rem; letter-spacing:0.18em;
   text-transform:uppercase; color:var(--orange);
 }
-.mp-industry-body h3{ font-size:1.08rem; font-weight:600; color : #261FB3}
+.mp-industry-body h3{ font-size:1.08rem; font-weight:600; color : var(--charcoal)}
 .mp-industry-body p{ font-size:0.88rem; line-height:1.65; color:var(--ink); flex-grow:1; }
 .mp-industry-link{
   margin-top:6px; font-family:'Poppins', sans-serif; font-size:0.85rem; font-weight:600;
-  color:#e85d04; text-decoration:none; display:inline-flex; align-items:center; gap:8px;
+  color:#261FB3; text-decoration:none; display:inline-flex; align-items:center; gap:8px;
 }
-.mp-industry-link:hover{ color:#261fb3; }
+.mp-industry-link:hover{ color:#e85d04; }
 
 .mp-scroll-hint{
   margin-top:24px; padding-right:6vw;
@@ -466,7 +467,7 @@ a{ color:inherit; }
    ============================================================ */
 .mp-clients-section{ padding:70px 0; background:#fff; color:#f4f3ef; overflow:hidden; }
 .mp-clients-section .mp-section-head{ padding:0 6vw; }
-.mp-clients-section .mp-section-head h2{ color:#261FB3; }
+.mp-clients-section .mp-section-head h2{ color:#261FB3;  font-size: clamp(1.6rem, 4vw, 2.3rem);}
 .mp-clients-section .mp-section-head h2 em{ color:var(--orange); }
 
 .mp-client-track-outer{ position:relative; }
@@ -500,7 +501,7 @@ a{ color:inherit; }
    CTA BAND
    ============================================================ */
 .mp-cta-band{
-  padding:70px 6vw; background:var(--blue); color:#f4f3ef;
+  padding:70px 6vw; background:#1c1c2e;; color:#f4f3ef;
   display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap;
 }
 .mp-cta-band h2{ font-size:clamp(1.3rem, 3.1vw, 1.9rem); font-weight:600; max-width:560px; line-height:1.25; }
@@ -704,6 +705,7 @@ a{ color:inherit; }
    ============================================================ */
 .mp-slider-section{
   padding:70px 6vw;
+  background: #e8e8f5;
 }
 
 .mp-slider-head{
@@ -764,17 +766,17 @@ a{ color:inherit; }
 }
 
 .mp-slide-body{ padding:26px; display:flex; flex-direction:column; gap:10px; flex-grow:1; }
-.mp-slide-body h3{ font-size:1.1rem; font-weight:600; color:#261FB3; }
+.mp-slide-body h3{ font-size:1.1rem; font-weight:600; color:var(--charcoal); }
 .mp-slide-body p{ font-size:0.9rem; line-height:1.7; color:var(--ink); flex-grow:1; }
 
 .mp-slide-link{
   margin-top:8px; font-family:'Poppins', sans-serif; font-size:0.85rem; font-weight:600;
-  color:#e85d04; text-decoration:none;
+  color:#261FB3; text-decoration:none;
   display:inline-flex; align-items:center; gap:8px;
   transition:gap .25s ease, color .25s ease;
 }
 .mp-slide-link i{ font-size:0.9rem; transition:transform .25s ease; }
-.mp-slide-link:hover{ color:#261FB3; }
+.mp-slide-link:hover{ color:#e85d04; }
 .mp-slide-link:hover i{ transform:translateX(4px); }
 
 /* pagination */
