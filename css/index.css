@@ -325,7 +325,7 @@ a{ color:inherit; }
 /* ============================================================
    PRODUCTS
    ============================================================ */
-.mp-products-section{ padding:110px 6vw; }
+.mp-products-section{ padding:70px 6vw; }
 
 .mp-product-grid{
   display:grid; grid-template-columns:repeat(3, 1fr); gap:1px;
@@ -388,7 +388,7 @@ a{ color:inherit; }
 /* ============================================================
    WHY CHOOSE US
    ============================================================ */
-.mp-why-section{ padding:110px 6vw; background:var(--paper-deep); }
+.mp-why-section{ padding:70px 6vw; background:var(--paper-deep); }
 
 .mp-why-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:1px; background:var(--line); border:2px solid var(--line); border-radius: 10px; }
 .mp-why-card{ background:var(--paper-deep); padding:40px 34px; border-radius: 10px; }
@@ -408,13 +408,14 @@ a{ color:inherit; }
 /* ============================================================
    INDUSTRIES — horizontal scroll, CSS snap, no JS arrows
    ============================================================ */
-.mp-industries-section{ padding:110px 0 110px 6vw; overflow:hidden; }
+.mp-industries-section{ padding:90px 0 110px 6vw; overflow:hidden; }
 .mp-industries-section .mp-section-head{ padding-right:6vw; }
 
 .mp-industry-track-wrap{ position:relative; }
 .mp-industry-track{
   display:flex ; gap:24px;  padding-bottom: 8px;
   overflow-x:auto;
+  overflow-y: hidden;
   padding-right:6vw;
   scroll-snap-type:x proximity;
 }
@@ -433,13 +434,13 @@ a{ color:inherit; }
   font-family:'Poppins', sans-serif; font-size:0.7rem; letter-spacing:0.18em;
   text-transform:uppercase; color:var(--orange);
 }
-.mp-industry-body h3{ font-size:1.08rem; font-weight:600; }
+.mp-industry-body h3{ font-size:1.08rem; font-weight:600; color : #261FB3}
 .mp-industry-body p{ font-size:0.88rem; line-height:1.65; color:var(--ink); flex-grow:1; }
 .mp-industry-link{
   margin-top:6px; font-family:'Poppins', sans-serif; font-size:0.85rem; font-weight:600;
-  color:var(--blue); text-decoration:none; display:inline-flex; align-items:center; gap:8px;
+  color:#e85d04; text-decoration:none; display:inline-flex; align-items:center; gap:8px;
 }
-.mp-industry-link:hover{ color:var(--orange); }
+.mp-industry-link:hover{ color:#261fb3; }
 
 .mp-scroll-hint{
   margin-top:24px; padding-right:6vw;
@@ -463,7 +464,7 @@ a{ color:inherit; }
 /* ============================================================
    CLIENTS — CSS marquee
    ============================================================ */
-.mp-clients-section{ padding:90px 0; background:#fff; color:#f4f3ef; overflow:hidden; }
+.mp-clients-section{ padding:70px 0; background:#fff; color:#f4f3ef; overflow:hidden; }
 .mp-clients-section .mp-section-head{ padding:0 6vw; }
 .mp-clients-section .mp-section-head h2{ color:#261FB3; }
 .mp-clients-section .mp-section-head h2 em{ color:var(--orange); }
@@ -499,7 +500,7 @@ a{ color:inherit; }
    CTA BAND
    ============================================================ */
 .mp-cta-band{
-  padding:90px 6vw; background:var(--blue); color:#f4f3ef;
+  padding:70px 6vw; background:var(--blue); color:#f4f3ef;
   display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap;
 }
 .mp-cta-band h2{ font-size:clamp(1.3rem, 3.1vw, 1.9rem); font-weight:600; max-width:560px; line-height:1.25; }
@@ -763,17 +764,17 @@ a{ color:inherit; }
 }
 
 .mp-slide-body{ padding:26px; display:flex; flex-direction:column; gap:10px; flex-grow:1; }
-.mp-slide-body h3{ font-size:1.1rem; font-weight:600; color:var(--charcoal); }
+.mp-slide-body h3{ font-size:1.1rem; font-weight:600; color:#261FB3; }
 .mp-slide-body p{ font-size:0.9rem; line-height:1.7; color:var(--ink); flex-grow:1; }
 
 .mp-slide-link{
   margin-top:8px; font-family:'Poppins', sans-serif; font-size:0.85rem; font-weight:600;
-  color:var(--blue); text-decoration:none;
+  color:#e85d04; text-decoration:none;
   display:inline-flex; align-items:center; gap:8px;
   transition:gap .25s ease, color .25s ease;
 }
 .mp-slide-link i{ font-size:0.9rem; transition:transform .25s ease; }
-.mp-slide-link:hover{ color:var(--orange); }
+.mp-slide-link:hover{ color:#261FB3; }
 .mp-slide-link:hover i{ transform:translateX(4px); }
 
 /* pagination */
@@ -855,7 +856,7 @@ a{ color:inherit; }
 .mp-reveal {
   opacity: 0;
   transform: translateY(40px);
-  transition: opacity 0.5s ease, transform 0.3s ease;
+  transition: opacity 0.4s ease, transform 0.2s ease;
 }
 .mp-reveal.mp-revealed {
   opacity: 1;
