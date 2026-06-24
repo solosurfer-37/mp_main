@@ -67,6 +67,7 @@
   font-weight: 700;
   line-height: 1.2;
   color: var(--sp-charcoal);
+  color: #261FB3;
   margin: 0 0 .3rem;
 }
 .sp-sechead--row {
@@ -253,6 +254,7 @@
   font-weight: 600;
   line-height: 1.2;
   color: var(--sp-charcoal);
+  color: #261FB3;
   margin: 0 0 1rem;
 }
 .sp-twocol__text p {
@@ -276,7 +278,7 @@
   font-size: clamp(1.6rem, 4vw, 2.2rem);
   font-size: 0.98;
   font-weight: 700;
-  color: #261FB3;
+  color: #000;
   font-style: italic;
 }
 
