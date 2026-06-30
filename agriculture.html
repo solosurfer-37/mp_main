@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agriculture Industry– Modern Pulveriser</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="stylesheet" href="css/Style.css"/>
+  <link rel="stylesheet" href="css/spice-processing_5.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/header-fixed.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+
+
+
+<body>
+
+
+
+<!-- ══════════ HEADER ══════════ -->
+<header id="site-header">
+  <div class="header-inner">
+
+    <!-- Logo -->
+    <a href="index.html" class="logo-btn">
+      <img src="images/LOGO.jpg" alt="Modern Pulveriser Logo" class="logo-img">
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav aria-label="Main navigation" class="nav-main-wrap">
+      <ul class="nav-main" id="desktop-nav">
+
+        <li><a href="index.html">Home</a></li>
+
+        <li><a href="STORYY.html">About Us</a></li>
+
+        <!-- Industries dropdown -->
+        <li id="nav-industries">
+          <button onclick="toggleDropdown('nav-industries')" aria-expanded="false" aria-haspopup="true">
+            Industries
+            <svg class="caret" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <ul class="dropdown" role="menu">
+            <li><a href="spicesnew.html">Spice processing</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="ayurveda.html">Ayurveda & Herbal</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="chemical.html">Chemical</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="pharma.html">Pharmaceutical</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="pigment.html">Pigments & Dyes</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="agriculture.html">Agricultural Products</a></li>
+          </ul>
+        </li>
+
+        <!-- Products dropdown -->
+        <li id="nav-products">
+          <button onclick="toggleDropdown('nav-products')" aria-expanded="false" aria-haspopup="true">
+            Products
+            <svg class="caret" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <ul class="dropdown dropdown-wide" role="menu">
+            <li><a href="hammer.html">Hammer Mill</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="ribbon-blender.html">Ribbon Blender</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="crusher.html">Hammer Crusher</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="vibro.html">Vibro Sifter</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="Impact.html">Impact Pulveriser</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="screw-conveyor.html">Screw Conveyor</a></li>
+          </ul>
+        </li>
+
+        <!-- CTA -->
+        <ol>
+          <a href="newcontact.html" class="btn-cta">
+            Contact Us
+            <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </ol>
+
+      </ul>
+    </nav>
+
+    <!-- Hamburger -->
+    <button class="hamburger" id="hamburger" onclick="toggleDrawer()" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+</header>
+
+<!-- ══════════ MOBILE OVERLAY ══════════ -->
+<div class="drawer-overlay" id="drawer-overlay" onclick="toggleDrawer()"></div>
+
+<!-- ══════════ MOBILE DRAWER ══════════ -->
+<nav class="drawer" id="drawer" aria-label="Mobile navigation">
+  <div class="drawer-head">
+    <a href="index.html" class="logo-btn">
+      <!-- <img src="images/LOGO.jpg" alt="Modern Pulveriser Logo" class="logo-img"> -->
+    </a>
+    <!-- <button class="drawer-close" onclick="toggleDrawer()" aria-label="Close menu">✕</button> -->
+  </div>
+
+  <ul class="drawer-nav">
+    <br>
+    <br>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="STORYY.html">About Us</a></li>
+
+    <li id="d-industries">
+      <button class="drawer-toggle" onclick="toggleDrawerSub('d-industries')" aria-expanded="false">
+        Industries
+        <svg class="drawer-caret" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <ul class="drawer-sub">
+        <li><a href="spicesnew.html"><span class="sub-dot"></span>Spice Processing </a></li>
+        <li><a href="ayurveda.html"><span class="sub-dot"></span>Ayurveda & Herbal</a></li>
+        <li><a href="chemical.html"><span class="sub-dot"></span>Chemical</a></li>
+        <li><a href="pharma.html"><span class="sub-dot"></span>Pharmaceutical</a></li>
+        <li><a href="pigment.html"><span class="sub-dot"></span>Pigments & Dyes</a></li>
+        <li><a href="agriculture.html"><span class="sub-dot"></span>Agricultural Products</a></li>
+      </ul>
+    </li>
+
+    <li id="d-products">
+      <button class="drawer-toggle" onclick="toggleDrawerSub('d-products')" aria-expanded="false">
+        Products
+        <svg class="drawer-caret" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <ul class="drawer-sub">
+        <li><a href="hammer.html"><span class="sub-dot"></span>Hammer Mill</a></li>
+        <li><a href="ribbon-blender.html"><span class="sub-dot"></span>Ribbon Blender</a></li>
+        <li><a href="crusher.html"><span class="sub-dot"></span>Hammer Crusher</a></li>
+        <li><a href="vibro.html"><span class="sub-dot"></span>Vibro Sifter</a></li>
+        <li><a href="impact.html"><span class="sub-dot"></span>Impact Pulveriser</a></li>
+        <li><a href="screw-conveyor.html"><span class="sub-dot"></span>Screw Conveyor</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <div class="drawer-footer">
+    <a href="newcontact.html" class="btn-cta-drawer">
+      Contact Us
+      <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </div>
+</nav>
+
+<script>
+  /* ── Scroll effect: transparent → solid ── */
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 20);
+  }, { passive: true });
+
+  /* ── Desktop dropdowns: hover (CSS) + click (JS) ── */
+  function toggleDropdown(id) {
+    const li = document.getElementById(id);
+    const isOpen = li.classList.contains('open');
+    document.querySelectorAll('.nav-main > li.open').forEach(el => {
+      el.classList.remove('open');
+      const btn = el.querySelector('button');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      li.classList.add('open');
+      const btn = li.querySelector('button');
+      if (btn) btn.setAttribute('aria-expanded', 'true');
+    }
+  }
+
+  // Close on outside click
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.nav-main > li')) {
+      document.querySelectorAll('.nav-main > li.open').forEach(el => {
+        el.classList.remove('open');
+        const btn = el.querySelector('button');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.nav-main > li.open').forEach(el => {
+        el.classList.remove('open');
+        const btn = el.querySelector('button');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      });
+      if (document.getElementById('drawer').classList.contains('open')) toggleDrawer();
+    }
+  });
+
+  /* ── Mobile drawer ── */
+  const drawer = document.getElementById('drawer');
+  const overlay = document.getElementById('drawer-overlay');
+  const hamburger = document.getElementById('hamburger');
+
+  function toggleDrawer() {
+    const isOpen = drawer.classList.contains('open');
+    drawer.classList.toggle('open');
+    overlay.classList.toggle('visible');
+    hamburger.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', String(!isOpen));
+    document.body.style.overflow = isOpen ? '' : 'hidden';
+  }
+
+  function toggleDrawerSub(id) {
+    const li = document.getElementById(id);
+    const isOpen = li.classList.contains('d-open');
+    document.querySelectorAll('.drawer-nav > li.d-open').forEach(el => {
+      if (el.id !== id) {
+        el.classList.remove('d-open');
+        const b = el.querySelector('.drawer-toggle');
+        if (b) b.setAttribute('aria-expanded', 'false');
+      }
+    });
+    li.classList.toggle('d-open', !isOpen);
+    const btn = li.querySelector('.drawer-toggle');
+    if (btn) btn.setAttribute('aria-expanded', String(!isOpen));
+  }
+</script>
+
+
+</body>
+
+</body>
+</html>
+
+
+
+
+
+
+
+  <!-- =====================
+       HERO
+  ===================== -->
+  <section class="sp-hero">
+    <div class="sp-hero__scrim"></div>
+    <img class="sp-hero__bg" src="https://images.pexels.com/photos/13065279/pexels-photo-13065279.jpeg" alt="Spices" />
+    <div class="sp-wrap sp-hero__inner">
+      <div class="sp-hero__text">
+        <!-- <span class="sp-eyebrow">Spice Industry Solutions</span> -->
+        <h1 class="sp-hero__h1">Agriculture  <br /><span> Processing Solutions</span></h1>
+        <p class="sp-hero__lead">Reliable Grinding &amp; Mixing Equipment for the Chemical Industry</p>
+        <p class="sp-hero__body">From grains and seeds to fertilizers, feed ingredients, and agricultural products, our grinding and mixing solutions are designed to deliver efficient processing, consistent output, and dependable performance for agricultural manufacturers and processors.</p>
+        <div class="sp-hero__btns">
+          <a href="contact.html" class="sp-btn sp-btn--solid">Request a Quote</a>
+          <a href="products.html" class="sp-btn sp-btn--ghost">View Machines</a>
+        </div>
+      </div>
+      <div class="sp-hero__stats">
+        <div class="sp-hstat">
+          <strong>70+</strong>
+          <span>Years Manufacturing</span>
+        </div>
+        <div class="sp-hstat">
+          <strong>SS304</strong>
+          <span>Food-Grade Available</span>
+        </div>
+        <div class="sp-hstat">
+          <strong>4+</strong>
+          <span>Agriculture Applications</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       OVERVIEW
+  ===================== -->
+  <section class="sp-section">
+    <div class="sp-wrap sp-twocol">
+      <div class="sp-twocol__text">
+        <span class="sp-eyebrow">Industry Overview</span>
+        <h2>Serving the Agriculture <br /> Industry</h2>
+        <p>The agriculture industry relies on efficient processing equipment to convert raw agricultural materials into value-added products. Whether processing grains, seeds, feed ingredients, fertilizers, or agricultural by-products, manufacturers require reliable machinery capable of delivering consistent results while maintaining high productivity.</p>
+        <p>At <strong>Modern Pulveriser</strong> we provide grinding and mixing solutions designed to support agricultural processors, fertilizer manufacturers, feed producers, seed treatment companies, and agro-based industries.</p>
+        <p>Our equipment is engineered to handle a wide variety of agricultural materials while ensuring dependable operation and efficient processing.</p>
+      </div>
+      <div class="sp-twocol__img">
+         <!-- <img src="https://i.pinimg.com/736x/5b/09/fe/5b09fe53b0bfd5cd245744c60b40542d.jpg" alt="Processing plant" /> -->
+         <img src="https://images.pexels.com/photos/34727209/pexels-photo-34727209.jpeg" alt="Processing plant" />
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       MATERIALS
+  ===================== -->
+  <section class="sp-section sp-section--alt">
+    <div class="sp-wrap">
+      <div class="sp-sechead">
+        <span class="sp-eyebrow">Applications</span>
+        <h2>Materials Commonly Processed</h2>
+      </div>
+      <div class="sp-mats">
+        <div class="sp-mat" style="--mat-img:url('https://images.pexels.com/photos/8964268/pexels-photo-8964268.jpeg')">
+          <div class="sp-mat__photo"></div>
+          <span>Grains</span>
+        </div>
+        <div class="sp-mat" style="--mat-img:url('https://images.pexels.com/photos/37829735/pexels-photo-37829735.jpeg')">
+          <div class="sp-mat__photo"></div>
+          <span>Maize </span>
+        </div>
+        <div class="sp-mat" style="--mat-img:url(https://images.pexels.com/photos/3112754/pexels-photo-3112754.jpeg)">
+          <div class="sp-mat__photo"></div>
+          <span>Wheat</span>
+        </div>
+        <div class="sp-mat" style="--mat-img:url('https://images.pexels.com/photos/7421198/pexels-photo-7421198.jpeg')">
+          <div class="sp-mat__photo"></div>
+          <span>Rice By-Products</span>
+        </div>
+        <div class="sp-mat" style="--mat-img:url('https://images.unsplash.com/photo-1642497393440-4b5cc5f03ff5?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+          <div class="sp-mat__photo"></div>
+          <span>Oilseeds</span>
+        </div>
+        <div class="sp-mat" style="--mat-img:url('https://images.pexels.com/photos/5216152/pexels-photo-5216152.jpeg')">
+          <div class="sp-mat__photo"></div>
+          <span>Cattle Feed</span>
+        </div>
+        <div class="sp-mat" style="--mat-img:url('https://images.pexels.com/photos/15247231/pexels-photo-15247231.jpeg')">
+          <div class="sp-mat__photo"></div>
+          <span>Crop Residue</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       MACHINES
+  ===================== -->
+  <section id="sp-machines" class="sp-section">
+    <div class="sp-wrap">
+      <div class="sp-sechead sp-sechead--row">
+        <div>
+          <span class="sp-eyebrow">Machines for This Industry</span>
+          <h2>Recommended Machines</h2>
+        </div>
+        
+      </div>
+      <div class="sp-machines">
+        <article class="sp-mcard">
+          <div class="sp-mcard__img"><img src="https://i.pinimg.com/736x/40/d5/11/40d51142b8ca8a64fbc84cd2972ce797.jpg" alt="Hammer Mill" /></div>
+          <div class="sp-mcard__body">
+            <h3>Hammer Mill</h3>
+            <p>For coarse to medium grinding applications.</p>
+            <a href="hammer.html" class="sp-mcard__link">View Details →</a>
+          </div>
+        </article>
+        <article class="sp-mcard">
+          <div class="sp-mcard__img"><img src="https://i.pinimg.com/736x/f4/73/b0/f473b0f670ca30fb054a5d36dc28ac1b.jpg" alt="Impact Pulveriser" /></div>
+          <div class="sp-mcard__body">
+            <h3>Impact Pulveriser</h3>
+            <p>For fine grinding and consistent particle size.</p>
+            <a href="#" class="sp-mcard__link">View Details →</a>
+          </div>
+        </article>
+        <article class="sp-mcard">
+          <div class="sp-mcard__img"><img src="https://i.pinimg.com/736x/88/77/39/887739210e55d61f1a11103c6c956b8d.jpg" alt="Vibro Sifter" /></div>
+          <div class="sp-mcard__body">
+            <h3>Vibro Sifter</h3>
+            <p>For ultra-fine screening and particle classification.</p>
+            <a href="#" class="sp-mcard__link">View Details →</a>
+          </div>
+        </article>
+        <article class="sp-mcard">
+          <div class="sp-mcard__img"><img src="images\ee3c7bdd9eeb716d6721aeaa15f9ad95.jpg" alt="Ribbon Blender" /></div>
+          <div class="sp-mcard__body">
+            <h3>Ribbon Blender</h3>
+            <p>For uniform spice mixing and seasoning preparation.</p>
+            <a href="#" class="sp-mcard__link">View Details →</a>
+          </div>
+        </article>
+      </div>
+      <div><a href="dumproduct.html" class="sp-btn sp-btn--ghostt">Explore All Machines</a></div>
+    </div>
+  </section>
+
+  <!-- =====================
+       WHY CHOOSE US
+  ===================== -->
+  <section class="sp-section sp-section--alt">
+    <div class="sp-wrap sp-twocol sp-twocol--rev">
+      <div class="sp-twocol__text">
+        <span class="sp-eyebrow">Why Choose Us ? </span>
+        <h2>Why Agriculture Manufacturers Choose <span>Modern Pulveriser ?</span> </h2>
+        <ul class="sp-whylist">
+          <li>Robust Industrial Construction</li>
+          <li>Wear-Resistant Grinding Components</li>
+          <li>Food-Grade SS304 Construction Available</li>
+          <li>Consistent Particle Size Distribution</li>
+          <li>Custom-Built Solutions</li>
+          <li>Low Maintenance Design</li>
+          <li>High Production Efficiency</li>
+        </ul>
+      </div>
+      <div class="sp-twocol__img">
+        <img src="https://images.pexels.com/photos/221369/pexels-photo-221369.jpeg" alt="Machinery" />
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       PROCESS FLOW
+  ===================== -->
+  <section class="sp-section">
+    <div class="sp-wrap">
+      <div class="sp-sechead">
+        <span class="sp-eyebrow">Process Flow</span>
+        <h2>Typical Agriculture Processing Line</h2>
+      </div>
+      <div class="sp-flow">
+        <div class="sp-fstep">
+          <div class="sp-fstep__dot sp-fstep__dot--accent">01</div>
+          <p>Raw Material</p>
+        </div>
+        <div class="sp-fstep__arrow">→</div>
+        <div class="sp-fstep">
+          <div class="sp-fstep__dot">02</div>
+          <p>Cleaning &amp; Sorting</p>
+        </div>
+        <div class="sp-fstep__arrow">→</div>
+        <div class="sp-fstep">
+          <div class="sp-fstep__dot sp-fstep__dot--accent">03</div>
+          <p>Grinding / Pulverization</p>
+        </div>
+        <div class="sp-fstep__arrow">→</div>
+        <div class="sp-fstep">
+          <div class="sp-fstep__dot">04</div>
+          <p>Classification</p>
+        </div>
+        <div class="sp-fstep__arrow">→</div>
+        <div class="sp-fstep">
+          <div class="sp-fstep__dot sp-fstep__dot--accent">05</div>
+          <p>Blending</p>
+        </div>
+        <div class="sp-fstep__arrow">→</div>
+        <div class="sp-fstep">
+          <div class="sp-fstep__dot">06</div>
+          <p>Packaging</p>
+        </div>
+      </div>
+      <p class="sp-flow__note">Our machinery can be integrated into complete processing lines based on your production requirements.</p>
+    </div>
+  </section>
+
+  <section class="sp-section sp-section--alt">
+  <div class="sp-wrap">
+    <div class="sp-sechead">
+      <span class="sp-eyebrow">Performance</span>
+      <h2>Designed for Industrial Performance</h2>
+    </div>
+    <div class="sp-feats">
+
+      <div class="sp-feat">
+        <div class="sp-feat__icon">
+          <img src="logos\settings.png" alt="High Throughput">
+        </div>
+        <h4>High Throughput Capacity</h4>
+        <p>Built for continuous high-volume production without compromising output quality.</p>
+      </div>
+
+      <div class="sp-feat">
+        <div class="sp-feat__icon">
+          <img src="logos\handshake.png" alt="Wear Resistant">
+        </div>
+        <h4>Wear Resistant Components</h4>
+        <p>Hardened grinding parts engineered to withstand abrasive spice materials.</p>
+      </div>
+
+      <div class="sp-feat">
+        <div class="sp-feat__icon">
+          <img src="logos\swap.png" alt="Continuous Operation">
+        </div>
+        <h4>Continuous Operation</h4>
+        <p>Designed for long shift runs with minimal downtime and easy maintenance access.</p>
+      </div>
+
+      <div class="sp-feat">
+        <div class="sp-feat__icon">
+          <img src="logos\line-chart.png" alt="Consistent Quality">
+        </div>
+        <h4>Consistent Product Quality</h4>
+        <p>Uniform particle size and blend distribution batch after batch.</p>
+      </div>
+
+      <div class="sp-feat">
+        <div class="sp-feat__icon">
+          <img src="logos\construction.png" alt="Heavy Duty">
+        </div>
+        <h4>Heavy Duty Construction</h4>
+        <p>Robust steel fabrication for demanding industrial environments.</p>
+      </div>
+
+      <div class="sp-feat">
+        <div class="sp-feat__icon">
+          <img src="logos\mop.png" alt="Easy Cleaning">
+        </div>
+        <h4>Easy Cleaning &amp; Maintenance</h4>
+        <p>Tool-free access panels and smooth internal surfaces for quick changeover.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- =====================
+       FAQ
+  ===================== -->
+  <section class="sp-section">
+    <div class="sp-wrap">
+      <div class="sp-sechead">
+        <span class="sp-eyebrow">FAQs</span>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="sp-faqs">
+        <details class="sp-faq">
+          <summary>What is the best machine for grinding turmeric?</summary>
+          <p>Impact Pulverisers and Air Classifying Mills are commonly used depending on the required fineness.</p>
+        </details>
+        <details class="sp-faq">
+          <summary>Can your machines be manufactured in SS304?</summary>
+          <p>Yes, food-contact parts can be supplied in SS304 and SS316.</p>
+        </details>
+        <details class="sp-faq">
+          <summary>Do you provide complete spice processing solutions?</summary>
+          <p>Yes, we can recommend equipment based on your capacity and product requirements.</p>
+        </details>
+        <details class="sp-faq">
+          <summary>Can the machine handle multiple spices?</summary>
+          <p>Yes, with proper cleaning procedures, the same machine can process different spices.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       CTA
+  ===================== -->
+  <section id="sp-contact" class="sp-cta">
+    <div class="sp-cta__scrim"></div>
+    <img class="sp-cta__bg" src="https://i.pinimg.com/736x/71/43/c7/7143c764f56774e6b576d13220229af7.jpg" alt="" />
+    <div class="sp-wrap sp-cta__inner">
+      <div class="sp-cta__text">
+        <span class="sp-eyebrow" style="color:#e85d04">Get In Touch</span>
+        <h2 style="color:#fff">Looking for Agriculture Processing Equipment?</h2>
+        <p style="color:rgba(255,255,255,.7)">Whether you are setting up a new plant or upgrading an existing production line, our team can help you select the right grinding and mixing solution.</p>
+      </div>
+      <div class="sp-cta__btns">
+        <a href="#" class="sp-btn sp-btn--orange">Request a Quote →</a>
+        <a href="#" class="sp-btn sp-btn--ghost-light">☎  Talk to an Expert</a>
+      </div>
+    </div>
+  </section>
+
+
+
+
+<!-- ============ FOOTER ============ -->
+<footer class="mp-footer">
+  <div class="mp-footer-container">
+    <div class="mp-footer-brand-block">
+      <span class="mp-logo-text">Modern <span>Pulveriser</span></span>
+      <p>Designing and manufacturing grinding, crushing and material-handling systems since 1951 .</p>
+    </div>
+
+    <div class="mp-footer-section">
+      <h4>Phone</h4>
+      <a href="tel:+919582250536">+91 9582250536</a>
+      <a href="tel:+919810023411">+91 9810023411</a>
+    </div>
+
+    <div class="mp-footer-section">
+      <h4>Email</h4>
+      <a href="mailto:info@modernpulveriser.com">info@modernpulveriser.com</a>
+      <a href="mailto:vermasiddharth85@gmail.com">vermasiddharth85@gmail.com</a>
+    </div>
+
+    <div class="mp-footer-section">
+      <h4>Address</h4>
+      <p>98-A, Pocket-K, Sheikh Sarai,<br>Phase-2, New Delhi – 110017</p>
+    </div>
+  </div>
+
+  <div class="mp-footer-bottom">
+    <span>© 2026 Modern Pulveriser. All rights reserved.</span>
+    <img src="images/LOGO.jpg" alt="MP Logo" class="mp-footer-logo">
+  </div>
+</footer>
+
+
+</body>
+</html>

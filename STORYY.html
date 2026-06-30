@@ -113,6 +113,12 @@
     rgba(43,53,175,.82) 50%,
     rgba(20,24,90,.55) 100%
   );
+  background: linear-gradient(
+    115deg,
+    rgba(20,24,90,.97) 0%,
+    rgba(43,53,175,.85) 55%,
+    rgba(20,24,90,.6) 100%
+  );
   z-index: 1;
 }
 .os-hero__inner {
@@ -255,7 +261,7 @@
    BREAKPOINT — desktop ≥ 900px
    ════════════════════════════════════════════ */
 @media (min-width: 900px) {
-  .os-hero { min-height: 95vh; border-radius: 0 0 28px 28px; }
+  .os-hero { min-height: 105vh; border-radius: 0 0 28px 28px; }
   .os-hero__inner { padding: 140px 0 80px; }
   .os-hero__lead { font-size: 1rem; }
 
@@ -1106,6 +1112,7 @@
       grid-template-columns: repeat(6, 1.5fr);
       gap: 1rem;
     }
+    
  
     .oj-card {
       background: var(--mp-white);
@@ -1306,6 +1313,7 @@
     @media (max-width: 440px) {
       .oj-cards { grid-template-columns: 1fr; }
     }
+    
  
     /* ── scroll reveal (minimal, respects prefers-reduced-motion) ── */
     @media (prefers-reduced-motion: no-preference) {
@@ -1327,6 +1335,7 @@
       }
       .oj-stats-card.visible { opacity: 1; transform: translateY(0); }
     }
+    
  
   </style>
 
@@ -1360,17 +1369,15 @@
           <ul class="dropdown" role="menu">
             <li><a href="spicesnew.html">Spice processing</a></li>
             <li class="dropdown-divider"></li>
-            <li><a href="industry-ayurveda.html">Ayurveda & Herbal</a></li>
+            <li><a href="ayurveda.html">Ayurveda & Herbal</a></li>
             <li class="dropdown-divider"></li>
-            <li><a href="industry-chemical.html">Chemical</a></li>
+            <li><a href="chemical.html">Chemical</a></li>
             <li class="dropdown-divider"></li>
-            <li><a href="industry-pharma.html">Pharmaceutical</a></li>
+            <li><a href="pharma.html">Pharmaceutical</a></li>
             <li class="dropdown-divider"></li>
-            <li><a href="industry-minerals.html">Minerals & Mining</a></li>
+            <li><a href="pigment.html">Pigments & Dyes</a></li>
             <li class="dropdown-divider"></li>
-            <li><a href="industry-pigments.html">Pigments & Dyes</a></li>
-            <li class="dropdown-divider"></li>
-            <li><a href="industry-agri.html">Agricultural Products</a></li>
+            <li><a href="agriculture.html">Agricultural Products</a></li>
           </ul>
         </li>
 
@@ -1387,11 +1394,11 @@
             <li class="dropdown-divider"></li>
             <li><a href="ribbon-blender.html">Ribbon Blender</a></li>
             <li class="dropdown-divider"></li>
-            <li><a href="hammer-crusher.html">Hammer Crusher</a></li>
+            <li><a href="crusher.html">Hammer Crusher</a></li>
             <li class="dropdown-divider"></li>
-            <li><a href="vibro-sifter.html">Vibro Sifter</a></li>
+            <li><a href="vibro.html">Vibro Sifter</a></li>
             <li class="dropdown-divider"></li>
-            <li><a href="impact-pulveriser.html">Impact Pulveriser</a></li>
+            <li><a href="Impact.html">Impact Pulveriser</a></li>
             <li class="dropdown-divider"></li>
             <li><a href="screw-conveyor.html">Screw Conveyor</a></li>
           </ul>
@@ -1445,12 +1452,11 @@
       </button>
       <ul class="drawer-sub">
         <li><a href="spicesnew.html"><span class="sub-dot"></span>Spice Processing </a></li>
-        <li><a href="industry-ayurveda.html"><span class="sub-dot"></span>Ayurveda & Herbal</a></li>
-        <li><a href="industry-chemical.html"><span class="sub-dot"></span>Chemical</a></li>
-        <li><a href="industry-pharma.html"><span class="sub-dot"></span>Pharmaceutical</a></li>
-        <li><a href="industry-minerals.html"><span class="sub-dot"></span>Minerals & Mining</a></li>
-        <li><a href="industry-pigments.html"><span class="sub-dot"></span>Pigments & Dyes</a></li>
-        <li><a href="industry-agri.html"><span class="sub-dot"></span>Agricultural Products</a></li>
+        <li><a href="ayurveda.html"><span class="sub-dot"></span>Ayurveda & Herbal</a></li>
+        <li><a href="chemical.html"><span class="sub-dot"></span>Chemical</a></li>
+        <li><a href="pharma.html"><span class="sub-dot"></span>Pharmaceutical</a></li>
+        <li><a href="pigment.html"><span class="sub-dot"></span>Pigments & Dyes</a></li>
+        <li><a href="agriculture.html"><span class="sub-dot"></span>Agricultural Products</a></li>
       </ul>
     </li>
 
@@ -1464,9 +1470,9 @@
       <ul class="drawer-sub">
         <li><a href="hammer.html"><span class="sub-dot"></span>Hammer Mill</a></li>
         <li><a href="ribbon-blender.html"><span class="sub-dot"></span>Ribbon Blender</a></li>
-        <li><a href="hammer-crusher.html"><span class="sub-dot"></span>Hammer Crusher</a></li>
-        <li><a href="vibro-sifter.html"><span class="sub-dot"></span>Vibro Sifter</a></li>
-        <li><a href="impact-pulveriser.html"><span class="sub-dot"></span>Impact Pulveriser</a></li>
+        <li><a href="crusher.html"><span class="sub-dot"></span>Hammer Crusher</a></li>
+        <li><a href="vibro.html"><span class="sub-dot"></span>Vibro Sifter</a></li>
+        <li><a href="impact.html"><span class="sub-dot"></span>Impact Pulveriser</a></li>
         <li><a href="screw-conveyor.html"><span class="sub-dot"></span>Screw Conveyor</a></li>
       </ul>
     </li>
@@ -1561,29 +1567,7 @@
   <section class="os-hero">
     <div class="os-hero__scrim"></div>
     <img class="os-hero__bg" src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=1800&auto=format&fit=crop&q=80" alt="Modern Pulveriser manufacturing floor" />
-    <img class="os-hero__bg" src="c:\Users\vansh\Downloads\Gemini_Generated_Image_a10cl5a10cl5a10c.png" alt="Modern Pulveriser manufacturing floor" />
-    <!-- <div class="os-wrap os-hero__inner">
-      <span class="os-eyebrow">Our Journey &middot; New Delhi, India</span>
-      <h1 class="os-hero__h1">70+ Years of<span>Engineering Excellence</span></h1>
-      <p class="os-hero__lead">
-        From a small workshop in 1951 to a trusted name in grinding solutions,
-        our journey is built on innovation, quality and trust.
-      </p>
-      <div class="os-hero__stats">
-        <div class="os-hstat">
-          <strong>70+</strong>
-          <span>Years of Manufacturing</span>
-        </div>
-        <div class="os-hstat">
-          <strong>1000+</strong>
-          <span>Machines Delivered</span>
-        </div>
-        <div class="os-hstat">
-          <strong>10+</strong>
-          <span>Industries Served</span>
-        </div>
-      </div>
-    </div> -->
+    <img class="os-hero__bg" src="images\story-main.png" alt="Modern Pulveriser manufacturing floor" />
     <div class="oj-wrap oj-hero__inner">
  
     <div class="oj-hero__left">
@@ -1799,62 +1783,6 @@ Whether it is grinding, pulverising, classifying, blending, screening, or comple
     </div>
   </div>
 </section>
-<!-- 
-<section class="os-journey-wrap">
-  <div class="os-journey-inner">
- 
-    <div class="os-journey-left">
-      <span class="os-section-eyebrow">Since 1951</span>
-      <h2 class="os-section-title">Our Journey</h2>
-      <div class="os-section-divider"></div>
-      <div class="htl">
-        <div class="htl-line"></div>
-        <div class="htl-items">
-          <div class="htl-item os-reveal">
-            <div class="htl-dot">
-              <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-            </div>
-            <div class="htl-year">1951</div>
-            <div class="htl-label">Company Founded</div>
-          </div>
-          <div class="htl-item os-reveal">
-            <div class="htl-dot">
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
-            </div>
-            <div class="htl-year">1966</div>
-            <div class="htl-label">MDH Machine Order</div>
-          </div>
-          <div class="htl-item os-reveal">
-            <div class="htl-dot">
-              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <div class="htl-year">1987</div>
-            <div class="htl-label">Expanded to Delhi</div>
-          </div>
-          <div class="htl-item os-reveal">
-            <div class="htl-dot">
-              <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-            </div>
-            <div class="htl-year">2001</div>
-            <div class="htl-label">Significant Growth</div>
-          </div>
-          <div class="htl-item os-reveal">
-            <div class="htl-dot">
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
-            </div>
-            <div class="htl-year">2026</div>
-            <div class="htl-label">Growing Globally</div>
-          </div>
-        </div>
-        <br>
-      </div>
-    </div>
- 
-   
-  </div>
-</section> -->
-
-
  
 <!-- ═══════════════════════════════════
      TIMELINE
@@ -1877,7 +1805,7 @@ Whether it is grinding, pulverising, classifying, blending, screening, or comple
     </nav>
 
 
-    <div class="about-cards">
+    <div class="about-cardss">
         <article class="sp-mcardd">
           <div class="sp-mcard__img"><img src="https://i.pinimg.com/736x/40/d5/11/40d51142b8ca8a64fbc84cd2972ce797.jpg" alt="Hammer Mill" /></div>
           <div class="sp-mcard__body">

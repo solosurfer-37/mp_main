@@ -3,17 +3,208 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us - Modern Pulveriser</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <title>Products - Modern Pulveriser</title>
   <link rel="stylesheet" href="css/Style.css"/>
-  <link rel="stylesheet" href="css/contact.css">
-  <link rel="stylesheet" href="css/index.css">
-  <link rel="stylesheet" href="css/header-fixed.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/header-fixed.css" />
+<link rel="stylesheet" href="css/index.css" />
+
+  <style>
+
+    /* ─── PRODUCTS SECTION — all classes prefixed mppl- to avoid Style.css collisions ─── */
+
+    .mppl-section {
+      background: #f0f0f0;
+      padding: 80px 0 100px;
+    }
+
+    .mppl-eyebrow {
+      text-align: center;
+      
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #e85d04;
+      margin-bottom: 12px;
+    }
+
+    .mppl-heading {
+      text-align: center;
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 700;
+      color: #1c1c2e;
+      margin: 0 0 16px;
+      letter-spacing: -0.02em;
+    }
+
+    .mppl-rule {
+      width: 48px;
+      height: 3px;
+      background: transparent;
+      margin: 0 auto 64px;
+      display: block;
+      border: none;
+    }
+
+    /* ─── GRID ─── */
+
+    .mppl-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 32px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    /* ─── CARD ─── */
+
+    .mppl-card {
+      background: #ffffff;
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      transition: box-shadow 0.25s ease, transform 0.25s ease;
+    }
+
+    .mppl-card:hover {
+      box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+      transform: translateY(-4px);
+    }
+
+    /* ─── IMAGE ─── */
+
+    .mppl-card-image {
+      width: 100%;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      position: relative;
+      background: #e8e8e8;
+    }
+
+    .mppl-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.45s ease;
+    }
+
+    .mppl-card:hover .mppl-card-image img {
+      transform: scale(1.05);
+    }
+
+    /* category tag */
+    .mppl-card-tag {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #fff !important;
+      background: #e85d04;
+      padding: 5px 10px;
+      border-radius: 4px;
+      line-height: 1;
+    }
+
+    /* ─── BODY ─── */
+
+    .mppl-card-body {
+      padding: 24px 24px 28px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      gap: 10px;
+      background: #ffffff;
+    }
+
+    .mppl-card-body h3 {
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: #1c1c2e !important;
+      margin: 0;
+      letter-spacing: -0.01em;
+      line-height: 1.3;
+    }
+
+    .mppl-card-desc {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.88rem;
+      color: #555 !important;
+      margin: 0;
+      line-height: 1.7;
+      flex: 1;
+    }
+
+    /* ─── LINK ─── */
+
+    .mppl-card-link {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      font-size: 14px !important;
+      font-weight: 600 !important;
+      color: #2b35af !important;
+      text-decoration: none !important;
+      margin-top: 6px !important;
+      width: fit-content !important;
+      transition: gap 0.2s ease, color 0.2s ease !important;
+      background: none !important;
+      border: none !important;
+      padding: 0 !important;
+    }
+
+    .mppl-card-link:hover {
+      color: #e85d04 !important;
+      gap: 10px !important;
+      text-decoration: none !important;
+    }
+
+    /* ─── MOBILE ─── */
+
+    @media (max-width: 960px) {
+      .mppl-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 0 20px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .mppl-section {
+        padding: 48px 0 64px;
+      }
+      .mppl-grid {
+        grid-template-columns: 1fr;
+        padding: 0 16px;
+        gap: 18px;
+      }
+      .mppl-rule {
+        margin-bottom: 40px;
+      }
+      .mppl-card-image {
+        aspect-ratio: 16/9;
+      }
+      .mppl-card-body {
+        padding: 18px 20px 22px;
+      }
+      .mppl-card:hover {
+        transform: none;
+      }
+    }
+
+  </style>
 </head>
 <body>
+
+ 
 <!-- ══════════ HEADER ══════════ -->
 <header id="site-header">
   <div class="header-inner">
@@ -237,141 +428,108 @@
   }
 </script>
 
-  <!-- ══ CONTACT HERO STRIP ══ -->
-  <section class="ct-hero">
-    <div class="ct-hero-inner">
-      <div class="ct-eyebrow">Get In Touch</div>
-      <h1>Let's Talk <em>Business</em></h1>
-      <p>Have a project in mind or need a quote? Our team is ready to help you find the right grinding solution for your needs.</p>
+  <!-- ── HERO ── -->
+  <section class="story-heroo" role="banner">
+    <div class="hero-overlay"></div>
+    <div class="hero-text-container">
+      <h1 class="fade-item">Our Products</h1>
+      <div class="hero-divider fade-item"></div>
     </div>
   </section>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll(".story-heroo .fade-item").forEach((el, i) => {
+        el.style.cssText = "opacity:0;transform:translateY(20px);transition:all 0.8s ease-out";
+        setTimeout(() => { el.style.opacity="1"; el.style.transform="translateY(0)"; }, i * 400);
+      });
+    });
+  </script>
 
-  <!-- ══ MAIN CONTACT SECTION ══ -->
-  <section class="ct-main">
-    <div class="ct-container">
+  <!-- ── PRODUCTS SECTION ── -->
+  <section class="mppl-section" id="products">
 
-      <!-- Row 1: Info + Form side by side -->
-      <div class="ct-top-row">
+    <p class="mppl-eyebrow">Manufacturing Excellence</p>
+    <h2 class="mppl-heading">Industrial Machinery</h2>
+    <span class="mppl-rule"></span>
 
-        <!-- Contact Info Card -->
-        <div class="ct-info-card">
-          <div class="ct-card-label">Our Details</div>
-          <h2>Contact Information</h2>
-          <p class="ct-card-sub">Reach out through any of the channels below — we typically respond within 24 hours.</p>
-<br>
-          <div class="ct-info-list">
+    <div class="mppl-grid">
 
-            <div class="ct-info-item">
-              <div class="ct-info-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.6 4.87 2 2 0 0 1 3.57 2.69h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 10.09a16 16 0 0 0 6 6l.72-.72a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.28 17.5"/></svg>
-              </div>
-              <div class="ct-info-body">
-                <span class="ct-info-label">Phone</span>
-                <a href="tel:+919582250536">+91 95822 50536</a>
-                <a href="tel:+919810023411">+91 98100 23411</a>
-              </div>
-            </div>
-
-            <div class="ct-info-item">
-              <div class="ct-info-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              </div>
-              <div class="ct-info-body">
-                <span class="ct-info-label">Email</span>
-                <a href="mailto:info@modernpulveriser.com">info@modernpulveriser.com</a>
-                <a href="mailto:vermasiddharth85@gmail.com">vermasiddharth85@gmail.com</a>
-              </div>
-            </div>
-
-            <div class="ct-info-item">
-              <div class="ct-info-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              </div>
-              <div class="ct-info-body">
-                <span class="ct-info-label">Address</span>
-                <a>98-A, Pocket-K, Sheikh Sarai,<br>Phase-2, New Delhi – 110017</a>
-              </div>
-            </div>
-
-          </div>
-<br>
-          <!-- Quick response note -->
-          <div class="ct-response-note">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            Typical response time: within 24 hours
-          </div>
+      <div class="mppl-card">
+        <div class="mppl-card-image">
+          <span class="mppl-card-tag">Size Reduction</span>
+          <img src="https://i.pinimg.com/736x/40/d5/11/40d51142b8ca8a64fbc84cd2972ce797.jpg" alt="Hammer Mill" loading="lazy">
         </div>
-
-        <!-- Contact Form Card -->
-        <div class="ct-form-card">
-          <div class="ct-card-label">Send a Message</div>
-          <h2>We'd Love to Hear From You</h2>
-          <p class="ct-card-sub">Fill in the form and we'll get back to you with the information you need.</p>
-
-          <form action="https://formspree.io/f/mblqrgol" method="POST" class="ct-form">
-            <div class="ct-form-row">
-              <div class="ct-field">
-                <label for="name">Your Name</label>
-                <input type="text" id="name" name="name" placeholder="e.g. Rahul Singh" required>
-              </div>
-              <div class="ct-field">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="you@example.com" required>
-              </div>
-            </div>
-            <div class="ct-field">
-              <label for="phone">Phone Number <span class="ct-optional">(optional)</span></label>
-              <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX">
-            </div>
-            <div class="ct-field">
-              <label for="subject">Subject</label>
-              <input type="text" id="subject" name="subject" placeholder="e.g. Quote for Hammer Mill">
-            </div>
-            <div class="ct-field">
-              <label for="message">Your Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="Tell us about your requirements, quantities, or any questions..." required></textarea>
-            </div>
-            <button type="submit" class="ct-submit">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-              Send Message
-            </button>
-          </form>
+        <div class="mppl-card-body">
+          <h3>Hammer Mill</h3>
+          <p class="mppl-card-desc">A robust and reliable grinding machine designed to deliver consistent, efficient size reduction across spices, minerals and grains.</p>
+          <a href="hammer.html" class="mppl-card-link">Read more →</a>
         </div>
-
       </div>
 
-      <!-- Row 2: Map full width -->
-      <div class="ct-map-row">
-        <div class="ct-map-header">
-          <div>
-            <div class="ct-card-label">Find Us</div>
-            <h2>Our Location</h2>
-          </div>
-          <a href="https://www.google.com/maps?q=98-A,+Pocket-K,+Sheikh+Sarai,+Phase-2,+New+Delhi-110017" target="_blank" class="ct-directions-btn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
-            Get Directions
-          </a>
+      <div class="mppl-card">
+        <div class="mppl-card-image">
+          <span class="mppl-card-tag">Size Reduction</span>
+          <img src="https://i.pinimg.com/736x/f4/73/b0/f473b0f670ca30fb054a5d36dc28ac1b.jpg" alt="Impact Pulveriser" loading="lazy">
         </div>
-        <div class="ct-map-wrap">
-          <iframe
-            src="https://www.google.com/maps?q=98-A,+Pocket-K,+Sheikh+Sarai,+Phase-2,+New+Delhi-110017&output=embed"
-            width="100%"
-            height="100%"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            title="Modern Pulveriser Location">
-          </iframe>
+        <div class="mppl-card-body">
+          <h3>Impact Pulveriser</h3>
+          <p class="mppl-card-desc">A versatile and efficient grinding solution designed for fine and ultra-fine size reduction of materials such as spices, minerals and pigments.</p>
+          <a href="impact-pulveriser.html" class="mppl-card-link">Read more →</a>
         </div>
-        <div class="ct-map-address">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          98-A, Pocket-K, Sheikh Sarai, Phase-2, New Delhi – 110017
+      </div>
+
+      <div class="mppl-card">
+        <div class="mppl-card-image">
+          <span class="mppl-card-tag">Crushing</span>
+          <img src="https://i.pinimg.com/736x/c4/bf/98/c4bf98c27c9ca102afcbdbeb784a50f7.jpg" alt="Hammer Crusher" loading="lazy">
+        </div>
+        <div class="mppl-card-body">
+          <h3>Hammer Crusher</h3>
+          <p class="mppl-card-desc">A rugged crusher built for high-capacity reduction of hard and abrasive materials like stones, coal and minerals.</p>
+          <a href="hammer-crusher.html" class="mppl-card-link">Read more →</a>
+        </div>
+      </div>
+
+      <div class="mppl-card">
+        <div class="mppl-card-image">
+          <span class="mppl-card-tag">Mixing</span>
+          <img src="images/ee3c7bdd9eeb716d6721aeaa15f9ad95.jpg" alt="Ribbon Blender" loading="lazy">
+        </div>
+        <div class="mppl-card-body">
+          <h3>Ribbon Blender</h3>
+          <p class="mppl-card-desc">Engineered for uniform mixing of dry powders and granules in a single enclosed trough with minimal product loss.</p>
+          <a href="ribbon-blender.html" class="mppl-card-link">Read more →</a>
+        </div>
+      </div>
+
+      <div class="mppl-card">
+        <div class="mppl-card-image">
+          <span class="mppl-card-tag">Conveying</span>
+          <img src="images/Screw conveyor.jpeg" alt="Screw Conveyor" loading="lazy">
+        </div>
+        <div class="mppl-card-body">
+          <h3>Screw Conveyor</h3>
+          <p class="mppl-card-desc">Reliable bulk material transport for powders, granules and semi-solids across processing lines with controlled flow.</p>
+          <a href="screw-conveyor.html" class="mppl-card-link">Read more →</a>
+        </div>
+      </div>
+
+      <div class="mppl-card">
+        <div class="mppl-card-image">
+          <span class="mppl-card-tag">Sifting</span>
+          <img src="https://i.pinimg.com/736x/88/77/39/887739210e55d61f1a11103c6c956b8d.jpg" alt="Vibro Sifter" loading="lazy">
+        </div>
+        <div class="mppl-card-body">
+          <h3>Vibro Sifter</h3>
+          <p class="mppl-card-desc">Efficient particle separation and grading with multi-deck vibratory screening for precise output consistency.</p>
+          <a href="product-6.html" class="mppl-card-link">Read more →</a>
         </div>
       </div>
 
     </div>
   </section>
-<!-- ============ FOOTER ============ -->
+
+  <!-- ============ FOOTER ============ -->
 <footer class="mp-footer">
   <div class="mp-footer-container">
     <div class="mp-footer-brand-block">
@@ -403,7 +561,7 @@
   </div>
 </footer>
 
-  <!-- YOUR EXISTING FOOTER -->
-  <script src="js/script.js"></script>
+
+  <script src="script.js"></script>
 </body>
 </html>
