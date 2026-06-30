@@ -277,15 +277,52 @@ a{ color:inherit; }
 .mp-spec-section{
   padding:100px 6vw;
   background: linear-gradient(135deg, #261FB3, #5b5bdb); color:#f4f3ef;
-  background-image: url("https://i.pinimg.com/736x/89/b5/fa/89b5fa5a4673a270e377e4ed8cb688d2.jpg");
   justify-content: center;
   align-text: center ;
+  position: relative;
+    overflow: hidden;
+    isolation: isolate;
   /* background-repeat: no-repeat; */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.pinimg.com/736x/ad/f9/a4/adf9a4cea463355da988abc14e0b5f13.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) ;
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) ; */
+  /*  url('https://i.pinimg.com/736x/ad/f9/a4/adf9a4cea463355da988abc14e0b5f13.jpg') */
+}
+.mp-spec-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+        rgba(7, 7, 45, 0.851),
+        rgba(11, 13, 36, 0.5),
+        rgba(2, 4, 30, 0.5)
+    );
+    background: rgba(6,12,35,.65);
+
+}
+
+.mp-section-head,
+.mp-spec-layout{
+    position:relative;
+    z-index:2;
+}
+
+.mp-section-head h2{
+  opacity: 1;
+}
+
+
+.mp-bg-image{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
     
 }
 
-.mp-spec-section .mp-section-head h2{ color:#f4f3ef; font-size: clamp(1.6rem, 4vw, 2.3rem);}
+.mp-spec-section .mp-section-head h2{ color:#fff; font-size: clamp(1.6rem, 4vw, 2.3rem);}
 .mp-spec-section .mp-section-head h2 em{ color:var(--orange); }
 
 
@@ -501,11 +538,11 @@ a{ color:inherit; }
    CTA BAND
    ============================================================ */
 .mp-cta-band{
-  padding:70px 6vw; background:#1c1c2e;; color:#f4f3ef;
+  padding:70px 6vw; background:#1c1c2e; color:#f4f3ef;
   display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap;
 }
 .mp-cta-band h2{ font-size:clamp(1.3rem, 3.1vw, 1.9rem); font-weight:600; max-width:560px; line-height:1.25; }
-.mp-cta-band h2 em{  color:#ffd9b8; font-weight:500; }
+.mp-cta-band h2 em{  color:#e8e8f5; font-weight:500; }
 .mp-cta-band .mp-btn-primary{ flex-shrink:0;border-radius: 10px; }
 
 /* ============================================================

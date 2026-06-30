@@ -147,11 +147,13 @@
    ════════════════════════════════════════════ */
 .sp-hero {
   position: relative;
-  min-height: 91svh;
+  min-height: 105svh;
+  
   display: flex;
   align-items: center;
   overflow: hidden;
 }
+
 .sp-hero__bg {
   position: absolute;
   inset: 0;
@@ -385,12 +387,21 @@
 
 
 /* about us cards */
-.about-cards {
+.about-cardss {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 1.4rem;
   align-items: center;
   text-align: center;
+}
+@media(max-width:768px){
+  .about-cardss {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.4rem;
+  align-items: center;
+  text-align: center;
+  }
 }
 
 .sp-mcardd {
@@ -672,6 +683,7 @@
   background: linear-gradient(105deg,
     rgba(20,24,90,.97) 0%,
     rgba(43,53,175,.93) 100%);
+  background: #1c1c2e;
   z-index: 1;
 }
 .sp-cta__inner {
@@ -775,7 +787,8 @@
 @media (min-width: 900px) {
 
   .sp-section { padding: 88px 0; }
-
+  
+  
   /* Hero: side-by-side */
   .sp-hero__inner {
     flex-direction: row;
@@ -808,6 +821,7 @@
 
   /* Machines: 4 across */
   .sp-machines { grid-template-columns: repeat(4, 1fr); }
+  
 
 }
 

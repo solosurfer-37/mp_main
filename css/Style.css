@@ -3310,9 +3310,10 @@ html, body {
 
 .hero-tech {
   position: relative;
-  min-height: 95vh;
+  min-height: 100vh;
   background-image: url('https://images.pexels.com/photos/190574/pexels-photo-190574.jpeg');
   background-image: url('https://i.pinimg.com/736x/81/c9/4c/81c94c47b4027d5b5949fbd7aa5523f9.jpg');
+  background-image: url('https://i.pinimg.com/736x/7a/8f/35/7a8f35f3a1e52b6b1ef664330c4d9e78.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -3320,7 +3321,48 @@ html, body {
   overflow: hidden;
   background-color: #050505;
 }
+.hero-tech {
+  /* Crucial for keeping the absolute positioned video inside this section */
+  position: relative; 
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  /* Hides any part of the video that bleeds outside the section */
+  overflow: hidden; 
+  /* Fallback background while video loads */
+  background-color: #050505; 
+}
 
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Ensures the video scales properly without squishing */
+  object-fit: cover; 
+  /* Places the video at the very back */
+  z-index: 0; 
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* 60% opacity black overlay - adjust the 0.6 to make it darker/lighter */
+  background: rgba(0, 0, 0, 0.6); 
+  z-index: 1; 
+}
+
+/* We need to ensure your content sits ABOVE the video and overlay */
+.hero-text, 
+.tech-grid, 
+.corner {
+  position: relative;
+  z-index: 2; 
+}
 
 .tech-grid {
   position: absolute;
@@ -3379,7 +3421,7 @@ html, body {
 
 .glow-text {
   font-size: clamp(1.5rem, 4vw, 3rem);
-  color: #ffd700;
+  color: #f9f9f9;
   text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
   margin-top: 5px;
 }
