@@ -19,228 +19,207 @@
 <body>
 
 
+<!-- ═══════════ HEADER ═══════════ -->
+<div class="orbit-shell" id="orbitShell">
+  <div class="orbit-bar">
 
-<!-- ══════════ HEADER ══════════ -->
-<header id="site-header">
-  <div class="header-inner">
-
-    <!-- Logo -->
-    <a href="index.html" class="logo-btn">
-      <img src="images/LOGO.jpg" alt="Modern Pulveriser Logo" class="logo-img">
+    <a href="index.html" class="orbit-logo">
+      <!-- <img src="images/LOGO.jpg" alt="Modern Pulveriser"> -->
+       <img src="images/LOGO-bgremove.png" alt="Modern Pulveriser">
     </a>
 
-    <!-- Desktop Nav -->
-    <nav aria-label="Main navigation" class="nav-main-wrap">
-      <ul class="nav-main" id="desktop-nav">
-
+    <nav>
+      <ul class="orbit-links" id="orbitDesktopNav">
         <li><a href="index.html">Home</a></li>
-
         <li><a href="STORYY.html">About Us</a></li>
 
-        <!-- Industries dropdown -->
-        <li id="nav-industries">
-          <button onclick="toggleDropdown('nav-industries')" aria-expanded="false" aria-haspopup="true">
-            Industries
-            <svg class="caret" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+        <li id="orbit-products">
+          <button onclick="orbitToggleDesktop('orbit-products')" aria-expanded="false">
+            Products
+            <svg class="orbit-caret" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
-          <ul class="dropdown" role="menu">
-            <li><a href="spicesnew.html">Spice processing</a></li>
-            <li class="dropdown-divider"></li>
+          <ul class="orbit-panel orbit-panel--wide">
+            <li><a href="hammer.html">Hammer Mill</a></li>
+            <li><a href="ribbon.html">Ribbon Blender</a></li>
+            <li><a href="crusher.html">Hammer Crusher</a></li>
+            <li><a href="vibro.html">Vibro Sifter</a></li>
+            <li><a href="Impact.html">Impact Pulveriser</a></li>
+            <li><a href="screw.html">Screw Conveyor</a></li>
+          </ul>
+        </li>
+
+        <li id="orbit-industries">
+          <button onclick="orbitToggleDesktop('orbit-industries')" aria-expanded="false">
+            Industries
+            <svg class="orbit-caret" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <ul class="orbit-panel orbit-panel--wide">
+            <li><a href="spicesnew.html">Spice Processing</a></li>
             <li><a href="ayurveda.html">Ayurveda & Herbal</a></li>
-            <li class="dropdown-divider"></li>
             <li><a href="chemical.html">Chemical</a></li>
-            <li class="dropdown-divider"></li>
             <li><a href="pharma.html">Pharmaceutical</a></li>
-            <li class="dropdown-divider"></li>
             <li><a href="pigment.html">Pigments & Dyes</a></li>
-            <li class="dropdown-divider"></li>
             <li><a href="agriculture.html">Agricultural Products</a></li>
           </ul>
         </li>
 
-        <!-- Products dropdown -->
-        <li id="nav-products">
-          <button onclick="toggleDropdown('nav-products')" aria-expanded="false" aria-haspopup="true">
-            Products
-            <svg class="caret" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <ul class="dropdown dropdown-wide" role="menu">
-            <li><a href="hammer.html">Hammer Mill</a></li>
-            <li class="dropdown-divider"></li>
-            <li><a href="ribbon-blender.html">Ribbon Blender</a></li>
-            <li class="dropdown-divider"></li>
-            <li><a href="crusher.html">Hammer Crusher</a></li>
-            <li class="dropdown-divider"></li>
-            <li><a href="vibro.html">Vibro Sifter</a></li>
-            <li class="dropdown-divider"></li>
-            <li><a href="Impact.html">Impact Pulveriser</a></li>
-            <li class="dropdown-divider"></li>
-            <li><a href="screw-conveyor.html">Screw Conveyor</a></li>
-          </ul>
-        </li>
-
-        <!-- CTA -->
-        <ol>
-          <a href="newcontact.html" class="btn-cta">
-            Contact Us
-            <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
-        </ol>
-
+        
       </ul>
     </nav>
 
-    <!-- Hamburger -->
-    <button class="hamburger" id="hamburger" onclick="toggleDrawer()" aria-label="Open menu" aria-expanded="false">
+    <a href="newcontact.html" class="orbit-cta">
+      Contact Us
+      <svg viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+
+    <button class="orbit-burger" id="orbitBurger" onclick="orbitToggleMobile()" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
 
   </div>
-</header>
+</div>
 
-<!-- ══════════ MOBILE OVERLAY ══════════ -->
-<div class="drawer-overlay" id="drawer-overlay" onclick="toggleDrawer()"></div>
-
-<!-- ══════════ MOBILE DRAWER ══════════ -->
-<nav class="drawer" id="drawer" aria-label="Mobile navigation">
-  <div class="drawer-head">
-    <a href="index.html" class="logo-btn">
-      <!-- <img src="images/LOGO.jpg" alt="Modern Pulveriser Logo" class="logo-img"> -->
+<!-- ═══════════ MOBILE FULL-SCREEN MENU ═══════════ -->
+<div class="orbit-mobile" id="orbitMobile">
+  <div class="orbit-mobile-head">
+    <a href="index.html" class="orbit-logo">
+      <img src="images/LOGO.jpg" alt="Modern Pulveriser">
     </a>
-    <!-- <button class="drawer-close" onclick="toggleDrawer()" aria-label="Close menu">✕</button> -->
+    <button class="orbit-mobile-close" onclick="orbitToggleMobile()" aria-label="Close menu">✕</button>
   </div>
 
-  <ul class="drawer-nav">
-    <br>
-    <br>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="STORYY.html">About Us</a></li>
+  <div class="orbit-mobile-body">
+    <ul class="orbit-mobile-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="STORYY.html">About Us</a></li>
 
-    <li id="d-industries">
-      <button class="drawer-toggle" onclick="toggleDrawerSub('d-industries')" aria-expanded="false">
-        Industries
-        <svg class="drawer-caret" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
-      <ul class="drawer-sub">
-        <li><a href="spicesnew.html"><span class="sub-dot"></span>Spice Processing </a></li>
-        <li><a href="ayurveda.html"><span class="sub-dot"></span>Ayurveda & Herbal</a></li>
-        <li><a href="chemical.html"><span class="sub-dot"></span>Chemical</a></li>
-        <li><a href="pharma.html"><span class="sub-dot"></span>Pharmaceutical</a></li>
-        <li><a href="pigment.html"><span class="sub-dot"></span>Pigments & Dyes</a></li>
-        <li><a href="agriculture.html"><span class="sub-dot"></span>Agricultural Products</a></li>
-      </ul>
-    </li>
+      <li id="orbit-m-products">
+        <button class="orbit-mobile-toggle" onclick="orbitToggleSub('orbit-m-products')" aria-expanded="false">
+          Products
+          <svg class="orbit-caret" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="orbit-mobile-sub">
+          <li><a href="hammer.html">Hammer Mill</a></li>
+          <li><a href="ribbon.html">Ribbon Blender</a></li>
+          <li><a href="crusher.html">Hammer Crusher</a></li>
+          <li><a href="vibro.html">Vibro Sifter</a></li>
+          <li><a href="Impact.html">Impact Pulveriser</a></li>
+          <li><a href="screw.html">Screw Conveyor</a></li>
+        </ul>
+      </li>
 
-    <li id="d-products">
-      <button class="drawer-toggle" onclick="toggleDrawerSub('d-products')" aria-expanded="false">
-        Products
-        <svg class="drawer-caret" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
-      <ul class="drawer-sub">
-        <li><a href="hammer.html"><span class="sub-dot"></span>Hammer Mill</a></li>
-        <li><a href="ribbon-blender.html"><span class="sub-dot"></span>Ribbon Blender</a></li>
-        <li><a href="crusher.html"><span class="sub-dot"></span>Hammer Crusher</a></li>
-        <li><a href="vibro.html"><span class="sub-dot"></span>Vibro Sifter</a></li>
-        <li><a href="impact.html"><span class="sub-dot"></span>Impact Pulveriser</a></li>
-        <li><a href="screw-conveyor.html"><span class="sub-dot"></span>Screw Conveyor</a></li>
-      </ul>
-    </li>
-  </ul>
+      <li id="orbit-m-industries">
+        <button class="orbit-mobile-toggle" onclick="orbitToggleSub('orbit-m-industries')" aria-expanded="false">
+          Industries
+          <svg class="orbit-caret" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="orbit-mobile-sub">
+          <li><a href="spicesnew.html">Spice Processing</a></li>
+          <li><a href="ayurveda.html">Ayurveda & Herbal</a></li>
+          <li><a href="chemical.html">Chemical</a></li>
+          <li><a href="pharma.html">Pharmaceutical</a></li>
+          <li><a href="pigment.html">Pigments & Dyes</a></li>
+          <li><a href="agriculture.html">Agricultural Products</a></li>
+        </ul>
+      </li>
 
-  <div class="drawer-footer">
-    <a href="newcontact.html" class="btn-cta-drawer">
+      
+    </ul>
+
+  </div>
+
+  <div class="orbit-mobile-foot">
+    <a href="newcontact.html" class="orbit-cta">
       Contact Us
-      <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
+      <svg viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
   </div>
-</nav>
+</div>
 
 <script>
-  /* ── Scroll effect: transparent → solid ── */
-  const header = document.getElementById('site-header');
+  /* Header scroll state */
+  const orbitShell = document.getElementById('orbitShell');
   window.addEventListener('scroll', () => {
-    header.classList.toggle('scrolled', window.scrollY > 20);
-  }, { passive: true });
+    orbitShell.classList.toggle('is-scrolled', window.scrollY > 16);
+  }, { passive:true });
 
-  /* ── Desktop dropdowns: hover (CSS) + click (JS) ── */
-  function toggleDropdown(id) {
+  /* Desktop dropdowns */
+  function orbitToggleDesktop(id){
     const li = document.getElementById(id);
-    const isOpen = li.classList.contains('open');
-    document.querySelectorAll('.nav-main > li.open').forEach(el => {
-      el.classList.remove('open');
-      const btn = el.querySelector('button');
-      if (btn) btn.setAttribute('aria-expanded', 'false');
+    const isOpen = li.classList.contains('is-open');
+    document.querySelectorAll('.orbit-links > li.is-open').forEach(el=>{
+      el.classList.remove('is-open');
+      const b = el.querySelector('button'); if(b) b.setAttribute('aria-expanded','false');
     });
-    if (!isOpen) {
-      li.classList.add('open');
-      const btn = li.querySelector('button');
-      if (btn) btn.setAttribute('aria-expanded', 'true');
+    if(!isOpen){
+      li.classList.add('is-open');
+      const b = li.querySelector('button'); if(b) b.setAttribute('aria-expanded','true');
     }
   }
-
-  // Close on outside click
-  document.addEventListener('click', e => {
-    if (!e.target.closest('.nav-main > li')) {
-      document.querySelectorAll('.nav-main > li.open').forEach(el => {
-        el.classList.remove('open');
-        const btn = el.querySelector('button');
-        if (btn) btn.setAttribute('aria-expanded', 'false');
+  document.addEventListener('click', e=>{
+    if(!e.target.closest('.orbit-links > li')){
+      document.querySelectorAll('.orbit-links > li.is-open').forEach(el=>{
+        el.classList.remove('is-open');
+        const b = el.querySelector('button'); if(b) b.setAttribute('aria-expanded','false');
       });
     }
   });
 
-  // Close on Escape
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') {
-      document.querySelectorAll('.nav-main > li.open').forEach(el => {
-        el.classList.remove('open');
-        const btn = el.querySelector('button');
-        if (btn) btn.setAttribute('aria-expanded', 'false');
-      });
-      if (document.getElementById('drawer').classList.contains('open')) toggleDrawer();
-    }
-  });
-
-  /* ── Mobile drawer ── */
-  const drawer = document.getElementById('drawer');
-  const overlay = document.getElementById('drawer-overlay');
-  const hamburger = document.getElementById('hamburger');
-
-  function toggleDrawer() {
-    const isOpen = drawer.classList.contains('open');
-    drawer.classList.toggle('open');
-    overlay.classList.toggle('visible');
-    hamburger.classList.toggle('open');
-    hamburger.setAttribute('aria-expanded', String(!isOpen));
+  /* Mobile full-screen menu */
+  const orbitBurger = document.getElementById('orbitBurger');
+  const orbitMobile = document.getElementById('orbitMobile');
+  function orbitToggleMobile(){
+    const isOpen = orbitMobile.classList.contains('is-open');
+    orbitMobile.classList.toggle('is-open');
+    orbitBurger.classList.toggle('is-active');
+    orbitBurger.setAttribute('aria-expanded', String(!isOpen));
     document.body.style.overflow = isOpen ? '' : 'hidden';
   }
 
-  function toggleDrawerSub(id) {
+  /* Mobile accordion (Industries/Products) */
+  function orbitToggleSub(id){
     const li = document.getElementById(id);
     const isOpen = li.classList.contains('d-open');
-    document.querySelectorAll('.drawer-nav > li.d-open').forEach(el => {
-      if (el.id !== id) {
+    document.querySelectorAll('.orbit-mobile-nav > li.d-open').forEach(el=>{
+      if(el.id !== id){
         el.classList.remove('d-open');
-        const b = el.querySelector('.drawer-toggle');
-        if (b) b.setAttribute('aria-expanded', 'false');
+        const b = el.querySelector('.orbit-mobile-toggle'); if(b) b.setAttribute('aria-expanded','false');
       }
     });
     li.classList.toggle('d-open', !isOpen);
-    const btn = li.querySelector('.drawer-toggle');
-    if (btn) btn.setAttribute('aria-expanded', String(!isOpen));
+    const btn = li.querySelector('.orbit-mobile-toggle'); if(btn) btn.setAttribute('aria-expanded', String(!isOpen));
   }
+
+  document.addEventListener('keydown', e=>{
+    if(e.key === 'Escape' && orbitMobile.classList.contains('is-open')) orbitToggleMobile();
+  });
+
+
+  let orbitHoverTimer = null;
+
+document.querySelectorAll('.orbit-links > li').forEach(li => {
+  li.addEventListener('mouseenter', () => {
+    clearTimeout(orbitHoverTimer);
+    document.querySelectorAll('.orbit-links > li.is-open').forEach(el => {
+      if (el !== li) {
+        el.classList.remove('is-open');
+        const b = el.querySelector('button');
+        if (b) b.setAttribute('aria-expanded', 'false');
+      }
+    });
+    li.classList.add('is-open');
+    const btn = li.querySelector('button');
+    if (btn) btn.setAttribute('aria-expanded', 'true');
+  });
+
+  li.addEventListener('mouseleave', () => {
+    orbitHoverTimer = setTimeout(() => {
+      li.classList.remove('is-open');
+      const btn = li.querySelector('button');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+    }, 250); // forgiveness window in ms
+  });
+});
 </script>
 
 
@@ -274,7 +253,7 @@
       </div>
       <div class="sp-hero__stats">
         <div class="sp-hstat">
-          <strong>60+</strong>
+          <strong>70+</strong>
           <span>Years Manufacturing</span>
         </div>
         <div class="sp-hstat">
@@ -578,6 +557,7 @@
   <!-- =====================
        FAQ
   ===================== -->
+  
   <section class="sp-section">
     <div class="sp-wrap">
       <div class="sp-sechead">
