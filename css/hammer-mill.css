@@ -1719,7 +1719,7 @@ html { scroll-behavior: smooth; }
   
   /* Top to bottom color gradient background */
   background: linear-gradient(to bottom, var(--blueprint-dark-gradient), var(--blueprint-light-gradient));
-  background: linear-gradient(to bottom, #a9acf0, #e5e5e5);
+  background: linear-gradient(to bottom, #6e74e0, #e5e5e5);
   
   /* Add safe internal padding so text doesn't touch the very edge of the monitor */
   padding: 32px 24px; 

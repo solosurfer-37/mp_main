@@ -3538,10 +3538,11 @@ html, body {
   position: relative;
   /* Aapki image URL */
   background-image: url('https://images.pexels.com/photos/190574/pexels-photo-190574.jpeg');
+  background-image: url('https://i.pinimg.com/736x/7a/8f/35/7a8f35f3a1e52b6b1ef664330c4d9e78.jpg');
   background-attachment: fixed; /* Parallax Effect */
   background-position: center;
   background-size: cover;
-  min-height: 50vh; /* Hero se thoda chota rakha hai Story ke liye */
+  min-height: 100vh; /* Hero se thoda chota rakha hai Story ke liye */
   display: flex;
   justify-content: center;
   align-items: center;
