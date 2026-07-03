@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modern Pulveriser</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="stylesheet" href="css/Style.css"/>
+  <link rel="stylesheet" href="header-fixed.css" />
+</head>
+<body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gradient Circle Loader</title>
+</head>
+<body>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<header class="header">
+  <!-- Logo -->
+  <a href="index.html" class="logo-btn">
+    <img src="images\LOGO.jpg" alt="Logo" class="logo-img">
+    <!-- <span class="logo-text">Modern Pulveriser</span> -->
+  </a>
+
+  <!-- Desktop Nav -->
+  <nav class="desktop-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="story.html">Our Story</a></li>
+      <!-- <li><a href="products.html">Products</a></li> -->
+       <li>
+        <button class="nav-btn">
+          Products <span class="caret">▾</span>
+        </button>
+        <ul class="dropdown-menu wide">
+          <li><a href="hammer.html">Hammer Mill</a></li>
+          <li class="dropdown-divider"></li>
+          <li><a href="/products/air-jet-mill">Ribbon Blender</a></li>
+          <li class="dropdown-divider"></li>
+          <li><a href="/products/pulverising-mills">Hammer Crusher</a></li>
+          <li class="dropdown-divider"></li>
+          <li><a href="/products/chopper-mill">Vibro Sifter</a></li>
+          <li class="dropdown-divider"></li>
+          <li><a href="/products/chopper-mill">Impact Pulveriser</a></li>
+          <li class="dropdown-divider"></li>
+          <li><a href="/products/chopper-mill">Screw Conveyor</a></li>
+        </ul>
+      </li>
+
+      <!-- <li><a href="industries.html">Industries</a></li> -->
+       <li>
+        <button class="nav-btn">
+          Industries <span class="caret">▾</span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="/products/classifying-mills">Food processing</a></li>
+          <li class="dropdown-divider"></li>
+          <li><a href="/products/air-jet-mill">Ayurveda & Herbal</a></li>
+          <li class="dropdown-divider"></li>
+          <li><a href="/products/pulverising-mills">Chemical</a></li>
+          <li class="dropdown-divider"></li>
+          <li><a href="/products/chopper-mill">Pharmaceutical</a></li>
+          <li class="dropdown-divider"></li>
+          <li><a href="/products/chopper-mill">Minerals & Mining</a></li>
+          <li class="dropdown-divider"></li>
+          <li><a href="/products/chopper-mill">Pigments & Dyes</a></li>
+          <li class="dropdown-divider"></li>
+          <li><a href="/products/chopper-mill">Agricultural Products</a></li>
+        </ul>
+      </li>
+      <section class= "contact"><li><a href="contact.html">Contact Us</a></li></sec>
+    </ul>
+  </nav>
+
+  <!-- Hamburger (Mobile Only) -->
+  <div class="hamburger" onclick="openMenu()">&#9776;</div>
+</header>
+
+
+<nav class="nav-overlay">
+  
+  <div class="nav-close" onclick="closeMenu()">&times;</div>
+  
+  <ul class="drawer-nav">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Our Story</a></li>
+
+    <li id="d-products">
+      <button class="drawer-toggle" onclick="toggleDrawerSub('d-products')" aria-expanded="false">
+        Products
+        <svg class="drawer-caret" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <ul class="drawer-sub">
+        <li><a href="hammer.html"><span class="sub-dot"></span>Hammer Mill</a></li>
+        <li><a href="hammer.html"><span class="sub-dot"></span>Vibro Sifter</a></li>
+        <li><a href="hammer.html"><span class="sub-dot"></span>Ribbon Blender</a></li>
+        <li><a href="hammer.html"><span class="sub-dot"></span>Screw Conveyer</a></li>
+        <li><a href="hammer.html"><span class="sub-dot"></span>Hammer Crusher</a></li>
+        <li><a href="hammer.html"><span class="sub-dot"></span>Impact pulveriser</a></li>
+        
+      </ul>
+    </li>
+
+    <li id="d-industries">
+      <button class="drawer-toggle" onclick="toggleDrawerSub('d-industries')" aria-expanded="false">
+        Industries
+        <svg class="drawer-caret" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <ul class="drawer-sub">
+        <li><a href="#"><span class="sub-dot"></span> Food processing</a></li>
+        <li><a href="#"><span class="sub-dot"></span> Pharmaceutical</a></li>
+        <li><a href="#"><span class="sub-dot"></span> Ayurveda & Herbal</a></li>
+        <li><a href="#"><span class="sub-dot"></span> Chemical</a></li>
+        <li><a href="#"><span class="sub-dot"></span> Minerals & Mining</a></li>
+        <li><a href="#"><span class="sub-dot"></span> Pigments & Dyes</a></li>
+        <li><a href="#"><span class="sub-dot"></span> Agricultural Products</a></li>
+      </ul>
+    </li>
+  </ul>
+
+
+  <div class="nav-cta">
+    <a href="contact.html" class="cta-btn">Get a Quote</a>
+  </div>
+</nav>
+
+
+<script> 
+    function toggleDrawerSub(id) {
+    const li = document.getElementById(id);
+    const isOpen = li.classList.contains('d-open');
+    // close siblings
+    document.querySelectorAll('.drawer-nav > li.d-open').forEach(el => {
+      if (el.id !== id) el.classList.remove('d-open');
+    });
+    li.classList.toggle('d-open', !isOpen);
+    const btn = li.querySelector('.drawer-toggle');
+    if (btn) btn.setAttribute('aria-expanded', String(!isOpen));
+  }
+</script>
+
+
+
+
+
+  <section class="hero-tech" role="banner">
+  <div class="tech-grid"></div>
+  
+  <div class="corner tl"></div>
+  <div class="corner tr"></div>
+  <div class="corner bl"></div>
+  <div class="corner br"></div>
+
+  <div class="hero-text">
+    <div class="since-badge">Est. 1951</div>
+    <h1>Leaders in providing</h1>
+    <h2 class="glow-text">Success Grinding Solutions</h2>
+    <p>
+      Modern Pulveriser is dedicated to delivering cutting-edge pulverizing solutions with unmatched 
+      efficiency, durability, and ease of use. Our machines are designed for low maintenance, 
+      high performance, and long-lasting reliability. 
+    </p>
+    <a href="products.html" class="Cta-btn">Check Products <span class="arrow">→</span></a>
+  </div>
+</section>
+<script>
+  // Saare items ko select karo, button (.yaya) ko bhi alag se pakda hai
+  const heroItems = document.querySelectorAll(
+    ".hero-text h1, .hero-text h2, .hero-text h3, .hero-text p, .hero-text h4,.Cta-btn"
+  );
+
+  // Pehle sabko gayab karo bina move kiye
+  heroItems.forEach(el => {
+    el.style.opacity = "0";
+    el.style.transform = "none";
+    el.style.visibility = "visible"; // Ensure hidden na ho
+  });
+
+  // Ek ek karke fade-in
+  heroItems.forEach((el, index) => {
+    setTimeout(() => {
+      el.style.transition = "opacity 0.8s ease";
+      el.style.opacity = "1";
+    }, index * 500);
+  });
+</script>
+
+  
+<section class="main-about-container">
+  <div class="about-left">
+    <section class="slider-container">
+  <div class="slider">
+    <img src="images\IMG_0423.jpg" alt="Image 3" class="slider-image">
+    <img src="images\IMG_0422.jpg" alt="Image 3" class="slider-image">
+
+  </div>
+
+  <div class="slider-controls">
+    <button class="prev-btn">&lt;</button>
+    <button class="next-btn">&gt;</button>
+  </div>
+</section>
+
+
+<link rel="stylesheet" href="style.css">
+<script src="js/image.js"></script>
+
+  </div>  
+  <section class="expo-section">
+  <div class="expo-content">
+    <h1>
+      Welcome to <span> Modern Pulveriser</span> – Powering the Future of Grinding Technology
+    </h1>
+    <p>
+      Modern Pulveriser is a pioneer in delivering advanced grinding and crushing solutions for industrial applications. 
+      With decades of engineering experience and a commitment to innovation, we design and manufacture pulverisers that 
+      deliver precision, durability and efficiency across sectors like chemicals, minerals, food, and pharmaceuticals.
+    </p>
+    <p>
+      Explore our comprehensive range of impact pulverisers, hammer mills and grinding systems built to meet modern 
+      production challenges. Join hundreds of manufacturers who trust Modern Pulveriser for consistent output, 
+      superior build quality and low maintenance performance.
+    </p>
+  </div>
+</section>
+</section>
+
+<button id="backToTop" title="Go to top">
+  <span class="arrow">↑</span>
+</button>
+<script>
+const topBtn = document.getElementById("backToTop");
+window.onscroll = function() {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    topBtn.style.display = "block";
+    topBtn.style.opacity = "1";
+  } else {
+    topBtn.style.opacity = "0";
+    setTimeout(() => {
+        if(topBtn.style.opacity === "0") topBtn.style.display = "none";
+    }, 300);
+  }
+};
+topBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+</script>
+
+
+  <section class="spec-section">
+  <div class="spec-wrapper">
+    <div class="spec-intro">
+      <h2>Our Specialisations</h2>
+      <div class="orange-line"></div>
+    </div>
+
+    <div class="spec-layout">
+      <div class="spec-box">
+        <span class="icon">⚙️</span>
+        <h4>Grinding & Pulverizing</h4>
+      </div>
+      <div class="spec-box">
+        <span class="icon">🏗️</span>
+        <h4>Crushing Machines</h4>
+      </div>
+      <div class="spec-box">
+        <span class="icon">🔍</span>
+        <h4>Screening & Sifting</h4>
+      </div>
+      <div class="spec-box">
+        <span class="icon">🌀</span>
+        <h4>Mixing & Blending</h4>
+      </div>
+      <div class="spec-box">
+        <span class="icon">📦</span>
+        <h4>Material Handling</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats-section">
+        <div class="stats-container">
+            <div class="stat-box">
+                <h2 class="stat-number" data-target="10000" data-suffix="+">0</h2>
+                <p>Installations</p>
+            </div>
+            <div class="stat-box">
+                <h2 class="stat-number" data-target="70" data-suffix="+ Years">0</h2>
+                <p>Experience</p>
+            </div>
+            <div class="stat-box">
+                <h2 class="stat-number" data-target="200" data-suffix="+">0</h2>
+                <p>Happy Customers</p>
+            </div>
+            <div class="stat-box">
+                <h2 class="stat-number" data-target="10" data-suffix="+">0</h2>
+                <p>Countries</p>
+            </div>
+        </div>
+</section>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const counters = document.querySelectorAll('.stat-number');
+            const duration = 2000;
+
+            const formatNumber = (num) => {
+                return num.toLocaleString('en-US');
+            };
+
+            const animateCounter = (counter) => {
+                if (counter.dataset.animated) return;
+                counter.dataset.animated = 'true';
+
+                const target = parseInt(counter.dataset.target);
+                const suffix = counter.dataset.suffix || '';
+                let startTime = null;
+
+                const step = (timestamp) => {
+                    if (!startTime) startTime = timestamp;
+                    const progress = timestamp - startTime;
+                    const percentage = Math.min(progress / duration, 1);
+                    const eased = percentage * (2 - percentage);
+                    const value = Math.floor(eased * target);
+
+                    counter.textContent = formatNumber(value) + suffix;
+
+                    if (percentage < 1) {
+                        requestAnimationFrame(step);
+                    } else {
+                        counter.textContent = formatNumber(target) + suffix;
+                    }
+                };
+
+                requestAnimationFrame(step);
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target
+                            .querySelectorAll('.stat-number')
+                            .forEach(animateCounter);
+
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            const section = document.querySelector('.stats-section');
+            observer.observe(section);
+        });
+    </script>
+
+  
+  
+
+  <section class="section">
+  <h2>Our Featured Products</h2>
+  <div class="orange-line"></div>
+  <section class="section">
+  <div class="pros">
+    <div class="pro">
+      <img src="https://i.pinimg.com/736x/f4/73/b0/f473b0f670ca30fb054a5d36dc28ac1b.jpg" alt="Chemical">
+      <h3>Impact Pulveriser</h3>
+      <p>The MODERN Impact Pulveriser is a versatile and efficient grinding solution designed for fine and ultra-fine size reduction of materials such as spices, minerals, chemicals, and pigments. </p>
+    </div>
+
+    <div class="pro">
+      <img src="https://i.pinimg.com/736x/c4/bf/98/c4bf98c27c9ca102afcbdbeb784a50f7.jpg" alt="Ayurveda">
+      <h3>Hammer Crusher</h3>
+      <p>The MODERN Hammer Crusher is a rugged crushing machine built for high-capacity reduction of hard and abrasive materials like stones, minerals, and coal.</p>
+    </div>
+
+    <div class="pro">
+      <img src="https://i.pinimg.com/736x/88/77/39/887739210e55d61f1a11103c6c956b8d.jpg" alt="Agriculture">
+      <h3>Vibro Sifter</h3>
+      <p>The MODERN Vibro Sifter is a high-efficiency screening and grading machine designed to separate materials by particle size with precision and speed.</p>
+    </div>
+  </div>
+  </section>
+   <!-- Expandable Section -->
+  <div class="more-products">
+    <div class="pros">
+      <div class="pro">
+        <img src="https://i.pinimg.com/736x/ee/3c/7b/ee3c7bdd9eeb716d6721aeaa15f9ad95.jpg" alt="Ball Mill">
+        <h3>Ribbon Blender</h3>
+        <p>The MODERN Ribbon Blender is a precision mixing machine designed for homogeneous blending of dry powders, granules, and low-viscosity pastes.</p>
+      </div>
+
+      <div class="pro">
+        <img src="https://i.pinimg.com/736x/40/d5/11/40d51142b8ca8a64fbc84cd2972ce797.jpg" alt="Air Classifier">
+        <h3>Hammer Mill</h3>
+        <p>The MODERN Hammer Mill is a robust and reliable grinding machine designed to deliver consistent and efficient size reduction across a variety of applications—whether it's spices, grains, or industrial minerals.</p>
+      </div>
+      <div class="pro">
+        <img src="images\Screw conveyor.jpeg" alt="Air Classifier">
+        <h3>Screw Conveyor</h3>
+        <p>The MODERN Screw Conveyor is a reliable and efficient material handling system designed to transport bulk solids horizontally or at an inclined angle.</p>
+      </div>
+    </div>
+  </div>
+  <button class="view-more-btn" onclick="toggleProducts()">View More</button>
+  <!-- <a href="products.html" class="view-more">View More</a> -->
+  </section>
+  
+  <section class="why-choose-us">
+  <h2>Why Choose Us?</h2>
+  <div class="orange-line"></div>
+
+  <div class="features-row">
+    <div class="feature-card">
+      <div class="feature-title">Low Maintenance Cost🛠️</div>
+      <div class="feature-desc">
+        Rugged construction and smart design guarantee low maintenance costs, maximizing your uptime, improving efficiency, and delivering superior long-term value.
+      </div>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-title">Best After Sales Service✨</div>
+      <div class="feature-desc">
+        Exceptional after-sales support is our promise; our team ensures smooth, efficient production, from installation to maintenance, keeping your operations running 24/7.
+      </div>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-title">High Quality Heavy Machines⚙️🦾</div>
+      <div class="feature-desc">
+        We manufacture robust, industrial-grade machines built for continuous, high-capacity output, making quality and enduring strength the core of everything we build.
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <section class="sectionnn">
+  <h2>Industries We Serve</h2>
+  <div class="orange-line"></div>
+  </section>
+<section class="sid">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+  <div class="container swiper">
+  <div class="wrapper ">
+    <div class="card-list swiper-wrapper">
+      <div class="card swiper-slide">
+        <div class="card-image">
+          <img src="https://i.pinimg.com/736x/e7/1e/4d/e71e4ddff07150a14521e0452b58e86b.jpg" alt="Development">
+          <p class="card-tag"> </p>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title"> Ayurveda & Herbal Industry</h3>
+          <p class="card-text">Specially engineered for ashwagandha, moringa, gokshura, neem, giloy, and other medicinal herbs — our machines preserve the potency and purity of plant-based ingredients.</p>
+        </div>
+        <div class="card-footer">
+          <a href="dumind.html#showcase-item" class="card-button">Read More</a>
+        </div>
+      </div>
+      <div class="card swiper-slide">
+        <div class="card-image">
+          <img src="https://i.pinimg.com/1200x/c4/9e/7e/c49e7e878c800f179b9541291dae76e8.jpg" alt="Development">
+          <p class="card-tag"> </p>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Agriculture Industry </h3>
+          <p class="card-text">Used in processing neem cake, guar gum, cattle feed, and de-oiled cakes — built to handle fibrous and oil-based materials with ease.</p>
+        </div>
+        <div class="card-footer">
+          <a href="industries.html" class="card-button">Read More</a>
+        </div>
+      </div>
+      <div class="card swiper-slide">
+        <div class="card-image">
+          <img src="https://i.pinimg.com/1200x/5a/f9/28/5af9288d014bfd92b4956efa60d7afc5.jpg" alt="Development">
+          <p class="card-tag"> </p>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Food processing industry</h3>
+          <p class="card-text">We provide efficient grinding solutions for spices, pulses, grains, besan, and more. Our machines ensure uniform particle size, high output, and hygienic operation for food-grade materials.</p>
+        </div>
+        <div class="card-footer">
+          <a href="industries.html" class="card-button">Read More</a>
+        </div>
+      </div>
+      <div class="card swiper-slide">
+        <div class="card-image">
+          <img src="https://images.pexels.com/photos/159211/headache-pain-pills-medication-159211.jpeg" alt="Development">
+          <p class="card-tag"> </p>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Pharmaceutical Industry</h3>
+          <p class="card-text">We serve pharma manufacturers with grinding systems suited for bulk drugs, API formulations, and excipients, where hygiene and particle uniformity are critical.</p>
+        </div>
+        <div class="card-footer">
+          <a href="industries.html" class="card-button">Read More</a>
+        </div>
+      </div>
+      <div class="card swiper-slide">
+        <div class="card-image">
+          <img src="https://i.pinimg.com/736x/7e/b4/1c/7eb41ce10a4991525d7d84cebe01416a.jpg" alt="Development">
+          <p class="card-tag"> </p>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Chemical Industry</h3>
+          <p class="card-text">Our hammer mills and impact pulverisers are used for grinding fine chemicals, industrial powders, acids, and alkaline materials — delivering precision and consistent fineness.</p>
+        </div>
+        <div class="card-footer">
+          <a href="industries.html" class="card-button">Read More</a>
+        </div>
+      </div>
+      <div class="card swiper-slide">
+        <div class="card-image">
+          <img src="https://i.pinimg.com/736x/d0/93/ad/d093ad0f2d7fb68b2b4a9c76fbbfa5b2.jpg" alt="Development">
+          <p class="card-tag"> </p>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title"> Minerals & Mining Industry</h3>
+          <p class="card-text">Robust grinding of non-metallic minerals like calcium carbonate, bentonite, silica, dolomite, and barytes — built for heavy-duty, 24/7 operation.</p>
+        </div>
+        <div class="card-footer">
+          <a href="industries.html" class="card-button">Read More</a>
+        </div>
+      </div>
+      <div class="card swiper-slide">
+        <div class="card-image">
+          <img src="https://images.pexels.com/photos/6712913/pexels-photo-6712913.jpeg" alt="Development">
+          <p class="card-tag"> </p>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title"> Pigments & Dyes Industry</h3>
+          <p class="card-text">For color pigment production, powder coatings, and dyes — our machines deliver controlled fineness and dust-free operation critical for color quality.</p>
+        </div>
+        <div class="card-footer">
+          <a href="industries.html" class="card-button">Read More</a>
+        </div>
+      </div>
+    </div>
+    <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+  
+
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<script src="js/SS.js"></script>
+</section>
+
+
+
+
+  
+      
+
+  
+  
+
+    
+  <section class="clients-section">
+  <h2>Our Clients</h2>
+  <div class="orange-line"></div>
+  <div class="Slider">
+    <div class="slide-track">
+      <img src="images\1.png" alt="Client 1">
+      <img src="images\2.png" alt="Client 2">
+      <img src="images\3.png" alt="Client 3">
+      <img src="images\4.png" alt="Client 4">
+      <img src="images\5.png" alt="Client 5">
+      <img src="images\6.png" alt="Client 6">
+      <img src="images\7.png" alt="Client 7">
+      <img src="images\8.png" alt="Client 8">
+      <img src="images\9.png" alt="Client 9">
+      <img src="images\10.png" alt="Client 10">
+      <img src="images\11.png" alt="Client 1">
+      <img src="images\12.png" alt="Client 2">
+      <img src="images\13.png" alt="Client 3">
+      <img src="images\14.png" alt="Client 4">
+      <img src="images\15.png" alt="Client 5">
+      <img src="images\16.png" alt="Client 6">
+      <img src="images\17.png" alt="Client 1">
+      <img src="images\18.png" alt="Client 2">
+      <img src="images\19.png" alt="Client 3">
+      <img src="images\20.png" alt="Client 4">
+      <img src="images\21.png" alt="Client 5">
+      <img src="images\22.png" alt="Client 6">
+      <img src="images\23.png" alt="Client 5">
+      <img src="images\24.png" alt="Client 6">
+      <img src="images\25.png" alt="Client 6">
+      
+      <img src="images\1.png" alt="Client 1">
+      <img src="images\2.png" alt="Client 2">
+      <img src="images\3.png" alt="Client 3">
+      <img src="images\4.png" alt="Client 4">
+      <img src="images\5.png" alt="Client 5">
+      <img src="images\6.png" alt="Client 6">
+      <img src="images\7.png" alt="Client 7">
+      <img src="images\8.png" alt="Client 8">
+      <img src="images\9.png" alt="Client 9">
+      <img src="images\10.png" alt="Client 10">
+      <img src="images\11.png" alt="Client 1">
+      <img src="images\12.png" alt="Client 2">
+      <img src="images\13.png" alt="Client 3">
+      <img src="images\14.png" alt="Client 4">
+      <img src="images\15.png" alt="Client 5">
+      <img src="images\16.png" alt="Client 6">
+      <img src="images\17.png" alt="Client 1">
+      <img src="images\18.png" alt="Client 2">
+      <img src="images\19.png" alt="Client 3">
+      <img src="images\20.png" alt="Client 4">
+      <img src="images\21.png" alt="Client 5">
+      <img src="images\22.png" alt="Client 6">
+      <img src="images\23.png" alt="Client 5">
+      <img src="images\24.png" alt="Client 6">
+      <img src="images\25.png" alt="Client 6">
+      
+      </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Phones -->
+    <div class="footer-section">
+      <h4><span class="icon-circle">📞</span> Phone</h4>
+      <a href="tel:+919582250536">+91 9582250536</a>
+      <a href="tel:+919810023411">+91 9810023411</a>
+    </div>
+
+    <!-- Emails -->
+    <div class="footer-section">
+      <h4><span class="icon-circle">📧</span> Email</h4>
+      <a href="mailto:info@modernpulveriser.com">info@modernpulveriser.com</a>
+      <a href="mailto:vermasiddharth85@gmail.com">vermasiddharth85@gmail.com</a>
+    </div>
+
+    <!-- Address -->
+    <div class="footer-section">
+      <h4><span class="icon-circle">📍</span> Address</h4>
+      <p>
+       98-A,Pocket-K,Sheikh Sarai,Phase-2, New Delhi-110017
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Branding at bottom -->
+  <div class="footer-brand">
+    <img src="images\LOGO.jpg" alt="MP Logo" class="footer-logo">
+  </div>
+</footer>
+
+
+
+
+  <script src="script.js"></script>
+  <script>
+  const hamburger = document.querySelector('.hamburger');
+  const navOverlay = document.querySelector('.nav-overlay');
+  const backdrop = document.querySelector('.backdrop');
+  const navClose = document.querySelector('.nav-close');
+
+  // Open menu
+  hamburger.addEventListener('click', () => {
+    navOverlay.style.display = 'flex';
+    backdrop.style.display = 'block';
+  });
+
+  // Close menu
+  navClose.addEventListener('click', () => {
+    navOverlay.style.display = 'none';
+    backdrop.style.display = 'none';
+  });
+
+  // Close if backdrop clicked
+  backdrop.addEventListener('click', () => {
+    navOverlay.style.display = 'none';
+    backdrop.style.display = 'none';
+  });
+  </script>
+
+</body>
+
+</body>
+</html>
+
+
+
