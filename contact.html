@@ -4,243 +4,389 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact Us - Modern Pulveriser</title>
-  <link rel="stylesheet" href="Style.css"/>
-</head>
-<body>
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gradient Circle Loader</title>
-  <style>
-    /* 🔹 Loader style */
-    .loading-element {
-      transition: height 8s linear;
-      overflow: hidden;
-      width: 100px;
-      height: 0px;
-      margin: auto;
-      position: fixed;
-      top: 0; bottom: 0; left: 0; right: 0;
-      z-index: 9999;
-    }
-
-    /* optional backdrop if you want it centered and visible */
-    .loading-bg {
-      position: fixed;
-      inset: 0;
-      background: #f9f9f9;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 9998;
-      transition: opacity 0.6s ease, visibility 0.6s ease;
-    }
-    .loading-bg.hidden {
-      opacity: 0;
-      visibility: hidden;
-    }
-  </style>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="stylesheet" href="css/Style.css"/>
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/header-fixed.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- 🔹 Loader Container -->
-  <div class="loading-bg" id="loader-bg"></div>
 
-  <script>
-    function getLoadingElement(){
-      var div = document.createElement('div');
-      div.setAttribute('class','loading-element');
-      div.innerHTML = `
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" 
-             viewBox="-50 -50 100 100" height="100" width="100">
-          <defs>
-            <linearGradient id="g" x1="0" x2="1" y1="0" y2="0">
-              <stop offset="0%" stop-color="#6366f1"/>
-              <stop offset="0%" stop-color="#E4572E"/>
-            </linearGradient>
-          </defs>
-          <circle transform="rotate(0)" cx="0" cy="0" r="50" fill="url(#g)"></circle>
-        </svg>
-      `;
+<!-- ═══════════ HEADER ═══════════ -->
+<div class="orbit-shell" id="orbitShell">
+  <div class="orbit-bar">
 
-      div.stop = function(){
-        div.style.height = '0px';
-      }
-      div.start = function(){
-        div.style.height = '100px';
-      }
+    <a href="index.html" class="orbit-logo">
+       <img src="clients/Whitelogo.png" alt="Modern Pulveriser">
+    </a>
 
-      var stops = div.querySelectorAll('stop');
-      var circ  = div.querySelector('circle');
-      var colors = [stops[0].getAttribute('stop-color'), stops[1].getAttribute('stop-color')];
+    <nav>
+      <ul class="orbit-links" id="orbitDesktopNav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="STORYY.html">About Us</a></li>
 
-      function step(t){
-        var oldStop = parseInt(stops[0].getAttribute('offset'));
-        var newStop = (Math.floor(t) % 500) / 5;
-        if(oldStop > newStop){
-          var rotation = parseInt(circ.getAttribute('transform').replace(/[^\d]/g,'')) || 0;
-          rotation = (rotation + 90) % 360;
-          circ.setAttribute('transform', 'rotate(' + rotation + ')');
-          colors.reverse();
-          stops[0].setAttribute('stop-color', colors[0]);
-          stops[1].setAttribute('stop-color', colors[1]);
-          stops[2].setAttribute('stop-color', colors[1]);
-        }
-        stops[0].setAttribute('offset', newStop + '%');
-        stops[1].setAttribute('offset', newStop + '%');
-        window.requestAnimationFrame(step);
-      }
+        <li id="orbit-products">
+          <button onclick="orbitToggleDesktop('orbit-products')" aria-expanded="false">
+            Products
+            <svg class="orbit-caret" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <ul class="orbit-panel orbit-panel--wide">
+            <li><a href="hammer.html">Hammer Mill</a></li>
+            <li><a href="Impact.html">Impact Pulveriser</a></li>
+            <li><a href="vibro.html">Vibro Sifter</a></li>
+            <li><a href="ribbon.html">Ribbon Blender</a></li>
+            <li><a href="screw.html">Screw Conveyor</a></li>
+            <li><a href="crusher.html">Hammer Crusher</a></li>
+          </ul>
+        </li>
 
-      window.requestAnimationFrame(step);
-      div.start();
-      return div;
-    }
+        <li id="orbit-industries">
+          <button onclick="orbitToggleDesktop('orbit-industries')" aria-expanded="false">
+            Industries
+            <svg class="orbit-caret" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <ul class="orbit-panel orbit-panel--wide">
+            <li><a href="spicesnew.html">Spice Processing</a></li>
+            <li><a href="ayurveda.html">Ayurveda & Herbal</a></li>
+            <li><a href="chemical.html">Chemical</a></li>
+            <li><a href="pharma.html">Pharmaceutical</a></li>
+            <li><a href="pigment.html">Pigments & Dyes</a></li>
+            <li><a href="agriculture.html">Agricultural Products</a></li>
+          </ul>
+        </li>
 
-    // Add loader on page start
-    var loaderElement = getLoadingElement();
-    document.getElementById('loader-bg').appendChild(loaderElement);
+        
+      </ul>
+    </nav>
 
-    // Hide loader after page loads
-    window.addEventListener('load', () => {
-      document.getElementById('loader-bg').classList.add('hidden');
-    });
-  </script>
+    <a href="contact.html" class="orbit-cta">
+      Contact Us
+      <svg viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
 
+    <button class="orbit-burger" id="orbitBurger" onclick="orbitToggleMobile()" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
 
-</body>
-</html>
-<body>
-<header class="header">
-  <!-- Logo -->
-  <a href="index.html" class="logo-btn">
-    <img src="images\LOGO.jpg" alt="Logo" class="logo-img">
-    <!-- <span class="logo-text">Modern Pulveriser</span> -->
-  </a>
+  </div>
+</div>
 
-  <!-- Desktop Nav -->
-  <nav class="desktop-nav">
-    <ul>
+<!-- ═══════════ MOBILE FULL-SCREEN MENU ═══════════ -->
+<div class="orbit-mobile" id="orbitMobile">
+  <div class="orbit-mobile-head">
+    <a href="index.html" class="orbit-logo">
+      <img src="clients/Whitelogo.png" alt="Modern Pulveriser">
+    </a>
+    <button class="orbit-mobile-close" onclick="orbitToggleMobile()" aria-label="Close menu">✕</button>
+  </div>
+
+  <div class="orbit-mobile-body">
+    <ul class="orbit-mobile-nav">
       <li><a href="index.html">Home</a></li>
-      <li><a href="story.html">Our Story</a></li>
-      <li><a href="products.html">Products</a></li>
-      <li><a href="industries.html">Industries</a></li>
-      <section class= "contact"><li><a href="contact.html">Contact Us</a></li></sec>
+      <li><a href="STORYY.html">About Us</a></li>
+
+      <li id="orbit-m-products">
+        <button class="orbit-mobile-toggle" onclick="orbitToggleSub('orbit-m-products')" aria-expanded="false">
+          Products
+          <svg class="orbit-caret" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="orbit-mobile-sub">
+          <li><a href="hammer.html">Hammer Mill</a></li>
+          <li><a href="Impact.html">Impact Pulveriser</a></li>
+          <li><a href="vibro.html">Vibro Sifter</a></li>
+          <li><a href="ribbon.html">Ribbon Blender</a></li>
+          <li><a href="screw.html">Screw Conveyor</a></li>
+          <li><a href="crusher.html">Hammer Crusher</a></li>
+        </ul>
+      </li>
+
+      <li id="orbit-m-industries">
+        <button class="orbit-mobile-toggle" onclick="orbitToggleSub('orbit-m-industries')" aria-expanded="false">
+          Industries
+          <svg class="orbit-caret" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="orbit-mobile-sub">
+          <li><a href="spicesnew.html">Spice Processing</a></li>
+          <li><a href="ayurveda.html">Ayurveda & Herbal</a></li>
+          <li><a href="chemical.html">Chemical</a></li>
+          <li><a href="pharma.html">Pharmaceutical</a></li>
+          <li><a href="pigment.html">Pigments & Dyes</a></li>
+          <li><a href="agriculture.html">Agricultural Products</a></li>
+        </ul>
+      </li>
+
+      
     </ul>
-  </nav>
-
-  <!-- Hamburger (Mobile Only) -->
-  <div class="hamburger" onclick="openMenu()">&#9776;</div>
-</header>
-
-<!-- Overlay -->
-<nav class="nav-overlay">
-  <div class="nav-close" onclick="closeMenu()">&times;</div>
-  <ul class="nav-list">
-    <li><a href="index.html" onclick="closeMenu()"><i class="fas fa-home"></i> Home</a></li>
-    <li><a href="story.html" onclick="closeMenu()"><i class="fas fa-book-open"></i> Our Story</a></li>
-    <li><a href="products.html" onclick="closeMenu()"><i class="fas fa-box"></i> Products</a></li>
-    <li><a href="industries.html" onclick="closeMenu()"><i class="fas fa-industry"></i> Industries</a></li>
-    <li><a href="contact.html" onclick="closeMenu()"><i class="fas fa-envelope"></i> Contact Us</a></li>
-  </ul>
-
-  <!-- CTA button at bottom -->
-  <div class="nav-cta">
-    <a href="contact.html" class="cta-btn">Get a Quote</a>
-  </div>
-</nav>
-
-
-
-
-<!-- Full Screen Contact Hero -->
-<section class="contact-page">
-
-  <!-- Contact Info -->
-<div class="contact-info">
-  <h2>Contact Information</h2>
-  <p><strong>📍 Address:</strong> 98-A, Pocket-K, Sheikh Sarai, Phase-2, New Delhi-110017</p>
-  <p><strong>📞 Phone:</strong> 
-    <a href="tel:+919582250536">+91 9582250536</a>
-  </p>
-  <p><strong>📞 Phone:</strong> 
-    <a href="tel:+919810023411">+91 9810023411</a>
-  </p>
-  <p><strong>📧 Email:</strong> 
-    <a href="mailto:info@modernpulverizer.com">info@modernpulverizer.com</a>
-  </p>
-  <p><strong>📧 Email:</strong> 
-    <a href="mailto:vermasiddharth85@gmail.com">vermasiddharth85@gmail.com</a>
-  </p>
-</div>
-  
-
-  <div class="contact-form">
-  <h2>Send Us a Message</h2>
-  <form action="https://formspree.io/f/mblqrgol" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</div>
-
-  
-
-  <!-- Google Map -->
-  <div class="contact-map">
-    <h2>Our Location</h2>
-    <iframe 
-  src="https://www.google.com/maps?q=98-A,+Pocket-K,+Shikh+Sarai,+Phase-2,+New+Delhi-110017&output=embed" 
-  width="100%" 
-  height="350" 
-  style="border:0; border-radius: 12px;" 
-  allowfullscreen="" 
-  loading="lazy">
-  <a href="https://www.google.com/maps?q=98-A,+Pocket-K,+Shikh+Sarai,+Phase-2,+New+Delhi-110017" target="_blank">
-  View larger map
-  </a>
-  </iframe>
 
   </div>
 
-</section>
+  <div class="orbit-mobile-foot">
+    <a href="contact.html" class="orbit-cta">
+      Contact Us
+      <svg viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</div>
+
+<script>
+  /* Header scroll state */
+  const orbitShell = document.getElementById('orbitShell');
+  window.addEventListener('scroll', () => {
+    orbitShell.classList.toggle('is-scrolled', window.scrollY > 16);
+  }, { passive:true });
+
+  /* Desktop dropdowns */
+  function orbitToggleDesktop(id){
+    const li = document.getElementById(id);
+    const isOpen = li.classList.contains('is-open');
+    document.querySelectorAll('.orbit-links > li.is-open').forEach(el=>{
+      el.classList.remove('is-open');
+      const b = el.querySelector('button'); if(b) b.setAttribute('aria-expanded','false');
+    });
+    if(!isOpen){
+      li.classList.add('is-open');
+      const b = li.querySelector('button'); if(b) b.setAttribute('aria-expanded','true');
+    }
+  }
+  document.addEventListener('click', e=>{
+    if(!e.target.closest('.orbit-links > li')){
+      document.querySelectorAll('.orbit-links > li.is-open').forEach(el=>{
+        el.classList.remove('is-open');
+        const b = el.querySelector('button'); if(b) b.setAttribute('aria-expanded','false');
+      });
+    }
+  });
+
+  /* Mobile full-screen menu */
+  const orbitBurger = document.getElementById('orbitBurger');
+  const orbitMobile = document.getElementById('orbitMobile');
+  function orbitToggleMobile(){
+    const isOpen = orbitMobile.classList.contains('is-open');
+    orbitMobile.classList.toggle('is-open');
+    orbitBurger.classList.toggle('is-active');
+    orbitBurger.setAttribute('aria-expanded', String(!isOpen));
+    document.body.style.overflow = isOpen ? '' : 'hidden';
+  }
+
+  /* Mobile accordion (Industries/Products) */
+  function orbitToggleSub(id){
+    const li = document.getElementById(id);
+    const isOpen = li.classList.contains('d-open');
+    document.querySelectorAll('.orbit-mobile-nav > li.d-open').forEach(el=>{
+      if(el.id !== id){
+        el.classList.remove('d-open');
+        const b = el.querySelector('.orbit-mobile-toggle'); if(b) b.setAttribute('aria-expanded','false');
+      }
+    });
+    li.classList.toggle('d-open', !isOpen);
+    const btn = li.querySelector('.orbit-mobile-toggle'); if(btn) btn.setAttribute('aria-expanded', String(!isOpen));
+  }
+
+  document.addEventListener('keydown', e=>{
+    if(e.key === 'Escape' && orbitMobile.classList.contains('is-open')) orbitToggleMobile();
+  });
 
 
-  <footer class="footer">
-  <div class="footer-container">
+  let orbitHoverTimer = null;
 
-    <!-- Phones -->
-    <div class="footer-section">
-      <h4><span class="icon-circle">📞</span> Phone</h4>
+document.querySelectorAll('.orbit-links > li').forEach(li => {
+  li.addEventListener('mouseenter', () => {
+    clearTimeout(orbitHoverTimer);
+    document.querySelectorAll('.orbit-links > li.is-open').forEach(el => {
+      if (el !== li) {
+        el.classList.remove('is-open');
+        const b = el.querySelector('button');
+        if (b) b.setAttribute('aria-expanded', 'false');
+      }
+    });
+    li.classList.add('is-open');
+    const btn = li.querySelector('button');
+    if (btn) btn.setAttribute('aria-expanded', 'true');
+  });
+
+  li.addEventListener('mouseleave', () => {
+    orbitHoverTimer = setTimeout(() => {
+      li.classList.remove('is-open');
+      const btn = li.querySelector('button');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+    }, 250); // forgiveness window in ms
+  });
+});
+</script>
+
+
+
+  <!-- ══ CONTACT HERO STRIP ══ -->
+  <section class="ct-hero">
+    <div class="ct-hero-inner">
+      <div class="ct-eyebrow">Get In Touch</div>
+      <h1>Let's Talk <em>Business</em></h1>
+      <p>Have a project in mind or need a quote? Our team is ready to help you find the right grinding solution for your needs.</p>
+    </div>
+  </section>
+
+  <!-- ══ MAIN CONTACT SECTION ══ -->
+  <section class="ct-main">
+    <div class="ct-container">
+
+      <!-- Row 1: Info + Form side by side -->
+      <div class="ct-top-row">
+
+        <!-- Contact Info Card -->
+        <div class="ct-info-card">
+          <div class="ct-card-label">Our Details</div>
+          <h2>Contact Information</h2>
+          <p class="ct-card-sub">Reach out through any of the channels below — we typically respond within 24 hours.</p>
+<br>
+          <div class="ct-info-list">
+
+            <div class="ct-info-item">
+              <div class="ct-info-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.6 4.87 2 2 0 0 1 3.57 2.69h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 10.09a16 16 0 0 0 6 6l.72-.72a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.28 17.5"/></svg>
+              </div>
+              <div class="ct-info-body">
+                <span class="ct-info-label">Phone</span>
+                <a href="tel:+919582250536">+91 95822 50536</a>
+                <a href="tel:+919810023411">+91 98100 23411</a>
+              </div>
+            </div>
+
+            <div class="ct-info-item">
+              <div class="ct-info-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="ct-info-body">
+                <span class="ct-info-label">Email</span>
+                <a href="mailto:info@modernpulveriser.com">info@modernpulveriser.com</a>
+                <a href="mailto:vermasiddharth85@gmail.com">vermasiddharth85@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="ct-info-item">
+              <div class="ct-info-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="ct-info-body">
+                <span class="ct-info-label">Address</span>
+                <a>98-A, Pocket-K, Sheikh Sarai,<br>Phase-2, New Delhi – 110017</a>
+              </div>
+            </div>
+
+          </div>
+<br>
+          <!-- Quick response note -->
+          <div class="ct-response-note">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Typical response time: within 24 hours
+          </div>
+        </div>
+
+        <!-- Contact Form Card -->
+        <div class="ct-form-card">
+          <div class="ct-card-label">Send a Message</div>
+          <h2>We'd Love to Hear From You</h2>
+          <p class="ct-card-sub">Fill in the form and we'll get back to you with the information you need.</p>
+
+          <form action="https://formspree.io/f/mblqrgol" method="POST" class="ct-form">
+            <div class="ct-form-row">
+              <div class="ct-field">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="e.g. Rahul Singh" required>
+              </div>
+              <div class="ct-field">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+              </div>
+            </div>
+            <div class="ct-field">
+              <label for="phone">Phone Number <span class="ct-optional">(optional)</span></label>
+              <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX">
+            </div>
+            <div class="ct-field">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="e.g. Quote for Hammer Mill">
+            </div>
+            <div class="ct-field">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell us about your requirements, quantities, or any questions..." required></textarea>
+            </div>
+            <button type="submit" class="ct-submit">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Send Message
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Row 2: Map full width -->
+      <div class="ct-map-row">
+        <div class="ct-map-header">
+          <div>
+            <div class="ct-card-label">Find Us</div>
+            <h2>Our Location</h2>
+          </div>
+          <a href="https://www.google.com/maps?q=98-A,+Pocket-K,+Sheikh+Sarai,+Phase-2,+New+Delhi-110017" target="_blank" class="ct-directions-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+            Get Directions
+          </a>
+        </div>
+        <div class="ct-map-wrap">
+          <iframe
+            src="https://www.google.com/maps?q=98-A,+Pocket-K,+Sheikh+Sarai,+Phase-2,+New+Delhi-110017&output=embed"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            title="Modern Pulveriser Location">
+          </iframe>
+        </div>
+        <div class="ct-map-address">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          98-A, Pocket-K, Sheikh Sarai, Phase-2, New Delhi – 110017
+        </div>
+      </div>
+
+    </div>
+  </section>
+<!-- ============ FOOTER ============ -->
+<footer class="mp-footer">
+  <div class="mp-footer-container">
+    <div class="mp-footer-brand-block">
+      <span class="mp-logo-text">Modern <span>Pulveriser</span></span>
+      <p>Designing and manufacturing grinding, crushing and material-handling systems since 1951 .</p>
+    </div>
+
+    <div class="mp-footer-section">
+      <h4>Phone</h4>
       <a href="tel:+919582250536">+91 9582250536</a>
       <a href="tel:+919810023411">+91 9810023411</a>
     </div>
 
-    <!-- Emails -->
-    <div class="footer-section">
-      <h4><span class="icon-circle">📧</span> Email</h4>
+    <div class="mp-footer-section">
+      <h4>Email</h4>
       <a href="mailto:info@modernpulveriser.com">info@modernpulveriser.com</a>
       <a href="mailto:vermasiddharth85@gmail.com">vermasiddharth85@gmail.com</a>
     </div>
 
-    <!-- Address -->
-    <div class="footer-section">
-      <h4><span class="icon-circle">📍</span> Address</h4>
-      <p>
-       98-A,Pocket-K,Sheikh Sarai,Phase-2, New Delhi-110017
-      </p>
+    <div class="mp-footer-section">
+      <h4>Address</h4>
+      <p>98-A, Pocket-K, Sheikh Sarai,<br>Phase-2, New Delhi – 110017</p>
     </div>
-
   </div>
 
-  <!-- Branding at bottom -->
-  <div class="footer-brand">
-    <img src="images\LOGO.jpg" alt="MP Logo" class="footer-logo">
+  <div class="mp-footer-bottom">
+    <span>© 2026 Modern Pulveriser. All rights reserved.</span>
+    <img src="clients/Whitelogo.png" alt="MP Logo" class="mp-footer-logo">
   </div>
 </footer>
+
+  <!-- YOUR EXISTING FOOTER -->
   <script src="js/script.js"></script>
 </body>
 </html>
-

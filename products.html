@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link rel="stylesheet" href="css/header-fixed.css" />
+  <link rel="stylesheet" href="css/spice-processing_5.css" />
 <link rel="stylesheet" href="css/index.css" />
 
   <style>
@@ -204,14 +205,13 @@
 </head>
 <body>
 
- 
+
 <!-- ═══════════ HEADER ═══════════ -->
 <div class="orbit-shell" id="orbitShell">
   <div class="orbit-bar">
 
     <a href="index.html" class="orbit-logo">
-      <!-- <img src="images/LOGO.jpg" alt="Modern Pulveriser"> -->
-       <img src="images/LOGO-bgremove.png" alt="Modern Pulveriser">
+       <img src="clients/Whitelogo.png" alt="Modern Pulveriser">
     </a>
 
     <nav>
@@ -226,11 +226,11 @@
           </button>
           <ul class="orbit-panel orbit-panel--wide">
             <li><a href="hammer.html">Hammer Mill</a></li>
-            <li><a href="ribbon.html">Ribbon Blender</a></li>
-            <li><a href="crusher.html">Hammer Crusher</a></li>
-            <li><a href="vibro.html">Vibro Sifter</a></li>
             <li><a href="Impact.html">Impact Pulveriser</a></li>
+            <li><a href="vibro.html">Vibro Sifter</a></li>
+            <li><a href="ribbon.html">Ribbon Blender</a></li>
             <li><a href="screw.html">Screw Conveyor</a></li>
+            <li><a href="crusher.html">Hammer Crusher</a></li>
           </ul>
         </li>
 
@@ -253,7 +253,7 @@
       </ul>
     </nav>
 
-    <a href="newcontact.html" class="orbit-cta">
+    <a href="contact.html" class="orbit-cta">
       Contact Us
       <svg viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
@@ -269,7 +269,7 @@
 <div class="orbit-mobile" id="orbitMobile">
   <div class="orbit-mobile-head">
     <a href="index.html" class="orbit-logo">
-      <img src="images/LOGO.jpg" alt="Modern Pulveriser">
+      <img src="clients/Whitelogo.png" alt="Modern Pulveriser">
     </a>
     <button class="orbit-mobile-close" onclick="orbitToggleMobile()" aria-label="Close menu">✕</button>
   </div>
@@ -286,11 +286,11 @@
         </button>
         <ul class="orbit-mobile-sub">
           <li><a href="hammer.html">Hammer Mill</a></li>
-          <li><a href="ribbon.html">Ribbon Blender</a></li>
-          <li><a href="crusher.html">Hammer Crusher</a></li>
-          <li><a href="vibro.html">Vibro Sifter</a></li>
           <li><a href="Impact.html">Impact Pulveriser</a></li>
+          <li><a href="vibro.html">Vibro Sifter</a></li>
+          <li><a href="ribbon.html">Ribbon Blender</a></li>
           <li><a href="screw.html">Screw Conveyor</a></li>
+          <li><a href="crusher.html">Hammer Crusher</a></li>
         </ul>
       </li>
 
@@ -315,7 +315,7 @@
   </div>
 
   <div class="orbit-mobile-foot">
-    <a href="newcontact.html" class="orbit-cta">
+    <a href="contact.html" class="orbit-cta">
       Contact Us
       <svg viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
@@ -411,10 +411,21 @@ document.querySelectorAll('.orbit-links > li').forEach(li => {
   <!-- ── HERO ── -->
   <section class="story-heroo" role="banner">
     <div class="hero-overlay"></div>
+    <div class="sp-wrap sp-hero__inner">
+      <div class="sp-hero__text">
+        <h1 class="sp-hero__h1"><br /><span>Our Story</span></h1>
+        <p class="sp-hero__lead">High-Performance Grinding, Crushing & Pulverizing Solutions</p>
+        <p class="sp-hero__body">Engineering excellence meets industrial durability. We design and manufacture heavy-duty pulverizers, hammer mills, and grinding machinery tailored to deliver precise particle sizes, maximum throughput, and unmatched energy efficiency across diverse industries.</p>
+        <div class="hero-divider fade-item"></div>
+      </div>
+    </div>
+<!--     
     <div class="hero-text-container">
+      
+
       <h1 class="fade-item">Our Products</h1>
       <div class="hero-divider fade-item"></div>
-    </div>
+    </div> -->
   </section>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
@@ -485,7 +496,7 @@ document.querySelectorAll('.orbit-links > li').forEach(li => {
       <div class="mppl-card">
         <div class="mppl-card-image">
           <span class="mppl-card-tag">Conveying</span>
-          <img src="images/Screw conveyor.jpeg" alt="Screw Conveyor" loading="lazy">
+          <img src="clients/Screw conveyor.webp" alt="Screw Conveyor" loading="lazy">
         </div>
         <div class="mppl-card-body">
           <h3>Screw Conveyor</h3>
@@ -537,7 +548,7 @@ document.querySelectorAll('.orbit-links > li').forEach(li => {
 
   <div class="mp-footer-bottom">
     <span>© 2026 Modern Pulveriser. All rights reserved.</span>
-    <img src="images/LOGO.jpg" alt="MP Logo" class="mp-footer-logo">
+    <img src="clients/Whitelogo.png" alt="MP Logo" class="mp-footer-logo">
   </div>
 </footer>
 

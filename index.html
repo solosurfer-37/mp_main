@@ -26,7 +26,7 @@
   <div class="orbit-bar">
 
     <a href="index.html" class="orbit-logo">
-       <img src="clients\LOGO-bgremove.webp" alt="Modern Pulveriser">
+       <img src="c:\Users\vansh\Downloads\image-removebg-preview (1).png" alt="Modern Pulveriser">
     </a>
 
     <nav>
@@ -41,11 +41,11 @@
           </button>
           <ul class="orbit-panel orbit-panel--wide">
             <li><a href="hammer.html">Hammer Mill</a></li>
-            <li><a href="ribbon.html">Ribbon Blender</a></li>
-            <li><a href="crusher.html">Hammer Crusher</a></li>
-            <li><a href="vibro.html">Vibro Sifter</a></li>
             <li><a href="Impact.html">Impact Pulveriser</a></li>
+            <li><a href="vibro.html">Vibro Sifter</a></li>
+            <li><a href="ribbon.html">Ribbon Blender</a></li>
             <li><a href="screw.html">Screw Conveyor</a></li>
+            <li><a href="crusher.html">Hammer Crusher</a></li>
           </ul>
         </li>
 
@@ -68,7 +68,7 @@
       </ul>
     </nav>
 
-    <a href="newcontact.html" class="orbit-cta">
+    <a href="contact.html" class="orbit-cta">
       Contact Us
       <svg viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
@@ -84,7 +84,7 @@
 <div class="orbit-mobile" id="orbitMobile">
   <div class="orbit-mobile-head">
     <a href="index.html" class="orbit-logo">
-      <img src="images/LOGO.jpg" alt="Modern Pulveriser">
+      <img src="clients/Whitelogo.png" alt="Modern Pulveriser">
     </a>
     <button class="orbit-mobile-close" onclick="orbitToggleMobile()" aria-label="Close menu">✕</button>
   </div>
@@ -101,11 +101,11 @@
         </button>
         <ul class="orbit-mobile-sub">
           <li><a href="hammer.html">Hammer Mill</a></li>
-          <li><a href="ribbon.html">Ribbon Blender</a></li>
-          <li><a href="crusher.html">Hammer Crusher</a></li>
-          <li><a href="vibro.html">Vibro Sifter</a></li>
           <li><a href="Impact.html">Impact Pulveriser</a></li>
+          <li><a href="vibro.html">Vibro Sifter</a></li>
+          <li><a href="ribbon.html">Ribbon Blender</a></li>
           <li><a href="screw.html">Screw Conveyor</a></li>
+          <li><a href="crusher.html">Hammer Crusher</a></li>
         </ul>
       </li>
 
@@ -130,7 +130,7 @@
   </div>
 
   <div class="orbit-mobile-foot">
-    <a href="newcontact.html" class="orbit-cta">
+    <a href="contact.html" class="orbit-cta">
       Contact Us
       <svg viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
@@ -223,31 +223,6 @@ document.querySelectorAll('.orbit-links > li').forEach(li => {
 });
 </script>
 
-
-
-  <!-- <section class="hero-tech" role="banner">
-  <div class="tech-grid"></div>
-  
-  <div class="corner tl"></div>
-  <div class="corner tr"></div>
-  <div class="corner bl"></div>
-  <div class="corner br"></div>
-  <video autoplay loop muted playsinline id="bg-video" style="position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%; z-index: -100; object-fit: cover; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-  <source src="C:\Users\vansh\Downloads\can_you_create_a_video_like_th.mp4" type="video/mp4">
-</video>
-
-  <div class="hero-text">
-    <div class="since-badge">Est. 1951</div>
-    <h1>Leaders in providing</h1>
-    <h2 class="glow-text">Success Grinding Solutions</h2>
-    <p>
-      Modern Pulveriser is dedicated to delivering cutting-edge pulverizing solutions with unmatched 
-      efficiency, durability, and ease of use. Our machines are designed for low maintenance, 
-      high performance, and long-lasting reliability. 
-    </p>
-    <a href="products.html" class="Cta-btn">Check Products <span class="arrow">→</span></a>
-  </div>
-</section> -->
 <section class="hero-tech" role="banner">
   <video autoplay loop muted playsinline class="hero-video">
     <source src="C:\Users\vansh\Downloads\can_you_create_a_video_like_th.mp4" type="video/mp4">
@@ -273,6 +248,28 @@ document.querySelectorAll('.orbit-links > li').forEach(li => {
     </p>
     <a href="products.html" class="Cta-btn">Check Products <span class="arrow">→</span></a>
   </div>
+  <script>
+  // Saare items ko select karo, button (.yaya) ko bhi alag se pakda hai
+  const heroItems = document.querySelectorAll(
+    ".hero-text h1, .hero-text h2, .hero-text h3, .hero-text p, .hero-text h4,.Cta-btn"
+  );
+
+  // Pehle sabko gayab karo bina move kiye
+  heroItems.forEach(el => {
+    el.style.opacity = "0";
+    el.style.transform = "none";
+    el.style.visibility = "visible"; // Ensure hidden na ho
+  });
+
+  // Ek ek karke fade-in
+  heroItems.forEach((el, index) => {
+    setTimeout(() => {
+      el.style.transition = "opacity 0.8s ease";
+      el.style.opacity = "1";
+    }, index * 500);
+  });
+</script>
+
 </section>
 
 <!-- ============ INTRO / ABOUT ============ -->
@@ -414,7 +411,7 @@ document.querySelectorAll('.orbit-links > li').forEach(li => {
         });
     </script>
 
-<!-- ============ PRODUCTS ============ -->
+
 <!-- ============ PRODUCT SLIDER ============ -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
 
@@ -436,7 +433,7 @@ document.querySelectorAll('.orbit-links > li').forEach(li => {
     <div class="swiper-wrapper">
       <div class="swiper-slide mp-slide-card">
         <div class="mp-slide-img-wrap">
-          <img src="https://i.pinimg.com/736x/40/d5/11/40d51142b8ca8a64fbc84cd2972ce797.jpg" alt="Hammer Mill">
+          <img src="machines/Hammer Mill 1.webp" alt="Hammer Mill">
         </div>
         <div class="mp-slide-body">
           <span class="mp-slide-tag">Size Reduction</span>
@@ -449,7 +446,7 @@ document.querySelectorAll('.orbit-links > li').forEach(li => {
 
       <div class="swiper-slide mp-slide-card">
         <div class="mp-slide-img-wrap">
-          <img src="https://i.pinimg.com/736x/f4/73/b0/f473b0f670ca30fb054a5d36dc28ac1b.jpg" alt="Impact Pulveriser">
+          <img src="machines/Impact Pul 1.webp" alt="Impact Pulveriser">
         </div>
         <div class="mp-slide-body">
           <span class="mp-slide-tag">Size Reduction</span>
@@ -461,7 +458,7 @@ document.querySelectorAll('.orbit-links > li').forEach(li => {
 
       <div class="swiper-slide mp-slide-card">
         <div class="mp-slide-img-wrap">
-          <img src="https://i.pinimg.com/736x/c4/bf/98/c4bf98c27c9ca102afcbdbeb784a50f7.jpg" alt="Hammer Crusher">
+          <img src="machines/Hammer Crusher 1.webp" alt="Hammer Crusher">
         </div>
         <div class="mp-slide-body">
           <span class="mp-slide-tag">Crushing</span>
@@ -473,7 +470,7 @@ document.querySelectorAll('.orbit-links > li').forEach(li => {
 
       <div class="swiper-slide mp-slide-card">
         <div class="mp-slide-img-wrap">
-          <img src="https://i.pinimg.com/736x/88/77/39/887739210e55d61f1a11103c6c956b8d.jpg" alt="Vibro Sifter">
+          <img src="machines/Vibro Sifter 1.webp" alt="Vibro Sifter">
         </div>
         <div class="mp-slide-body">
           <span class="mp-slide-tag">Screening &amp; Grading</span>
@@ -485,7 +482,7 @@ document.querySelectorAll('.orbit-links > li').forEach(li => {
 
       <div class="swiper-slide mp-slide-card">
         <div class="mp-slide-img-wrap">
-          <img src="https://i.pinimg.com/736x/ee/3c/7b/ee3c7bdd9eeb716d6721aeaa15f9ad95.jpg" alt="Ribbon Blender">
+          <img src="machines/Ribbon Blender 1.png" alt="Ribbon Blender">
         </div>
         <div class="mp-slide-body">
           <span class="mp-slide-tag">Mixing &amp; Blending</span>
@@ -532,6 +529,7 @@ document.querySelectorAll('.orbit-links > li').forEach(li => {
     }
   });
 </script>
+<script src="js/SS.js"></script>
 
 <!-- ============ WHY CHOOSE US ============ -->
 <section class="mp-why-section">
@@ -574,7 +572,7 @@ document.querySelectorAll('.orbit-links > li').forEach(li => {
           <!-- <span class="mp-industry-tag">Food Processing</span> -->
           <h3>Spice Processing Industry</h3>
           <p>Efficient grinding for spices, pulses, grains and besan — uniform particle size, high output and hygienic operation for food-grade materials.</p>
-          <a href="industries.html" class="mp-industry-link">Read more →</a>
+          <a href="spicesnew.html" class="mp-industry-link">Read more →</a>
         </div>
       </div>
       <div class="mp-industry-card">
@@ -583,7 +581,7 @@ document.querySelectorAll('.orbit-links > li').forEach(li => {
           <!-- <span class="mp-industry-tag">Ayurveda &amp; Herbal</span> -->
           <h3>Ayurveda &amp; Herbal Industry</h3>
           <p>Engineered for ashwagandha, moringa, gokshura, neem, giloy and other medicinal herbs — preserving the potency and purity of plant-based ingredients.</p>
-          <a href="dumind.html#showcase-item" class="mp-industry-link">Read more →</a>
+          <a href="ayurveda.html" class="mp-industry-link">Read more →</a>
         </div>
       </div>
       <div class="mp-industry-card">
@@ -592,7 +590,7 @@ document.querySelectorAll('.orbit-links > li').forEach(li => {
           <!-- <span class="mp-industry-tag">Pharmaceutical</span> -->
           <h3>Pharmaceutical Industry</h3>
           <p>Grinding systems suited for bulk drugs, API formulations and excipients, where hygiene and particle uniformity are critical.</p>
-          <a href="industries.html" class="mp-industry-link">Read more →</a>
+          <a href="pharma.html" class="mp-industry-link">Read more →</a>
         </div>
       </div>
       <div class="mp-industry-card">
@@ -601,7 +599,7 @@ document.querySelectorAll('.orbit-links > li').forEach(li => {
           <!-- <span class="mp-industry-tag">Pigments &amp; Dyes</span> -->
           <h3>Pigments &amp; Dyes Industry</h3>
           <p>For colour pigment production, powder coatings and dyes — controlled fineness and dust-free operation critical for colour quality.</p>
-          <a href="industries.html" class="mp-industry-link">Read more →</a>
+          <a href="pigment.html" class="mp-industry-link">Read more →</a>
         </div>
       </div>
       
@@ -611,7 +609,7 @@ document.querySelectorAll('.orbit-links > li').forEach(li => {
           <!-- <span class="mp-industry-tag">Agriculture</span> -->
           <h3>Agriculture Industry</h3>
           <p>Used in processing neem cake, guar gum, cattle feed and de-oiled cakes — built to handle fibrous and oil-based materials with ease.</p>
-          <a href="industries.html" class="mp-industry-link">Read more →</a>
+          <a href="agriculture.html" class="mp-industry-link">Read more →</a>
         </div>
       </div>
       
@@ -622,7 +620,7 @@ document.querySelectorAll('.orbit-links > li').forEach(li => {
           <!-- <span class="mp-industry-tag">Chemical</span> -->
           <h3>Chemical Industry</h3>
           <p>Hammer mills and impact pulverisers for fine chemicals, industrial powders, acids and alkaline materials — precision and consistent fineness.</p>
-          <a href="industries.html" class="mp-industry-link">Read more →</a>
+          <a href="chemical.html" class="mp-industry-link">Read more →</a>
         </div>
       </div>
     </div>
@@ -734,7 +732,7 @@ document.querySelectorAll('.orbit-links > li').forEach(li => {
 
   <div class="mp-footer-bottom">
     <span>© 2026 Modern Pulveriser. All rights reserved.</span>
-    <img src="clients\LOGO.webp" alt="MP Logo" class="mp-footer-logo">
+    <img src="clients/Whitelogo.png" alt="MP Logo" class="mp-footer-logo">
   </div>
 </footer>
 

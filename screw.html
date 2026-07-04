@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Screw Conveyor-Modern Pulveriser</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="stylesheet" href="css/Style.css"/>
+  <link rel="stylesheet" href="css/hammer-mill.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/spice-processing_5.css">
+  <link rel="stylesheet" href="css/header-fixed.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ═══════════ HEADER ═══════════ -->
+<div class="orbit-shell" id="orbitShell">
+  <div class="orbit-bar">
+
+    <a href="index.html" class="orbit-logo">
+       <img src="clients/Whitelogo.png" alt="Modern Pulveriser">
+    </a>
+
+    <nav>
+      <ul class="orbit-links" id="orbitDesktopNav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="STORYY.html">About Us</a></li>
+
+        <li id="orbit-products">
+          <button onclick="orbitToggleDesktop('orbit-products')" aria-expanded="false">
+            Products
+            <svg class="orbit-caret" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <ul class="orbit-panel orbit-panel--wide">
+            <li><a href="hammer.html">Hammer Mill</a></li>
+            <li><a href="Impact.html">Screw Conveyor</a></li>
+            <li><a href="vibro.html">Vibro Sifter</a></li>
+            <li><a href="ribbon.html">Ribbon Blender</a></li>
+            <li><a href="screw.html">Screw Conveyor</a></li>
+            <li><a href="crusher.html">Hammer Crusher</a></li>
+          </ul>
+        </li>
+
+        <li id="orbit-industries">
+          <button onclick="orbitToggleDesktop('orbit-industries')" aria-expanded="false">
+            Industries
+            <svg class="orbit-caret" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <ul class="orbit-panel orbit-panel--wide">
+            <li><a href="spicesnew.html">Spice Processing</a></li>
+            <li><a href="ayurveda.html">Ayurveda & Herbal</a></li>
+            <li><a href="chemical.html">Chemical</a></li>
+            <li><a href="pharma.html">Pharmaceutical</a></li>
+            <li><a href="pigment.html">Pigments & Dyes</a></li>
+            <li><a href="agriculture.html">Agricultural Products</a></li>
+          </ul>
+        </li>
+
+        
+      </ul>
+    </nav>
+
+    <a href="contact.html" class="orbit-cta">
+      Contact Us
+      <svg viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+
+    <button class="orbit-burger" id="orbitBurger" onclick="orbitToggleMobile()" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+</div>
+
+<!-- ═══════════ MOBILE FULL-SCREEN MENU ═══════════ -->
+<div class="orbit-mobile" id="orbitMobile">
+  <div class="orbit-mobile-head">
+    <a href="index.html" class="orbit-logo">
+      <img src="clients/Whitelogo.png" alt="Modern Pulveriser">
+    </a>
+    <button class="orbit-mobile-close" onclick="orbitToggleMobile()" aria-label="Close menu">✕</button>
+  </div>
+
+  <div class="orbit-mobile-body">
+    <ul class="orbit-mobile-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="STORYY.html">About Us</a></li>
+
+      <li id="orbit-m-products">
+        <button class="orbit-mobile-toggle" onclick="orbitToggleSub('orbit-m-products')" aria-expanded="false">
+          Products
+          <svg class="orbit-caret" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="orbit-mobile-sub">
+          <li><a href="hammer.html">Hammer Mill</a></li>
+          <li><a href="Impact.html">Screw Conveyor</a></li>
+          <li><a href="vibro.html">Vibro Sifter</a></li>
+          <li><a href="ribbon.html">Ribbon Blender</a></li>
+          <li><a href="screw.html">Screw Conveyor</a></li>
+          <li><a href="crusher.html">Hammer Crusher</a></li>
+        </ul>
+      </li>
+
+      <li id="orbit-m-industries">
+        <button class="orbit-mobile-toggle" onclick="orbitToggleSub('orbit-m-industries')" aria-expanded="false">
+          Industries
+          <svg class="orbit-caret" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="orbit-mobile-sub">
+          <li><a href="spicesnew.html">Spice Processing</a></li>
+          <li><a href="ayurveda.html">Ayurveda & Herbal</a></li>
+          <li><a href="chemical.html">Chemical</a></li>
+          <li><a href="pharma.html">Pharmaceutical</a></li>
+          <li><a href="pigment.html">Pigments & Dyes</a></li>
+          <li><a href="agriculture.html">Agricultural Products</a></li>
+        </ul>
+      </li>
+
+      
+    </ul>
+
+  </div>
+
+  <div class="orbit-mobile-foot">
+    <a href="contact.html" class="orbit-cta">
+      Contact Us
+      <svg viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</div>
+
+<script>
+  /* Header scroll state */
+  const orbitShell = document.getElementById('orbitShell');
+  window.addEventListener('scroll', () => {
+    orbitShell.classList.toggle('is-scrolled', window.scrollY > 16);
+  }, { passive:true });
+
+  /* Desktop dropdowns */
+  function orbitToggleDesktop(id){
+    const li = document.getElementById(id);
+    const isOpen = li.classList.contains('is-open');
+    document.querySelectorAll('.orbit-links > li.is-open').forEach(el=>{
+      el.classList.remove('is-open');
+      const b = el.querySelector('button'); if(b) b.setAttribute('aria-expanded','false');
+    });
+    if(!isOpen){
+      li.classList.add('is-open');
+      const b = li.querySelector('button'); if(b) b.setAttribute('aria-expanded','true');
+    }
+  }
+  document.addEventListener('click', e=>{
+    if(!e.target.closest('.orbit-links > li')){
+      document.querySelectorAll('.orbit-links > li.is-open').forEach(el=>{
+        el.classList.remove('is-open');
+        const b = el.querySelector('button'); if(b) b.setAttribute('aria-expanded','false');
+      });
+    }
+  });
+
+  /* Mobile full-screen menu */
+  const orbitBurger = document.getElementById('orbitBurger');
+  const orbitMobile = document.getElementById('orbitMobile');
+  function orbitToggleMobile(){
+    const isOpen = orbitMobile.classList.contains('is-open');
+    orbitMobile.classList.toggle('is-open');
+    orbitBurger.classList.toggle('is-active');
+    orbitBurger.setAttribute('aria-expanded', String(!isOpen));
+    document.body.style.overflow = isOpen ? '' : 'hidden';
+  }
+
+  /* Mobile accordion (Industries/Products) */
+  function orbitToggleSub(id){
+    const li = document.getElementById(id);
+    const isOpen = li.classList.contains('d-open');
+    document.querySelectorAll('.orbit-mobile-nav > li.d-open').forEach(el=>{
+      if(el.id !== id){
+        el.classList.remove('d-open');
+        const b = el.querySelector('.orbit-mobile-toggle'); if(b) b.setAttribute('aria-expanded','false');
+      }
+    });
+    li.classList.toggle('d-open', !isOpen);
+    const btn = li.querySelector('.orbit-mobile-toggle'); if(btn) btn.setAttribute('aria-expanded', String(!isOpen));
+  }
+
+  document.addEventListener('keydown', e=>{
+    if(e.key === 'Escape' && orbitMobile.classList.contains('is-open')) orbitToggleMobile();
+  });
+
+
+  let orbitHoverTimer = null;
+
+document.querySelectorAll('.orbit-links > li').forEach(li => {
+  li.addEventListener('mouseenter', () => {
+    clearTimeout(orbitHoverTimer);
+    document.querySelectorAll('.orbit-links > li.is-open').forEach(el => {
+      if (el !== li) {
+        el.classList.remove('is-open');
+        const b = el.querySelector('button');
+        if (b) b.setAttribute('aria-expanded', 'false');
+      }
+    });
+    li.classList.add('is-open');
+    const btn = li.querySelector('button');
+    if (btn) btn.setAttribute('aria-expanded', 'true');
+  });
+
+  li.addEventListener('mouseleave', () => {
+    orbitHoverTimer = setTimeout(() => {
+      li.classList.remove('is-open');
+      const btn = li.querySelector('button');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+    }, 250); // forgiveness window in ms
+  });
+});
+</script>
+
+   <section class="hero-blueprint">
+  <div class="blueprint-container">
+    
+    <div class="blueprint-card">
+      <div class="card-left">
+        <div class="product-identity">
+          <br>
+          <br>
+          <div class="hero-eyebrow">Material Handling Equipment</div>
+          <h1 class="product-name"><span>MODERN </span><br>Screw Conveyor</h1>
+        </div>
+        
+        <p class="product-info">
+          The MODERN Screw Conveyor is a high-speed grinding machine designed for fine size reduction of a wide range of materials. It is ideal for applications requiring consistent fineness, high throughput, and reliable performance. It reduces solids to a particle size range of up to 300 mesh, making it suitable for fine grinding applications.
+        </p>
+        
+        <div class="product-specs">
+          <div class="spec-pills">
+            <div class="spec-pill">
+              <span class="sp-label">Feed Size</span>
+              <span class="sp-val">Up to 20 Meters</span>
+            </div>
+            <div class="spec-pill">
+              <span class="sp-label">Fineness</span>
+              <span class="sp-val">Upto SS304 & SS316</span>
+            </div>
+            <div class="spec-pill">
+              <span class="sp-label">Capacity</span>
+              <span class="sp-val">100 Kg/Hr to 1 TPH</span>
+            </div>
+          </div>
+          
+          <div class="hero-ctas">
+            <a href="contact.html" class="btn-solid">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              Get Quote
+            </a>
+            <a href="contact.html" class="btn-line">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.6 4.87 2 2 0 0 1 3.57 2.69h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 10.09a16 16 0 0 0 6 6l.72-.72a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.28 17.5"/></svg>
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-divider"></div>
+
+      <div class="card-right">
+        <div class="mp-gallery" data-mp-gallery data-autoplay="5500">
+          <br>
+    <div class="mp-gallery__frame">
+      <div class="mp-gallery__track">
+        <div class="mp-gallery__slide">
+          <img src="machines/Screw Conveyor 1.webp" >
+        </div>
+      </div>
+
+      <div class="mp-gallery__caption">Full machine view</div>
+
+      <button class="mp-gallery__nav mp-gallery__nav--prev" aria-label="Previous image">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+
+      <div class="mp-gallery__dots">
+        <button class="mp-gallery__dot is-active" data-index="0" aria-label="Go to image 1"></button>
+        <button class="mp-gallery__dot" data-index="1" aria-label="Go to image 2"></button>
+        <button class="mp-gallery__dot" data-index="2" aria-label="Go to image 3"></button>
+      </div>
+
+      <button class="mp-gallery__nav mp-gallery__nav--next" aria-label="Next image">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </div>  
+        
+        <!-- <div class="image-wrapper">
+          <img src="machines\Hammer Mill 1.webp" alt="MODERN Hammer Mill in operation">
+        </div> -->
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  const CAPTIONS_SELECTOR = '.mp-gallery__slide img';
+ 
+  document.querySelectorAll('[data-mp-gallery]').forEach(initGallery);
+ 
+  function initGallery(root){
+    const track   = root.querySelector('.mp-gallery__track');
+    const slides  = Array.from(root.querySelectorAll('.mp-gallery__slide'));
+    const dots    = Array.from(root.querySelectorAll('.mp-gallery__dot'));
+    const prevBtn = root.querySelector('.mp-gallery__nav--prev');
+    const nextBtn = root.querySelector('.mp-gallery__nav--next');
+    const curEl   = root.querySelector('.mp-gallery__count--current');
+    const totEl   = root.querySelector('.mp-gallery__count--total');
+    const caption = root.querySelector('.mp-gallery__caption');
+    const total   = slides.length;
+    let index = 0;
+    let autoplayMs = parseInt(root.dataset.autoplay || '0', 10);
+    let timer = null;
+ 
+    if (totEl) totEl.textContent = String(total).padStart(2,'0');
+ 
+    function pad(n){ return String(n+1).padStart(2,'0'); }
+ 
+    function render(){
+      track.style.transform = `translateX(-${index * 100}%)`;
+      dots.forEach((d,i)=> d.classList.toggle('is-active', i === index));
+      if (curEl) curEl.textContent = pad(index);
+      if (prevBtn) prevBtn.disabled = false;
+      if (nextBtn) nextBtn.disabled = false;
+      if (caption){
+        const img = slides[index].querySelector('img');
+        caption.textContent = img.alt.split('–').pop().trim();
+      }
+    }
+ 
+    function goTo(i){
+      index = (i + total) % total;
+      render();
+      restartAutoplay();
+    }
+    function next(){ goTo(index + 1); }
+    function prev(){ goTo(index - 1); }
+ 
+    prevBtn && prevBtn.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); prev(); });
+    nextBtn && nextBtn.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); next(); });
+    dots.forEach(d => d.addEventListener('click', (e) => {
+      e.preventDefault(); e.stopPropagation();
+      goTo(parseInt(d.dataset.index,10));
+    }));
+ 
+    // keyboard support when the gallery has focus
+    root.setAttribute('tabindex','0');
+    root.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') prev();
+      if (e.key === 'ArrowRight') next();
+    });
+ 
+    // touch / mouse swipe
+    let startX = 0, deltaX = 0, dragging = false;
+    const frame = root.querySelector('.mp-gallery__frame');
+ 
+    frame.addEventListener('pointerdown', (e) => {
+      if (e.target.closest('.mp-gallery__nav, .mp-gallery__dot')) return; // let the button handle its own click
+      dragging = true; startX = e.clientX; deltaX = 0;
+      track.style.transition = 'none';
+      frame.setPointerCapture(e.pointerId);
+      stopAutoplay();
+    });
+    frame.addEventListener('pointermove', (e) => {
+      if (!dragging) return;
+      deltaX = e.clientX - startX;
+      const pct = (deltaX / frame.clientWidth) * 100;
+      track.style.transform = `translateX(calc(-${index * 100}% + ${pct}%))`;
+    });
+    function endDrag(e){
+      if (!dragging) return;
+      dragging = false;
+      track.style.transition = '';
+      const moved = Math.abs(deltaX) > 6;
+      if (Math.abs(deltaX) > frame.clientWidth * 0.15){
+        deltaX < 0 ? next() : prev();
+      } else {
+        render();
+      }
+      if (moved) suppressNextClick = true;   // this was a swipe, not a tap — don't let it act as a link click
+      restartAutoplay();
+    }
+    frame.addEventListener('pointerup', endDrag);
+    frame.addEventListener('pointerleave', () => { if(dragging) endDrag(); });
+ 
+    // if a swipe just happened, eat the resulting click so it can't bubble to a wrapping link/card
+    let suppressNextClick = false;
+    frame.addEventListener('click', (e) => {
+      if (suppressNextClick){
+        e.preventDefault();
+        e.stopPropagation();
+        suppressNextClick = false;
+      }
+    }, true);
+ 
+    // autoplay
+    function startAutoplay(){
+      stopAutoplay();               // always clear any existing timer first — prevents stacked intervals
+      if (!autoplayMs || total < 2) return;
+      timer = setInterval(next, autoplayMs);
+    }
+    function stopAutoplay(){ if (timer){ clearInterval(timer); timer = null; } }
+    function restartAutoplay(){ startAutoplay(); }
+ 
+    root.addEventListener('mouseenter', stopAutoplay);
+    root.addEventListener('mouseleave', startAutoplay);
+ 
+    render();
+    startAutoplay();
+  }
+})();
+</script>
+
+ <section class="section">
+    <div class="container">
+      <div class="section-label">Where It's Used</div>
+      <h2 class="section-title">Applications</h2>
+      <p class="section-sub">Trusted across industries that demand consistent particle size reduction and reliable throughput.</p>
+      </div>
+      <div class="sp-wrap">
+      <div class="sp-sechead">
+        
+      </div>
+      <div class="sp-mats">
+        <div class="sp-mat" style="--mat-img:url('https://i.pinimg.com/1200x/5a/f9/28/5af9288d014bfd92b4956efa60d7afc5.jpg')">
+          <div class="sp-mat__photo"></div>
+          <span>Spices</span>
+        </div>
+        <div class="sp-mat" style="--mat-img:url('https://i.pinimg.com/736x/e7/1e/4d/e71e4ddff07150a14521e0452b58e86b.jpg')">
+          <div class="sp-mat__photo"></div>
+          <span>Ayurveda</span>
+        </div>
+        <div class="sp-mat" style="--mat-img:url('https://images.pexels.com/photos/159211/headache-pain-pills-medication-159211.jpeg')">
+          <div class="sp-mat__photo"></div>
+          <span>Pharmaceuticals</span>
+        </div>
+        <div class="sp-mat" style="--mat-img:url('https://images.pexels.com/photos/6712913/pexels-photo-6712913.jpeg')">
+          <div class="sp-mat__photo"></div>
+          <span>Pigments &amp; Dyes</span>
+        </div>
+        <div class="sp-mat" style="--mat-img:url(https://i.pinimg.com/736x/d0/93/ad/d093ad0f2d7fb68b2b4a9c76fbbfa5b2.jpg)">
+          <div class="sp-mat__photo"></div>
+          <span>Minerals &amp; Chemicals</span>
+        </div>
+        <div class="sp-mat" style="--mat-img:url('https://i.pinimg.com/1200x/c4/9e/7e/c49e7e878c800f179b9541291dae76e8.jpg')">
+          <div class="sp-mat__photo"></div>
+          <span>Agro Products</span>
+        </div>
+        <div class="sp-mat" style="--mat-img:url('https://i.pinimg.com/736x/87/73/f3/8773f354df852427a27f2ad3328b9ebe.jpg')">
+          <div class="sp-mat__photo"></div>
+          <span>Plastic &amp; Recycling Industry</span>
+        </div>
+        
+        
+      </div>
+    </div>
+    </div>
+  </section>
+ 
+<section>
+    <!-- Wide image banner below -->
+    <div class="hero-image-banner">
+       <img src="clients/pexels-tamanna-rumee-52377920-7956502.jpg.webp" alt="MODERN Screw Conveyor in operation">
+      <div class="banner-overlay"></div>
+      <div class="banner-stats">
+        <div class="bstat">
+          <span class="bval">6</span>
+          <span class="blbl">Model Variants</span>
+        </div>
+        <div class="bstat">
+          <span class="bval">SS304 & SS316</span>
+          <span class="blbl">Finest Output</span>
+        </div>
+        <div class="bstat">
+          <span class="bval">1000 Kg</span>
+          <span class="blbl">Max Per Hour</span>
+        </div>
+      </div>
+      <div class="banner-tag">Impact Grinding Technology</div>
+    </div>
+</section>
+
+
+
+  <section class="section">
+    <div class="container">
+      <div class="section-label">How It Works</div>
+      <h2 class="section-titlee">Working Principle</h2>
+      <p class="section-sub">High-speed impact grinding with precision screen filtration and integrated dust control — delivering clean, consistent output every time.</p>
+ 
+      <div class="principle-layout">
+        <div class="steps">
+          <div class="step">
+            <div class="step-badge">
+              <div class="step-num">01</div>
+              <div class="step-line"></div>
+            </div>
+            <div class="step-content">
+              <h4>High-Speed Impact Grinding</h4>
+              <p>Material enters the grinding chamber where high-speed hammers or beaters strike it repeatedly against the liners, reducing it into finer particles through impact.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-badge">
+              <div class="step-num">02</div>
+              <div class="step-line"></div>
+            </div>
+            <div class="step-content">
+              <h4>Wizard Blade Classification</h4>
+              <p>The Wizard Blade creates controlled airflow inside the chamber and continuously circulates the material. Finer particles are carried forward, while coarser particles remain in the grinding zone for further size reduction.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-badge">
+              <div class="step-num">03</div>
+              <div class="step-line"></div>
+            </div>
+            <div class="step-content">
+              <h4>Fine Product Discharge</h4>
+              <p>Once the desired fineness is achieved, the processed material passes through the screen and is discharged through the outlet system for collection.</p>
+            </div>
+          </div>
+        </div>
+ 
+        <div class="principle-card">
+          <p>The Screw Conveyor operates on the principle of impact grinding and dynamic classification. High-speed beaters reduce the material size through repeated impact, while the Wizard Blade generates internal airflow that continuously classifies and recirculates particles within the grinding chamber.<br><br>This process ensures finer particle size distribution, higher grinding efficiency, and consistent product quality across a wide range of applications.</p>
+          <div class="p-stats">
+            <div class="p-stat">
+              <span class="pv">6+</span>
+              <span class="pl">Model Sizes</span>
+            </div>
+            <div class="p-stat">
+              <span class="pv">100M</span>
+              <span class="pl">Finest Mesh</span>
+            </div>
+            <div class="p-stat">
+              <span class="pv">1T/Hr</span>
+              <span class="pl">Max Output</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<section class="section section-white">
+    <div class="container">
+      <div class="section-label">Why Choose This</div>
+      <h2 class="section-title">Features</h2>
+      <p class="section-sub">Designed around the needs of real production environments — efficient, reliable, and easy to maintain.</p>
+ 
+      <div class="features-grid">
+        <div class="feature-item">
+          <img src="weblogos/settings.webp" class="feat-icon" alt="High Efficiency">
+          <h4>High Efficiency Grinding</h4>
+          <p>Optimized hammer design ensures faster and uniform particle reduction across every batch.</p>
+        </div>
+        <div class="feature-item">
+          <img src="weblogos/world.webp" class="feat-icon" alt="Wide Range">
+          <h4>Wide Range of Applications</h4>
+          <p>Suitable for minerals, chemicals, food products, and agro materials across diverse industries.</p>
+        </div>
+        <div class="feature-item">
+          <img src="weblogos/construction.webp" class="feat-icon" alt="Robust Construction">
+          <h4>Robust Construction</h4>
+          <p>Heavy-duty body with wear-resistant liners built for long-term, continuous industrial use.</p>
+        </div>
+        <div class="feature-item">
+          <img src="weblogos/slider.webp" class="feat-icon" alt="Adjustable Fineness">
+          <h4>Adjustable Fineness</h4>
+          <p>Interchangeable screens allow different particle sizes to be achieved — up to 300 mesh.</p>
+        </div>
+        <div class="feature-item">
+          <img src="weblogos/adjustable-wrench.webp" class="feat-icon" alt="Low Maintenance">
+          <h4>Low Maintenance</h4>
+          <p>Easy-access design enables quick cleaning and rapid hammer replacement with minimal downtime.</p>
+        </div>
+        <div class="feature-item">
+          <img src="weblogos/no-dust.webp" class="feat-icon" alt="Dust-Free">
+          <h4>Dust-Free Operation</h4>
+          <p>Positive suction system maintains clean working conditions at all times during operation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <section class="section">
+    <div class="container">
+      <div class="section-label">Customisation</div>
+      <h2 class="section-title">Options</h2>
+      <p class="section-sub">Tailor your Screw Conveyor to the exact demands of your material, environment, and production volume.</p>
+ 
+      <div class="options-grid">
+        <div class="option-item">
+          <div class="opt-icon">
+            <img src="weblogos/screw.webp" alt="Material">
+          </div>
+          <div>
+            <h4>Material of Construction</h4>
+            <p>Contact &amp; non-contact parts in Cast Iron (CI), Carbon Steel (CS), and SS 304 — SS 316 available on request.</p>
+          </div>
+        </div>
+        <div class="option-item">
+          <div class="opt-icon">
+            <img src="weblogos/shield.webp" alt="Wear-Resistant">
+          </div>
+          <div>
+            <h4>Wear-Resistant Parts</h4>
+            <p>Hammers, liners, and impact components from graded alloy steel and hardened materials for extended service life.</p>
+          </div>
+        </div>
+        <div class="option-item">
+          <div class="opt-icon">
+            <img src="weblogos/good-feedback.webp" alt="Performance">
+          </div>
+          <div>
+            <h4>Performance Range</h4>
+            <p>Feed size up to 50MM, output up to 300 mesh, capacity from 20 kg/hr all the way to 1000 kg/hr.</p>
+          </div>
+        </div>
+        <div class="option-item">
+          <div class="opt-icon">
+            <img src="weblogos/settings.webp" alt="Robust Design">
+          </div>
+          <div>
+            <h4>Robust Design</h4>
+            <p>Heavy-duty build with a dynamically balanced rotor for smooth, low-vibration operation under continuous loads.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CTA STRIP ══ -->
+  <section class="cta-strip">
+    <div class="container">
+      <div class="cta-inner">
+        <div class="cta-text">
+          <h2>Need the right <span>Screw Conveyor</span><br>for your process?</h2>
+          <p>Our engineers will help you select the ideal model and configuration.</p>
+        </div>
+        <div class="cta-btns">
+          <a href="contact.html" class="btn-cta-solid">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Get Quote
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="mp-footer">
+  <div class="mp-footer-container">
+    <div class="mp-footer-brand-block">
+      <span class="mp-logo-text">Modern <span>Pulveriser</span></span>
+      <p>Designing and manufacturing grinding, crushing and material-handling systems since 1951 .</p>
+    </div>
+
+    <div class="mp-footer-section">
+      <h4>Phone</h4>
+      <a href="tel:+919582250536">+91 9582250536</a>
+      <a href="tel:+919810023411">+91 9810023411</a>
+    </div>
+
+    <div class="mp-footer-section">
+      <h4>Email</h4>
+      <a href="mailto:info@modernpulveriser.com">info@modernpulveriser.com</a>
+      <a href="mailto:vermasiddharth85@gmail.com">vermasiddharth85@gmail.com</a>
+    </div>
+
+    <div class="mp-footer-section">
+      <h4>Address</h4>
+      <p>98-A, Pocket-K, Sheikh Sarai,<br>Phase-2, New Delhi – 110017</p>
+    </div>
+  </div>
+
+  <div class="mp-footer-bottom">
+    <span>© 2026 Modern Pulveriser. All rights reserved.</span>
+    <img src="clients/Whitelogo.png" alt="MP Logo" class="mp-footer-logo">
+  </div>
+</footer>
+
+</body>
+</html>

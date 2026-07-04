@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ribbon Blender - Modern Pulveriser</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="stylesheet" href="css/Style.css"/>
+  <link rel="stylesheet" href="css/hammer-mill.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/spice-processing_5.css">
+  <link rel="stylesheet" href="css/header-fixed.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ═══════════ HEADER ═══════════ -->
+<div class="orbit-shell" id="orbitShell">
+  <div class="orbit-bar">
+
+    <a href="index.html" class="orbit-logo">
+       <img src="clients/Whitelogo.png" alt="Modern Pulveriser">
+    </a>
+
+    <nav>
+      <ul class="orbit-links" id="orbitDesktopNav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="STORYY.html">About Us</a></li>
+
+        <li id="orbit-products">
+          <button onclick="orbitToggleDesktop('orbit-products')" aria-expanded="false">
+            Products
+            <svg class="orbit-caret" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <ul class="orbit-panel orbit-panel--wide">
+            <li><a href="hammer.html">Hammer Mill</a></li>
+            <li><a href="Impact.html">Impact Pulveriser</a></li>
+            <li><a href="vibro.html">Vibro Sifter</a></li>
+            <li><a href="ribbon.html">Ribbon Blender</a></li>
+            <li><a href="screw.html">Screw Conveyor</a></li>
+            <li><a href="crusher.html">Hammer Crusher</a></li>
+          </ul>
+        </li>
+
+        <li id="orbit-industries">
+          <button onclick="orbitToggleDesktop('orbit-industries')" aria-expanded="false">
+            Industries
+            <svg class="orbit-caret" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <ul class="orbit-panel orbit-panel--wide">
+            <li><a href="spicesnew.html">Spice Processing</a></li>
+            <li><a href="ayurveda.html">Ayurveda & Herbal</a></li>
+            <li><a href="chemical.html">Chemical</a></li>
+            <li><a href="pharma.html">Pharmaceutical</a></li>
+            <li><a href="pigment.html">Pigments & Dyes</a></li>
+            <li><a href="agriculture.html">Agricultural Products</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <a href="contact.html" class="orbit-cta">
+      Contact Us
+      <svg viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+
+    <button class="orbit-burger" id="orbitBurger" onclick="orbitToggleMobile()" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+</div>
+
+<!-- ═══════════ MOBILE FULL-SCREEN MENU ═══════════ -->
+<div class="orbit-mobile" id="orbitMobile">
+  <div class="orbit-mobile-head">
+    <a href="index.html" class="orbit-logo">
+      <img src="clients/Whitelogo.png" alt="Modern Pulveriser">
+    </a>
+    <button class="orbit-mobile-close" onclick="orbitToggleMobile()" aria-label="Close menu">✕</button>
+  </div>
+
+  <div class="orbit-mobile-body">
+    <ul class="orbit-mobile-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="STORYY.html">About Us</a></li>
+
+      <li id="orbit-m-products">
+        <button class="orbit-mobile-toggle" onclick="orbitToggleSub('orbit-m-products')" aria-expanded="false">
+          Products
+          <svg class="orbit-caret" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="orbit-mobile-sub">
+          <li><a href="hammer.html">Hammer Mill</a></li>
+          <li><a href="Impact.html">Impact Pulveriser</a></li>
+          <li><a href="vibro.html">Vibro Sifter</a></li>
+          <li><a href="ribbon.html">Ribbon Blender</a></li>
+          <li><a href="screw.html">Screw Conveyor</a></li>
+          <li><a href="crusher.html">Hammer Crusher</a></li>
+        </ul>
+      </li>
+
+      <li id="orbit-m-industries">
+        <button class="orbit-mobile-toggle" onclick="orbitToggleSub('orbit-m-industries')" aria-expanded="false">
+          Industries
+          <svg class="orbit-caret" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="orbit-mobile-sub">
+          <li><a href="spicesnew.html">Spice Processing</a></li>
+          <li><a href="ayurveda.html">Ayurveda & Herbal</a></li>
+          <li><a href="chemical.html">Chemical</a></li>
+          <li><a href="pharma.html">Pharmaceutical</a></li>
+          <li><a href="pigment.html">Pigments & Dyes</a></li>
+          <li><a href="agriculture.html">Agricultural Products</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="orbit-mobile-foot">
+    <a href="contact.html" class="orbit-cta">
+      Contact Us
+      <svg viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</div>
+
+<script>
+  /* Header scroll state */
+  const orbitShell = document.getElementById('orbitShell');
+  window.addEventListener('scroll', () => {
+    orbitShell.classList.toggle('is-scrolled', window.scrollY > 16);
+  }, { passive:true });
+
+  /* Desktop dropdowns */
+  function orbitToggleDesktop(id){
+    const li = document.getElementById(id);
+    const isOpen = li.classList.contains('is-open');
+    document.querySelectorAll('.orbit-links > li.is-open').forEach(el=>{
+      el.classList.remove('is-open');
+      const b = el.querySelector('button'); if(b) b.setAttribute('aria-expanded','false');
+    });
+    if(!isOpen){
+      li.classList.add('is-open');
+      const b = li.querySelector('button'); if(b) b.setAttribute('aria-expanded','true');
+    }
+  }
+  document.addEventListener('click', e=>{
+    if(!e.target.closest('.orbit-links > li')){
+      document.querySelectorAll('.orbit-links > li.is-open').forEach(el=>{
+        el.classList.remove('is-open');
+        const b = el.querySelector('button'); if(b) b.setAttribute('aria-expanded','false');
+      });
+    }
+  });
+
+  /* Mobile full-screen menu */
+  const orbitBurger = document.getElementById('orbitBurger');
+  const orbitMobile = document.getElementById('orbitMobile');
+  function orbitToggleMobile(){
+    const isOpen = orbitMobile.classList.contains('is-open');
+    orbitMobile.classList.toggle('is-open');
+    orbitBurger.classList.toggle('is-active');
+    orbitBurger.setAttribute('aria-expanded', String(!isOpen));
+    document.body.style.overflow = isOpen ? '' : 'hidden';
+  }
+
+  /* Mobile accordion (Industries/Products) */
+  function orbitToggleSub(id){
+    const li = document.getElementById(id);
+    const isOpen = li.classList.contains('d-open');
+    document.querySelectorAll('.orbit-mobile-nav > li.d-open').forEach(el=>{
+      if(el.id !== id){
+        el.classList.remove('d-open');
+        const b = el.querySelector('.orbit-mobile-toggle'); if(b) b.setAttribute('aria-expanded','false');
+      }
+    });
+    li.classList.toggle('d-open', !isOpen);
+    const btn = li.querySelector('.orbit-mobile-toggle'); if(btn) btn.setAttribute('aria-expanded', String(!isOpen));
+  }
+
+  document.addEventListener('keydown', e=>{
+    if(e.key === 'Escape' && orbitMobile.classList.contains('is-open')) orbitToggleMobile();
+  });
+
+  let orbitHoverTimer = null;
+  document.querySelectorAll('.orbit-links > li').forEach(li => {
+    li.addEventListener('mouseenter', () => {
+      clearTimeout(orbitHoverTimer);
+      document.querySelectorAll('.orbit-links > li.is-open').forEach(el => {
+        if (el !== li) {
+          el.classList.remove('is-open');
+          const b = el.querySelector('button');
+          if (b) b.setAttribute('aria-expanded', 'false');
+        }
+      });
+      li.classList.add('is-open');
+      const btn = li.querySelector('button');
+      if (btn) btn.setAttribute('aria-expanded', 'true');
+    });
+
+    li.addEventListener('mouseleave', () => {
+      orbitHoverTimer = setTimeout(() => {
+        li.classList.remove('is-open');
+        const btn = li.querySelector('button');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      }, 250);
+    });
+  });
+</script>
+
+<section class="hero-blueprint">
+  <div class="blueprint-container">
+    <div class="blueprint-card">
+      <div class="card-left">
+        <div class="product-identity">
+          <br><br>
+          <div class="hero-eyebrow">Mixing & Blending Equipment</div>
+          <h1 class="product-name"><span>MODERN </span><br>Ribbon Blender</h1>
+        </div>
+        
+        <p class="product-info">
+          The MODERN Ribbon Blender is designed for fast and uniform mixing of dry powders, granules, and free-flowing materials. The specially designed inner and outer ribbons create a counter-flow mixing action that ensures excellent homogeneity throughout the batch. Engineered for industrial process reliability and long service life.
+        </p>
+        
+        <div class="product-specs">
+          <div class="spec-pills">
+            <div class="spec-pill">
+              <span class="sp-label">Batch Size</span>
+              <span class="sp-val">50 – 1000 Kg/Hr</span>
+            </div>
+            <div class="spec-pill">
+              <span class="sp-label">Uniformity</span>
+              <span class="sp-val">95% – 99%</span>
+            </div>
+            <div class="spec-pill">
+              <span class="sp-label">Mixing Time</span>
+              <span class="sp-val">8 – 20 Mins</span>
+            </div>
+          </div>
+          
+          <div class="hero-ctas">
+            <a href="contact.html" class="btn-solid">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              Get Quote
+            </a>
+            <a href="contact.html" class="btn-line">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.6 4.87 2 2 0 0 1 3.57 2.69h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 10.09a16 16 0 0 0 6 6l.72-.72a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.28 17.5"/></svg>
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-divider"></div>
+
+      <div class="card-right">
+        <div class="mp-gallery" data-mp-gallery data-autoplay="5500">
+          <br>
+          <div class="mp-gallery__frame">
+            <div class="mp-gallery__track">
+              <div class="mp-gallery__slide">
+                <img src="machines/Ribbon Blender 1.png" alt="Ribbon Blender Outer Shell View">
+              </div>
+              <div class="mp-gallery__slide">
+                <img src="machines/Ribbon Blender 2.webp" alt="Double Helical Ribbon Assembly Internal View">
+              </div>
+              <div class="mp-gallery__slide">
+                <img src="machines/Ribbon Blender 3.webp" alt="Double Helical Ribbon Assembly Internal View">
+              </div>
+            </div>
+
+            <div class="mp-gallery__caption">Industrial Ribbon Blender</div>
+
+            <button class="mp-gallery__nav mp-gallery__nav--prev" aria-label="Previous image">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+
+            <div class="mp-gallery__dots">
+              <button class="mp-gallery__dot is-active" data-index="0" aria-label="Go to image 1"></button>
+              <button class="mp-gallery__dot" data-index="1" aria-label="Go to image 2"></button>
+            </div>
+
+            <button class="mp-gallery__nav mp-gallery__nav--next" aria-label="Next image">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </div>  
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  document.querySelectorAll('[data-mp-gallery]').forEach(initGallery);
+  
+  function initGallery(root){
+    const track   = root.querySelector('.mp-gallery__track');
+    const slides  = Array.from(root.querySelectorAll('.mp-gallery__slide'));
+    const dots    = Array.from(root.querySelectorAll('.mp-gallery__dot'));
+    const prevBtn = root.querySelector('.mp-gallery__nav--prev');
+    const nextBtn = root.querySelector('.mp-gallery__nav--next');
+    const caption = root.querySelector('.mp-gallery__caption');
+    const total   = slides.length;
+    let index = 0;
+    let autoplayMs = parseInt(root.dataset.autoplay || '0', 10);
+    let timer = null;
+ 
+    function render(){
+      track.style.transform = `translateX(-${index * 100}%)`;
+      dots.forEach((d,i)=> d.classList.toggle('is-active', i === index));
+      if (caption){
+        const img = slides[index].querySelector('img');
+        caption.textContent = img.alt;
+      }
+    }
+ 
+    function goTo(i){
+      index = (i + total) % total;
+      render();
+      restartAutoplay();
+    }
+    function next(){ goTo(index + 1); }
+    function prev(){ goTo(index - 1); }
+ 
+    prevBtn && prevBtn.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); prev(); });
+    nextBtn && nextBtn.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); next(); });
+    dots.forEach(d => d.addEventListener('click', (e) => {
+      e.preventDefault(); e.stopPropagation();
+      goTo(parseInt(d.dataset.index,10));
+    }));
+ 
+    root.setAttribute('tabindex','0');
+    root.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') prev();
+      if (e.key === 'ArrowRight') next();
+    });
+ 
+    let startX = 0, deltaX = 0, dragging = false;
+    const frame = root.querySelector('.mp-gallery__frame');
+ 
+    frame.addEventListener('pointerdown', (e) => {
+      if (e.target.closest('.mp-gallery__nav, .mp-gallery__dot')) return;
+      dragging = true; startX = e.clientX; deltaX = 0;
+      track.style.transition = 'none';
+      frame.setPointerCapture(e.pointerId);
+      stopAutoplay();
+    });
+    frame.addEventListener('pointermove', (e) => {
+      if (!dragging) return;
+      deltaX = e.clientX - startX;
+      const pct = (deltaX / frame.clientWidth) * 100;
+      track.style.transform = `translateX(calc(-${index * 100}% + ${pct}%))`;
+    });
+    function endDrag(e){
+      if (!dragging) return;
+      dragging = false;
+      track.style.transition = '';
+      const moved = Math.abs(deltaX) > 6;
+      if (Math.abs(deltaX) > frame.clientWidth * 0.15){
+        deltaX < 0 ? next() : prev();
+      } else {
+        render();
+      }
+      if (moved) suppressNextClick = true;
+      restartAutoplay();
+    }
+    frame.addEventListener('pointerup', endDrag);
+    frame.addEventListener('pointerleave', () => { if(dragging) endDrag(); });
+ 
+    let suppressNextClick = false;
+    frame.addEventListener('click', (e) => {
+      if (suppressNextClick){
+        e.preventDefault();
+        e.stopPropagation();
+        suppressNextClick = false;
+      }
+    }, true);
+ 
+    function startAutoplay(){
+      stopAutoplay();
+      if (!autoplayMs || total < 2) return;
+      timer = setInterval(next, autoplayMs);
+    }
+    function stopAutoplay(){ if (timer){ clearInterval(timer); timer = null; } }
+    function restartAutoplay(){ startAutoplay(); }
+ 
+    root.addEventListener('mouseenter', stopAutoplay);
+    root.addEventListener('mouseleave', startAutoplay);
+ 
+    render();
+    startAutoplay();
+  }
+})();
+</script>
+
+ <section class="section">
+    <div class="container">
+      <div class="section-label">Where It's Used</div>
+      <h2 class="section-title">Applications</h2>
+      <p class="section-sub">Trusted across industries that demand consistent particle size reduction and reliable throughput.</p>
+      </div>
+      <div class="sp-wrap">
+      <div class="sp-sechead">
+        
+      </div>
+      <div class="sp-mats">
+        <div class="sp-mat" style="--mat-img:url('https://i.pinimg.com/1200x/5a/f9/28/5af9288d014bfd92b4956efa60d7afc5.jpg')">
+          <div class="sp-mat__photo"></div>
+          <span>Spices</span>
+        </div>
+        <div class="sp-mat" style="--mat-img:url('https://i.pinimg.com/736x/e7/1e/4d/e71e4ddff07150a14521e0452b58e86b.jpg')">
+          <div class="sp-mat__photo"></div>
+          <span>Ayurveda</span>
+        </div>
+        <div class="sp-mat" style="--mat-img:url('https://images.pexels.com/photos/159211/headache-pain-pills-medication-159211.jpeg')">
+          <div class="sp-mat__photo"></div>
+          <span>Pharmaceuticals</span>
+        </div>
+        <div class="sp-mat" style="--mat-img:url('https://images.pexels.com/photos/6712913/pexels-photo-6712913.jpeg')">
+          <div class="sp-mat__photo"></div>
+          <span>Pigments &amp; Dyes</span>
+        </div>
+        <div class="sp-mat" style="--mat-img:url(https://i.pinimg.com/736x/d0/93/ad/d093ad0f2d7fb68b2b4a9c76fbbfa5b2.jpg)">
+          <div class="sp-mat__photo"></div>
+          <span>Minerals &amp; Chemicals</span>
+        </div>
+        <div class="sp-mat" style="--mat-img:url('https://i.pinimg.com/1200x/c4/9e/7e/c49e7e878c800f179b9541291dae76e8.jpg')">
+          <div class="sp-mat__photo"></div>
+          <span>Agro Products</span>
+        </div>
+        <div class="sp-mat" style="--mat-img:url('https://i.pinimg.com/736x/87/73/f3/8773f354df852427a27f2ad3328b9ebe.jpg')">
+          <div class="sp-mat__photo"></div>
+          <span>Plastic &amp; Recycling Industry</span>
+        </div>
+        
+        
+      </div>
+    </div>
+    </div>
+  </section>
+ 
+<section>
+  <div class="hero-image-banner">
+    <img src="clients/pexels-tamanna-rumee-52377920-7956502.jpg.webp" alt="MODERN Ribbon Blender processing plant">
+    <div class="banner-overlay"></div>
+    <div class="banner-stats">
+      <div class="bstat">
+        <span class="bval">5</span>
+        <span class="blbl">Model Variants</span>
+      </div>
+      <div class="bstat">
+        <span class="bval">99%</span>
+        <span class="blbl">Max Uniformity</span>
+      </div>
+      <div class="bstat">
+        <span class="bval">1000 Kg</span>
+        <span class="blbl">Max Batch Size</span>
+      </div>
+    </div>
+    <div class="banner-tag">Counter-Flow Mixing Technology</div>
+  </div>
+</section>
+
+<section class="section section-white">
+  <div class="container">
+    <div class="section-label">Technical Data</div>
+    <h2 class="section-title">Specifications</h2>
+    <p class="section-sub">Five model sizes engineered to deliver fast and uniform mixing with excellent batch consistency — from small to large industrial scales.</p>
+ 
+    <div class="table-wrap">
+      <table class="spec-table">
+        <thead>
+          <tr>
+            <th>Machine Model</th>
+            <th>50A</th>
+            <th>100A</th>
+            <th>200A</th>
+            <th>500A</th>
+            <th>1000A</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>HP (Motor)</td>
+            <td>3 – 5</td>
+            <td>5 – 10</td>
+            <td>10 – 15</td>
+            <td>15 – 20</td>
+            <td>25 – 30</td>
+          </tr>
+          <tr>
+            <td>Capacity<span class="UNIT">Per Batch</span></td>
+            <td>50<span class="unit">Kg</span></td>
+            <td>100<span class="unit">Kg/Hr</span></td>
+            <td>200<span class="unit">Kg/Hr</span></td>
+            <td>500<span class="unit">Kg/Hr</span></td>
+            <td>1000<span class="unit">Kg/Hr</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-label">How It Works</div>
+    <h2 class="section-titlee">Working Principle</h2>
+    <p class="section-sub">High-efficiency mixing powered by dynamic inner and outer ribbon counter-flows.</p>
+ 
+    <div class="principle-layout">
+      <div class="steps">
+        <div class="step">
+          <div class="step-badge">
+            <div class="step-num">01</div>
+            <div class="step-line"></div>
+          </div>
+          <div class="step-content">
+            <h4>Material Loading</h4>
+            <p>Powders, granules, and processing additives are safely loaded into the processing mixing chamber trough via the specialized top feeding arrangement.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-badge">
+            <div class="step-num">02</div>
+            <div class="step-line"></div>
+          </div>
+          <div class="step-content">
+            <h4>Ribbon Mixing Action</h4>
+            <p>The uniquely calibrated inner and outer helical ribbons rotate simultaneously, moving bulk materials in structural opposite directions to achieve exceptionally rapid and uniform mixing.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-badge">
+            <div class="step-num">03</div>
+            <div class="step-line"></div>
+          </div>
+          <div class="step-content">
+            <h4>Batch Discharge</h4>
+            <p>Once the desired processing time cycle is safely reached, your mixed material cleanly exits via the automated bottom outlet valve assembly for final packaging operations.</p>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="principle-card">
+        <p>The Ribbon Blender operates on an advanced counter-flow mechanism. The outer ribbon moves material from the sides toward the center, while the inner ribbon moves material from the center toward the sides, creating an intense radial and axial mixing action.<br><br>This simultaneous flow ensures that all ingredients are uniformly distributed within minutes, making it highly reliable for even delicate products and complex cross-ingredient batch runs.</p>
+        <div class="p-stats">
+          <div class="p-stat">
+            <div class="pv">5</div>
+            <div class="pl">Standard Sizes</div>
+          </div>
+          <div class="p-stat">
+            <div class="pv">99%</div>
+            <div class="pl">Peak Accuracy</div>
+          </div>
+          <div class="p-stat">
+            <div class="pv">8-20</div>
+            <div class="pl">Mins Blend Time</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-white">
+  <div class="container">
+    <div class="section-label">Why Choose This</div>
+    <h2 class="section-title">Key Features</h2>
+    <p class="section-sub">Heavy-duty construction engineered to deliver exceptional batch homogeneity and lower maintenance downtime.</p>
+ 
+    <div class="features-grid">
+      <div class="feature-item">
+        <img src="weblogos/settings.webp" class="feat-icon" alt="Fast & Uniform Mixing">
+        <h4>Fast & Uniform Mixing</h4>
+        <p>Specially designed inner and outer ribbons ensure rapid blending and excellent batch homogeneity.</p>
+      </div>
+      <div class="feature-item">
+        <img src="weblogos/slider.webp" class="feat-icon" alt="High Mixing Accuracy">
+        <h4>High Mixing Accuracy</h4>
+        <p>Delivers consistent mixing quality with uniform distribution of ingredients throughout the batch.</p>
+      </div>
+      <div class="feature-item">
+        <img src="weblogos/construction.webp" class="feat-icon" alt="Robust Construction">
+        <h4>Robust Construction</h4>
+        <p>Heavy-duty fabricated body and ribbon assembly built for continuous industrial operation and long service life.</p>
+      </div>
+      <div class="feature-item">
+        <img src="weblogos/world.webp" class="feat-icon" alt="Versatile Applications">
+        <h4>Versatile Applications</h4>
+        <p>Suitable for mixing powders, granules, spices, chemicals, pharmaceuticals, minerals, and food products.</p>
+      </div>
+      <div class="feature-item">
+        <img src="weblogos/adjustable-wrench.webp" class="feat-icon" alt="Easy Cleaning">
+        <h4>Easy Cleaning & Maintenance</h4>
+        <p>Simple design with easy access to internal components, reducing cleaning time and maintenance effort.</p>
+      </div>
+      <div class="feature-item">
+        <img src="weblogos/no-dust.webp" class="feat-icon" alt="Customizable Design">
+        <h4>Customizable Design</h4>
+        <p>Available with jacketed construction, liquid spray systems, and multiple configuration options to suit specific processes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<section class="section">
+  <div class="container">
+    <div class="section-label">Customisation</div>
+    <h2 class="section-title">Options</h2>
+    <p class="section-sub">Tailor your industrial blending setup to meet exact structural material demands, plant floor configurations, and regulatory criteria.</p>
+ 
+    <div class="options-grid">
+      <div class="option-item">
+        <div class="opt-icon">
+          <img src="weblogos/screw.webp" alt="Material of Construction">
+        </div>
+        <div>
+          <h4>Material of Construction</h4>
+          <p>Contact and non-contact parts available in Carbon Steel (CS), SS 304, and SS 316 to fully suit food, chemical, or pharmaceutical hygiene grades.</p>
+        </div>
+      </div>
+      <div class="option-item">
+        <div class="opt-icon">
+          <img src="weblogos/shield.webp" alt="Batch Capacity Range">
+        </div>
+        <div>
+          <h4>Batch Capacity Range</h4>
+          <p>Flexible manufacturing layouts supporting operational capacities scaling seamlessly from small 50 Kg configurations up to 1000 Kg units.</p>
+        </div>
+      </div>
+      <div class="option-item">
+        <div class="opt-icon">
+          <img src="weblogos/settings.webp" alt="Discharge Arrangements">
+        </div>
+        <div>
+          <h4>Discharge Arrangements</h4>
+          <p>Multiple engineered options including robust slide gates, sealed manual butterfly valves, or automated pneumatic discharge systems.</p>
+        </div>
+      </div>
+      <div class="option-item">
+        <div class="opt-icon">
+          <img src="weblogos/good-feedback.webp" alt="Robust Design">
+        </div>
+        <div>
+          <h4>Robust Rigidity</h4>
+          <p>Heavy-duty ribbon assemblies coupled with rigid support frames guarantee vibration management and low wear under peak loads.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-strip">
+  <div class="container">
+    <div class="cta-inner">
+      <div class="cta-text">
+        <h2>Need the right <span>Ribbon Blender</span><br>for your process?</h2>
+        <p>Our engineers will help you select the ideal model and customized internal setup.</p>
+      </div>
+      <div class="cta-btns">
+        <a href="contact.html" class="btn-cta-solid">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          Get Quote
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="mp-footer">
+  <div class="mp-footer-container">
+    <div class="mp-footer-brand-block">
+      <span class="mp-logo-text">Modern <span>Pulveriser</span></span>
+      <p>Designing and manufacturing grinding, crushing and material-handling systems since 1951.</p>
+    </div>
+
+    <div class="mp-footer-section">
+      <h4>Phone</h4>
+      <a href="tel:+919582250536">+91 9582250536</a>
+      <a href="tel:+919810023411">+91 9810023411</a>
+    </div>
+
+    <div class="mp-footer-section">
+      <h4>Email</h4>
+      <a href="mailto:info@modernpulveriser.com">info@modernpulveriser.com</a>
+      <a href="mailto:vermasiddharth85@gmail.com">vermasiddharth85@gmail.com</a>
+    </div>
+
+    <div class="mp-footer-section">
+      <h4>Address</h4>
+      <p>98-A, Pocket-K, Sheikh Sarai,<br>Phase-2, New Delhi – 110017</p>
+    </div>
+  </div>
+
+  <div class="mp-footer-bottom">
+    <span>© 2026 Modern Pulveriser. All rights reserved.</span>
+    <img src="clients/Whitelogo.png" alt="MP Logo" class="mp-footer-logo">
+  </div>
+</footer>
+
+</body>
+</html>
