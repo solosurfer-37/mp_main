@@ -344,7 +344,7 @@
   box-shadow: var(--sp-shadow-md);
 }
 .sp-mcard__img {
-  height: 180px;
+  height: 220px;
   overflow: hidden;
   background: var(--sp-light);
 }
@@ -405,6 +405,10 @@
   align-items: center;
   text-align: center;
   }
+  
+  .sp-mcard__img {
+  height: 300px;
+}
 }
 
 .sp-mcardd {

@@ -41,6 +41,7 @@
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   background-image: url("https://i.pinimg.com/736x/84/a4/7e/84a47eef9963c48c781ea4c650e22b49.jpg");
+    background-image: url("https://images.pexels.com/photos/3785935/pexels-photo-3785935.jpeg");
   background-size: cover;
   background-position: center;
   opacity: 0.3; /* 👈 Control image opacity */
