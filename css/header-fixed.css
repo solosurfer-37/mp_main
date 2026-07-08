@@ -1,21 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-body {
-  font-family: 'Poppins', sans-serif;
-  padding-top: 0;
-}
-
 /* ═══════════════════════════════════════
    HEADER — fixed, transparent → solid
 ═══════════════════════════════════════ */
@@ -171,7 +154,7 @@ body{
   box-shadow:0 6px 18px rgba(228,87,46,.35);
   box-shadow:0 6px 18px rgba(30, 42, 213, 0.35);
 }
-.orbit-cta:hover{ background:#c9450f; transform:translateY(-1px); }
+.orbit-cta:hover{ background:#E4572E; transform:translateY(-1px); box-shadow:0 6px 18px rgba(184, 72, 28, 0.35); }
 .orbit-cta svg{ width:13px; height:13px; }
 
 /* ─── Hamburger ─── */
