@@ -266,7 +266,7 @@
   color: var(--sp-charcoal);
   /* color: #261FB3; */
   margin: 0 0 1rem;
-  width: 110%;
+  width: 100%;
 }
 .sp-twocol__text p {
   font-family: 'Poppins', sans-serif;
@@ -873,14 +873,6 @@
   text-decoration: none;
   border-radius: 8px;
 }
-
-
-
-
-
-
-
-
 
 
 
