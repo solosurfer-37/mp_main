@@ -132,92 +132,6 @@
   </div>
 </div>
 
-<script>
-  /* Header scroll state */
-  const orbitShell = document.getElementById('orbitShell');
-  window.addEventListener('scroll', () => {
-    orbitShell.classList.toggle('is-scrolled', window.scrollY > 16);
-  }, { passive:true });
-
-  /* Desktop dropdowns */
-  function orbitToggleDesktop(id){
-    const li = document.getElementById(id);
-    const isOpen = li.classList.contains('is-open');
-    document.querySelectorAll('.orbit-links > li.is-open').forEach(el=>{
-      el.classList.remove('is-open');
-      const b = el.querySelector('button'); if(b) b.setAttribute('aria-expanded','false');
-    });
-    if(!isOpen){
-      li.classList.add('is-open');
-      const b = li.querySelector('button'); if(b) b.setAttribute('aria-expanded','true');
-    }
-  }
-  document.addEventListener('click', e=>{
-    if(!e.target.closest('.orbit-links > li')){
-      document.querySelectorAll('.orbit-links > li.is-open').forEach(el=>{
-        el.classList.remove('is-open');
-        const b = el.querySelector('button'); if(b) b.setAttribute('aria-expanded','false');
-      });
-    }
-  });
-
-  /* Mobile full-screen menu */
-  const orbitBurger = document.getElementById('orbitBurger');
-  const orbitMobile = document.getElementById('orbitMobile');
-  function orbitToggleMobile(){
-    const isOpen = orbitMobile.classList.contains('is-open');
-    orbitMobile.classList.toggle('is-open');
-    orbitBurger.classList.toggle('is-active');
-    orbitBurger.setAttribute('aria-expanded', String(!isOpen));
-    document.body.style.overflow = isOpen ? '' : 'hidden';
-  }
-
-  /* Mobile accordion (Industries/Products) */
-  function orbitToggleSub(id){
-    const li = document.getElementById(id);
-    const isOpen = li.classList.contains('d-open');
-    document.querySelectorAll('.orbit-mobile-nav > li.d-open').forEach(el=>{
-      if(el.id !== id){
-        el.classList.remove('d-open');
-        const b = el.querySelector('.orbit-mobile-toggle'); if(b) b.setAttribute('aria-expanded','false');
-      }
-    });
-    li.classList.toggle('d-open', !isOpen);
-    const btn = li.querySelector('.orbit-mobile-toggle'); if(btn) btn.setAttribute('aria-expanded', String(!isOpen));
-  }
-
-  document.addEventListener('keydown', e=>{
-    if(e.key === 'Escape' && orbitMobile.classList.contains('is-open')) orbitToggleMobile();
-  });
-
-
-  let orbitHoverTimer = null;
-
-document.querySelectorAll('.orbit-links > li').forEach(li => {
-  li.addEventListener('mouseenter', () => {
-    clearTimeout(orbitHoverTimer);
-    document.querySelectorAll('.orbit-links > li.is-open').forEach(el => {
-      if (el !== li) {
-        el.classList.remove('is-open');
-        const b = el.querySelector('button');
-        if (b) b.setAttribute('aria-expanded', 'false');
-      }
-    });
-    li.classList.add('is-open');
-    const btn = li.querySelector('button');
-    if (btn) btn.setAttribute('aria-expanded', 'true');
-  });
-
-  li.addEventListener('mouseleave', () => {
-    orbitHoverTimer = setTimeout(() => {
-      li.classList.remove('is-open');
-      const btn = li.querySelector('button');
-      if (btn) btn.setAttribute('aria-expanded', 'false');
-    }, 250); // forgiveness window in ms
-  });
-});
-</script>
-
    <section class="hero-blueprint">
   <div class="blueprint-container">
     
@@ -739,6 +653,9 @@ document.querySelectorAll('.orbit-links > li').forEach(li => {
     <img src="clients/s-logo.png" alt="MP Logo" class="mp-footer-logo">
   </div>
 </footer>
+
+
+<script src="js/main.js"></script>
 
 </body>
 </html>
