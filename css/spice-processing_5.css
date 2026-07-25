@@ -330,6 +330,20 @@
   color: var(--sp-charcoal);
   text-align: center;
 }
+@media (max-width: 639px) {
+  .sp-mat__photo {
+  width: clamp(72px, 20vw, 96px);
+  height: clamp(72px, 20vw, 96px);
+  aspect-ratio: 1;
+  background-image: var(--mat-img);
+  background-size: cover;
+  background-position: center;
+  border: 3px solid var(--sp-white);
+  box-shadow: var(--sp-shadow);
+  border-radius: 50%;
+  transition: transform .25s ease, box-shadow .25s ease;
+}  
+}
 
 /* ════════════════════════════════════════════
    MACHINES

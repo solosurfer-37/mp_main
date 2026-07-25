@@ -652,6 +652,7 @@ html { scroll-behavior: smooth; }
 .spec-table thead th {
   padding: 11px 13px;
   color: var(--white);
+  width: 40px;
   font-weight: 600;
   font-size: 0.72rem;
   letter-spacing: 0.04em;
@@ -663,7 +664,7 @@ html { scroll-behavior: smooth; }
 .spec-table thead th:first-child { text-align: left; }
 
 @media (min-width: 900px) {
-  .spec-table thead th { padding: 15px 20px; font-size: 0.98rem; letter-spacing: 0.05em; }
+  .spec-table thead th { padding: 15px 20px; font-size: 0.98rem; letter-spacing: 0.05em;width: 100px; }
 }
 
 .spec-table tbody td:first-child {
@@ -1887,3 +1888,11 @@ html { scroll-behavior: smooth; }
     text-align: center;
 }
 
+h1.product-name span.pn-line2 {
+  color: #1c1c2e !important;
+  font-style: italic !important;
+}
+
+h1.product-name span.pn-line1 {
+  color: #261FB3 !important;
+}
