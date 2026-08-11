@@ -559,9 +559,7 @@ body { background-color: #FFFFFA; color: #080705; }
 .hero-tech {
   position: relative;
   min-height: 100vh;
-  background-image: url('https://images.pexels.com/photos/190574/pexels-photo-190574.jpeg');
-  background-image: url('https://i.pinimg.com/736x/81/c9/4c/81c94c47b4027d5b5949fbd7aa5523f9.jpg');
-  background-image: url('https://i.pinimg.com/736x/7a/8f/35/7a8f35f3a1e52b6b1ef664330c4d9e78.jpg');
+  /* background-image: url('https://i.pinimg.com/736x/7a/8f/35/7a8f35f3a1e52b6b1ef664330c4d9e78.jpg'); */
   background-size: cover;
   background-position: center;
   display: flex;
