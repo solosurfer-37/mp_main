@@ -515,9 +515,7 @@ body{
 
 
 
-
 .btt-btn {
-  --btn-bg: #261fb3;
   position: fixed;
   bottom: clamp(16px, 4vw, 26px);
   right: clamp(16px, 4vw, 26px);
@@ -525,17 +523,14 @@ body{
   height: clamp(38px, 9vw, 50px);
   border: none;
   border-radius: 50%;
-  background: var(--btn-bg);
-  color: #fff;
+  background: #261fb3;
   cursor: pointer;
   display: grid;
   place-items: center;
-  overflow: visible;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(20px) scale(0.8);
-  transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
-              background 0.3s ease, box-shadow 0.3s ease;
+  transform: translateY(20px) scale(0.85);
+  transition: opacity 0.3s ease, transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
   z-index: 999;
   box-shadow: 0 4px 14px rgba(38, 31, 179, 0.35);
   padding: 0;
@@ -548,117 +543,21 @@ body{
 }
 
 .btt-btn:hover {
-  --btn-bg: #e4572e;
+  background: #e4572e;
   box-shadow: 0 4px 18px rgba(228, 87, 46, 0.45);
-  transform: translateY(-4px) scale(1.05);
+  transform: translateY(-6px) scale(1.12);
 }
 
-/* ===== Gears ===== */
-.btt-gears {
-  position: absolute;
-  inset: 0;
-  opacity: 0.55;
+.btt-btn:active {
+  transform: translateY(-3px) scale(1.02);
 }
 
-.btt-gear {
-  position: absolute;
-  color: #fff;
-}
-
-.gear-hole {
-  fill: var(--btn-bg);
-  transition: fill 0.3s ease;
-}
-
-.btt-gear-big {
-  width: 62%;
-  height: 62%;
-  top: 6%;
-  left: 2%;
-  animation: gear-idle-cw 6s linear infinite;
-  animation-play-state: paused;
-}
-
-.btt-gear-small {
-  width: 40%;
-  height: 40%;
-  bottom: 4%;
-  right: 2%;
-  animation: gear-idle-ccw 4s linear infinite;
-  animation-play-state: paused;
-}
-
-.btt-btn:hover .btt-gear-big,
-.btt-btn:hover .btt-gear-small {
-  animation-play-state: running;
-}
-
-@keyframes gear-idle-cw {
-  to { transform: rotate(360deg); }
-}
-@keyframes gear-idle-ccw {
-  to { transform: rotate(-360deg); }
-}
-
-/* Fast spin burst on click */
-.btt-gear-big.burst {
-  animation: gear-burst-cw 0.55s cubic-bezier(0.2, 0.8, 0.3, 1);
-}
-.btt-gear-small.burst {
-  animation: gear-burst-ccw 0.55s cubic-bezier(0.2, 0.8, 0.3, 1);
-}
-
-@keyframes gear-burst-cw {
-  to { transform: rotate(300deg); }
-}
-@keyframes gear-burst-ccw {
-  to { transform: rotate(-300deg); }
-}
-
-/* ===== Arrow ===== */
 .btt-arrow {
-  position: relative;
-  width: 40%;
-  height: 40%;
-  transition: transform 0.25s ease;
-  z-index: 2;
+  width: 44%;
+  height: 44%;
+  transition: transform 0.3s ease;
 }
 
 .btt-btn:hover .btt-arrow {
   transform: translateY(-2px);
-}
-
-.btt-btn:active .btt-arrow {
-  transform: translateY(1px) scale(0.9);
-}
-
-/* ===== Sparks ===== */
-.btt-sparks {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-
-.spark {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: #ffcf5c;
-  box-shadow: 0 0 4px 1px rgba(255, 207, 92, 0.7);
-  transform: translate(-50%, -50%);
-  animation: spark-fly 0.55s ease-out forwards;
-}
-
-@keyframes spark-fly {
-  0% {
-    transform: translate(-50%, -50%) rotate(var(--angle)) translateX(0) scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(var(--angle)) translateX(var(--distance)) scale(0.2);
-    opacity: 0;
-  }
 }
