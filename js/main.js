@@ -1,4 +1,25 @@
 
+// ===== Back to Top Button =====
+(function () {
+  const btn = document.getElementById('backToTop');
+
+  function toggleBackToTop() {
+    if (window.scrollY > 300) {
+      btn.classList.add('show');
+    } else {
+      btn.classList.remove('show');
+    }
+  }
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  window.addEventListener('scroll', toggleBackToTop, { passive: true });
+  toggleBackToTop();
+})();
+
+
   /* Header scroll state */
   const orbitShell = document.getElementById('orbitShell');
   window.addEventListener('scroll', () => {
@@ -227,68 +248,6 @@ document.addEventListener('DOMContentLoaded',()=>{
 
 
 
-
-
-
-
-
-// ===== Back to Top Button (Gear + Sparks) =====
-(function () {
-  const btn = document.getElementById('backToTop');
-  const gearBig = btn.querySelector('.btt-gear-big');
-  const gearSmall = btn.querySelector('.btt-gear-small');
-  const sparkBox = btn.querySelector('.btt-sparks');
-
-  function toggleBackToTop() {
-    if (window.scrollY > 300) {
-      btn.classList.add('show');
-    } else {
-      btn.classList.remove('show');
-    }
-  }
-
-  function spawnSparks() {
-    const sparkCount = 8;
-    for (let i = 0; i < sparkCount; i++) {
-      const spark = document.createElement('span');
-      spark.className = 'spark';
-
-      // random angle around full circle + random distance for organic burst
-      const angle = (360 / sparkCount) * i + (Math.random() * 20 - 10);
-      const distance = 18 + Math.random() * 14;
-
-      spark.style.setProperty('--angle', `${angle}deg`);
-      spark.style.setProperty('--distance', `${distance}px`);
-
-      sparkBox.appendChild(spark);
-
-      // cleanup after animation ends
-      setTimeout(() => spark.remove(), 600);
-    }
-  }
-
-  function triggerGearBurst() {
-    gearBig.classList.remove('burst');
-    gearSmall.classList.remove('burst');
-    void gearBig.offsetWidth; // reflow trick taaki animation restart ho baar baar click pe
-    gearBig.classList.add('burst');
-    gearSmall.classList.add('burst');
-    spawnSparks();
-
-    setTimeout(() => {
-      gearBig.classList.remove('burst');
-      gearSmall.classList.remove('burst');
-    }, 550);
-  }
-
-  btn.addEventListener('click', () => {
-    triggerGearBurst();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-
-  window.addEventListener('scroll', toggleBackToTop, { passive: true });
-  toggleBackToTop();
-})();
 
 
 
