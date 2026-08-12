@@ -1,62 +1,92 @@
-/* .stats-section {
-  background: var(--paper);
-  padding: 60px 40px;
-  
+/*fonts*/
+/* Poppins */
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/poppins-v24-latin-300.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
 
-.stats-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 60px;
-  flex-wrap: wrap;
-  max-width: 1300px;
-  width: 1200px ;
-  margin: 0 auto;
-  background: linear-gradient(135deg, #261fb3 0%, #251fb3 60%, #12173d 100%);
-  border-radius: 24px;
-  border-radius: 10px;
-  padding: 40px 30px;
-  height: 250px;
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/poppins-v24-latin-300italic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
 }
 
-.stat-box {
-  background: transparent;
-  border: none;
-  border-radius: 0;
-  padding: 0;
-  width: auto;
-  min-width: 180px;
-  box-shadow: none;
-}
-
-.stat-box h2 {
-  font-size: 42px;
-  font-weight: 500;
-  color: #FFFFFA;
-  margin-bottom: 10px;
-}
-
-.stat-box p {
-  font-size: 15px;
-  color: #cfd2e8;
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/poppins-v24-latin-regular.woff2') format('woff2');
   font-weight: 400;
-  line-height: 1.4;
-  margin: 0;
+  font-style: normal;
+  font-display: swap;
 }
 
-.white-gap {
-  display: none;
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/poppins-v24-latin-500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
-
-@media (max-width: 768px) {
-  .stats-container {
-  height: auto;
-  margin-right: auto;
-  width: auto;
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/poppins-v24-latin-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
-} */
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/poppins-v24-latin-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Space Grotesk */
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('../fonts/space-grotesk-v22-latin-500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('../fonts/space-grotesk-v22-latin-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('../fonts/space-grotesk-v22-latin-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/poppins-v24-latin-800.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/poppins-v24-latin-800italic.woff2') format('woff2');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
 
 /* ════════════════════════════════════════════
    STATS COUNTER SECTION — mobile-first

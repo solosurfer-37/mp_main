@@ -1405,7 +1405,8 @@ html { scroll-behavior: smooth; }
 
 .product-name {
   font-size: 2rem;
-  font-weight: 800;
+  font-weight: 600;
+  /* font-weight: bold; */
   color: #000;
   line-height: 1.2;
 }
@@ -1896,3 +1897,4 @@ h1.product-name span.pn-line2 {
 h1.product-name span.pn-line1 {
   color: #261FB3 !important;
 }
+
