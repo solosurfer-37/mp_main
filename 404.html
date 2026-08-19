@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Page Not Found | Modern Pulveriser</title>
+<meta name="robots" content="noindex, follow">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<!-- Same stylesheets as the live site, so header/footer/nav look identical -->
+<link rel="stylesheet" href="css/Style.css"/>
+<link rel="stylesheet" href="css/index.css" />
+<link rel="stylesheet" href="css/head&foot.css" />
+
+<style>
+  /* ===== 404-page-only styles, built from the same design tokens as index.css ===== */
+  :root{
+    --blue:#2b35af;
+    --orange:#e85d04;
+    --charcoal:#1c1c2e;
+    --paper:#f4f3ef;
+    --steel:#8a8d9a;
+    --ink:#4a4a5c;
+    --line-dark: rgba(244,243,239,0.12);
+  }
+
+  .mp-404-hero{
+    position:relative;
+    min-height:82vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    overflow:hidden;
+    padding:180px 6vw 90px;
+    color:#f4f3ef;
+  }
+  .mp-404-hero .mp-bg-image{
+    position:absolute; inset:0; width:100%; height:100%;
+    object-fit:cover; z-index:0;
+  }
+  .mp-404-hero::before{
+    content:"";
+    position:absolute; inset:0; z-index:1;
+    background: rgba(6,12,35,.82);
+  }
+  .mp-404-grid-overlay{
+    position:absolute; inset:0; z-index:2; pointer-events:none;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size:56px 56px;
+  }
+  .mp-404-corner{
+    position:absolute; width:34px; height:34px; z-index:3;
+    border:2px solid rgba(232,93,4,0.55); pointer-events:none;
+  }
+  .mp-404-corner.tl{ top:36px; left:36px; border-right:none; border-bottom:none; }
+  .mp-404-corner.tr{ top:36px; right:36px; border-left:none; border-bottom:none; }
+  .mp-404-corner.bl{ bottom:36px; left:36px; border-right:none; border-top:none; }
+  .mp-404-corner.br{ bottom:36px; right:36px; border-left:none; border-top:none; }
+
+  .mp-404-inner{ position:relative; z-index:4; max-width:720px; margin:0 auto; }
+
+  .mp-404-graphic{ margin-bottom:28px; display:flex; justify-content:center; }
+  .mp-404-graphic svg{ width:100%; max-width:480px; height:auto; }
+
+  .mp-404-inner h1{
+    font-size:clamp(1.5rem, 3.2vw, 2.2rem);
+    font-weight:600;
+    line-height:1.3;
+    margin-bottom:16px;
+  }
+  .mp-404-inner p{
+    font-size:1rem;
+    line-height:1.75;
+    color:#c7c8d4;
+    max-width:520px;
+    margin:0 auto 36px;
+  }
+
+  .mp-404-actions{
+    display:flex; gap:16px; justify-content:center; flex-wrap:wrap;
+    margin-bottom:44px;
+  }
+  .mp-btn-primary, .mp-btn-ghost{
+    font-family:'Poppins', sans-serif; font-size:0.92rem; font-weight:600;
+    letter-spacing:0.02em; padding:15px 30px; border-radius:8px; text-decoration:none;
+    transition:transform .25s ease, background .25s ease, color .25s ease, border-color .25s ease;
+    display:inline-flex; align-items:center; gap:10px; border:1px solid transparent; cursor:pointer;
+  }
+  .mp-btn-primary{ background:var(--orange); color:#fff; }
+  .mp-btn-primary:hover{ transform:translateY(-3px); background:#261FB3; color:#fff; }
+  .mp-btn-ghost{ border-color:rgba(244,243,239,0.28); color:#f4f3ef; background:transparent; }
+  .mp-btn-ghost:hover{ border-color:var(--orange); color:var(--orange); transform:translateY(-3px); }
+
+  /* search */
+  .mp-404-search{
+    max-width:440px; margin:0 auto;
+    display:flex; align-items:center; gap:0;
+    background:rgba(244,243,239,0.06);
+    border:1px solid var(--line-dark);
+    border-radius:8px;
+    overflow:hidden;
+  }
+  .mp-404-search input{
+    flex:1; border:none; background:transparent; outline:none;
+    padding:15px 18px; font-family:'Poppins', sans-serif; font-size:0.92rem;
+    color:#f4f3ef;
+  }
+  .mp-404-search input::placeholder{ color:var(--steel); }
+  .mp-404-search button{
+    border:none; background:var(--orange); color:#fff; cursor:pointer;
+    padding:0 22px; height:100%; min-height:52px;
+    font-size:1rem; transition:background .25s ease;
+  }
+  .mp-404-search button:hover{ background:#261FB3; }
+
+  /* quick links grid, styled like the products grid on index.html */
+  .mp-404-links-section{
+    padding:90px 6vw 100px;
+    background:var(--paper);
+  }
+  .mp-404-links-head{
+    text-align:center; margin-bottom:48px;
+  }
+  .mp-404-links-head span{
+    font-family:'Poppins', sans-serif; font-size:0.78rem; font-weight:600;
+    letter-spacing:0.2em; text-transform:uppercase; color:#261FB3;
+  }
+  .mp-404-links-head h2{
+    font-size:clamp(1.4rem, 3vw, 1.9rem); font-weight:600; color:#000; margin-top:14px;
+  }
+
+  .mp-404-grid{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:1px;
+    background:rgba(28,28,46,0.10); border:1px solid rgba(28,28,46,0.10);
+    max-width:1100px; margin:0 auto;
+  }
+  .mp-404-card{
+    background:#fff; padding:30px 26px; text-decoration:none; color:var(--charcoal);
+    display:flex; flex-direction:column; gap:8px; transition:background .25s ease;
+  }
+  .mp-404-card:hover{ background:#f7f6f2; }
+  .mp-404-card .mp-404-card-tag{
+    font-family:'Poppins', sans-serif; font-size:0.68rem; letter-spacing:0.16em;
+    text-transform:uppercase; color:var(--orange);
+  }
+  .mp-404-card h3{ font-size:1rem; font-weight:600; }
+  .mp-404-card .mp-404-arrow{
+    margin-top:4px; font-family:'Poppins', sans-serif; font-size:0.85rem; font-weight:600;
+    color:#261FB3; display:inline-flex; align-items:center; gap:8px;
+  }
+  .mp-404-card:hover .mp-404-arrow{ color:var(--orange); }
+
+  @media (max-width:900px){ .mp-404-grid{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:600px){
+    .mp-404-grid{ grid-template-columns:1fr; }
+    .mp-404-hero{ padding:150px 6vw 70px; }
+  }
+</style>
+</head>
+<body>
+
+<span id="mp-top"></span>
+
+<!-- ═══════════ HEADER (identical to index.html) ═══════════ -->
+<div class="orbit-shell" id="orbitShell">
+  <div class="orbit-bar">
+
+    <a href="index.html" class="orbit-logo">
+       <img src="clients/s-logo.png" alt="Modern Pulveriser">
+    </a>
+
+    <nav>
+      <ul class="orbit-links" id="orbitDesktopNav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="STORYY.html">About Us</a></li>
+
+        <li id="orbit-products">
+          <button onclick="orbitToggleDesktop('orbit-products')" aria-expanded="false">
+            Products
+            <svg class="orbit-caret" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <ul class="orbit-panel orbit-panel--wide">
+            <li><a href="hammer.html">Hammer Mill</a></li>
+            <li><a href="Impact.html">Impact Pulveriser</a></li>
+            <li><a href="vibro.html">Vibro Sifter</a></li>
+            <li><a href="ribbon.html">Ribbon Blender</a></li>
+            <li><a href="screw.html">Screw Conveyor</a></li>
+            <li><a href="crusher.html">Hammer Crusher</a></li>
+          </ul>
+        </li>
+
+        <li id="orbit-industries">
+          <button onclick="orbitToggleDesktop('orbit-industries')" aria-expanded="false">
+            Industries
+            <svg class="orbit-caret" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <ul class="orbit-panel orbit-panel--wide">
+            <li><a href="spicesnew.html">Spice Processing</a></li>
+            <li><a href="ayurveda.html">Ayurveda & Herbal</a></li>
+            <li><a href="chemical.html">Chemical</a></li>
+            <li><a href="pharma.html">Pharmaceutical</a></li>
+            <li><a href="pigment.html">Pigments & Dyes</a></li>
+            <li><a href="agriculture.html">Agricultural Products</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </nav>
+
+    <a href="contact.html" class="orbit-cta">
+      Contact Us
+      <svg viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+
+    <button class="orbit-burger" id="orbitBurger" onclick="orbitToggleMobile()" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+</div>
+
+<!-- ═══════════ MOBILE FULL-SCREEN MENU (identical to index.html) ═══════════ -->
+<div class="orbit-mobile" id="orbitMobile">
+  <div class="orbit-mobile-head">
+    <a href="index.html" class="orbit-logo">
+      <img src="clients/s-logo.png" alt="Modern Pulveriser">
+    </a>
+    <button class="orbit-mobile-close" onclick="orbitToggleMobile()" aria-label="Close menu">✕</button>
+  </div>
+
+  <div class="orbit-mobile-body">
+    <ul class="orbit-mobile-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="STORYY.html">About Us</a></li>
+
+      <li id="orbit-m-products">
+        <button class="orbit-mobile-toggle" onclick="orbitToggleSub('orbit-m-products')" aria-expanded="false">
+          Products
+          <svg class="orbit-caret" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="orbit-mobile-sub">
+          <li><a href="hammer.html">Hammer Mill</a></li>
+          <li><a href="Impact.html">Impact Pulveriser</a></li>
+          <li><a href="vibro.html">Vibro Sifter</a></li>
+          <li><a href="ribbon.html">Ribbon Blender</a></li>
+          <li><a href="screw.html">Screw Conveyor</a></li>
+          <li><a href="crusher.html">Hammer Crusher</a></li>
+        </ul>
+      </li>
+
+      <li id="orbit-m-industries">
+        <button class="orbit-mobile-toggle" onclick="orbitToggleSub('orbit-m-industries')" aria-expanded="false">
+          Industries
+          <svg class="orbit-caret" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="orbit-mobile-sub">
+          <li><a href="spicesnew.html">Spice Processing</a></li>
+          <li><a href="ayurveda.html">Ayurveda & Herbal</a></li>
+          <li><a href="chemical.html">Chemical</a></li>
+          <li><a href="pharma.html">Pharmaceutical</a></li>
+          <li><a href="pigment.html">Pigments & Dyes</a></li>
+          <li><a href="agriculture.html">Agricultural Products</a></li>
+        </ul>
+      </li>
+
+    </ul>
+  </div>
+
+  <div class="orbit-mobile-foot">
+    <a href="contact.html" class="orbit-cta">
+      Contact Us
+      <svg viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</div>
+
+<button id="backToTop" class="btt-btn" aria-label="Back to top">
+  <svg class="btt-arrow" viewBox="0 0 24 24" fill="none">
+    <path d="M12 19V5M5 12l7-7 7 7" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
+
+<!-- ═══════════ 404 HERO ═══════════ -->
+<section class="mp-404-hero">
+  <img class="mp-bg-image" src="Stock_images/lathe.avif" alt="" fetchpriority="high">
+  <div class="mp-404-grid-overlay"></div>
+  <div class="mp-404-corner tl"></div>
+  <div class="mp-404-corner tr"></div>
+  <div class="mp-404-corner bl"></div>
+  <div class="mp-404-corner br"></div>
+
+  <div class="mp-404-inner">
+    <div class="mp-404-graphic">
+      <svg viewBox="0 0 560 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="404">
+        <!-- "4" -->
+        <text x="20" y="185" font-family="Space Grotesk, Poppins, sans-serif" font-weight="700" font-size="190" fill="#f4f3ef">4</text>
+
+        <!-- gauge "0" -->
+        <g transform="translate(255,120)">
+          <circle r="88" fill="none" stroke="rgba(244,243,239,0.18)" stroke-width="10"/>
+          <circle r="88" fill="none" stroke="#e85d04" stroke-width="10" stroke-linecap="round" stroke-dasharray="130 415"/>
+          <g stroke="rgba(244,243,239,0.35)" stroke-width="2">
+            <line x1="0" y1="-88" x2="0" y2="-76"/>
+            <line x1="62" y1="-62" x2="54" y2="-54" />
+            <line x1="88" y1="0" x2="76" y2="0"/>
+            <line x1="62" y1="62" x2="54" y2="54"/>
+            <line x1="0" y1="88" x2="0" y2="76"/>
+            <line x1="-62" y1="62" x2="-54" y2="54"/>
+            <line x1="-88" y1="0" x2="-76" y2="0"/>
+            <line x1="-62" y1="-62" x2="-54" y2="-54"/>
+          </g>
+          <line x1="0" y1="0" x2="40" y2="-48" stroke="#e85d04" stroke-width="4" stroke-linecap="round"/>
+          <circle r="8" fill="#e85d04"/>
+        </g>
+
+        <!-- "4" -->
+        <text x="365" y="185" font-family="Space Grotesk, Poppins, sans-serif" font-weight="700" font-size="190" fill="#f4f3ef">4</text>
+
+        <!-- ground powder trailing off -->
+        <g fill="#e85d04">
+          <circle cx="500" cy="205" r="3.5" opacity="0.85"/>
+          <circle cx="517" cy="196" r="2.5" opacity="0.6"/>
+          <circle cx="529" cy="212" r="2" opacity="0.5"/>
+          <circle cx="508" cy="220" r="2" opacity="0.4"/>
+          <circle cx="540" cy="200" r="1.6" opacity="0.35"/>
+        </g>
+        <g fill="#f4f3ef">
+          <circle cx="490" cy="215" r="2" opacity="0.4"/>
+          <circle cx="522" cy="222" r="1.6" opacity="0.3"/>
+        </g>
+      </svg>
+    </div>
+
+    <h1>This page has been pulverised.</h1>
+    <p>
+      The page you're looking for no longer exists or may have moved.
+      Search for what you need below, or head straight to our machines, industries, or team.
+    </p>
+
+    <form class="mp-404-search" action="products.html" method="get" role="search">
+      <input type="text" name="q" placeholder="Search machines, e.g. Hammer Mill">
+      <button type="submit" aria-label="Search"><i class="ti ti-search"></i>&#8594;</button>
+    </form>
+
+    <br>
+
+    <div class="mp-404-actions">
+      <a href="index.html" class="mp-btn-ghost">← Back to Home</a>
+      <a href="contact.html" class="mp-btn-primary">Request a Quote <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ QUICK LINKS ═══════════ -->
+<section class="mp-404-links-section">
+  <div class="mp-404-links-head">
+    <span>Or go straight to</span>
+    <h2>Our Machines</h2>
+  </div>
+
+  <div class="mp-404-grid">
+    <a href="hammer.html" class="mp-404-card">
+      <span class="mp-404-card-tag">Size Reduction</span>
+      <h3>Hammer Mill</h3>
+      <span class="mp-404-arrow">Read more →</span>
+    </a>
+    <a href="Impact.html" class="mp-404-card">
+      <span class="mp-404-card-tag">Size Reduction</span>
+      <h3>Impact Pulveriser</h3>
+      <span class="mp-404-arrow">Read more →</span>
+    </a>
+    <a href="vibro.html" class="mp-404-card">
+      <span class="mp-404-card-tag">Screening & Grading</span>
+      <h3>Vibro Sifter</h3>
+      <span class="mp-404-arrow">Read more →</span>
+    </a>
+    <a href="ribbon.html" class="mp-404-card">
+      <span class="mp-404-card-tag">Mixing & Blending</span>
+      <h3>Ribbon Blender</h3>
+      <span class="mp-404-arrow">Read more →</span>
+    </a>
+    <a href="screw.html" class="mp-404-card">
+      <span class="mp-404-card-tag">Material Handling</span>
+      <h3>Screw Conveyor</h3>
+      <span class="mp-404-arrow">Read more →</span>
+    </a>
+    <a href="crusher.html" class="mp-404-card">
+      <span class="mp-404-card-tag">Crushing</span>
+      <h3>Hammer Crusher</h3>
+      <span class="mp-404-arrow">Read more →</span>
+    </a>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER (identical to index.html) ═══════════ -->
+<footer class="mp-footer">
+  <div class="mp-footer-container">
+    <div class="mp-footer-brand-block">
+      <span class="mp-logo-text">Modern <span>Pulveriser</span></span>
+      <p>Designing and manufacturing grinding, crushing and material-handling systems built for reliable industrial performance .</p>
+    </div>
+
+    <div class="mp-footer-section">
+      <h4>Phone</h4>
+      <a href="tel:+919582250536">+91 9582250536</a>
+      <a href="tel:+919810023411">+91 9810023411</a>
+    </div>
+
+    <div class="mp-footer-section">
+      <h4>Email</h4>
+      <a href="mailto:info@modernpulveriser.com">info@modernpulveriser.com</a>
+      <a href="mailto:vermasiddharth85@gmail.com">vermasiddharth85@gmail.com</a>
+    </div>
+
+    <div class="mp-footer-section">
+      <h4>Address</h4>
+      <p>98-A, Pocket-K, Sheikh Sarai,<br>Phase-2, New Delhi – 110017</p>
+    </div>
+  </div>
+
+  <div class="mp-footer-bottom">
+    <span>© 2026 Modern Pulveriser. All rights reserved.</span>
+    <img src="clients/s-logo.png" alt="MP Logo" class="mp-footer-logo">
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
