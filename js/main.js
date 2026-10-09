@@ -20,6 +20,8 @@
 })();
 
 
+
+
   /* Header scroll state */
   const orbitShell = document.getElementById('orbitShell');
   window.addEventListener('scroll', () => {
@@ -252,3 +254,31 @@ document.addEventListener('DOMContentLoaded',()=>{
 
 
 
+(() => {
+  const grid = document.querySelector('.mp-why-grid');
+  if (!grid || !('IntersectionObserver' in window)) return;
+
+  grid.classList.add('mp-reveal');
+  const io = new IntersectionObserver((entries, obs) => {
+    if (!entries[0].isIntersecting) return;
+    grid.classList.add('is-visible');
+    obs.disconnect();
+  }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+  io.observe(grid);
+})();
+
+
+(() => {
+  if (!('IntersectionObserver' in window)) return;
+  const targets = document.querySelectorAll(
+    '.mp-why-grid, .mp-spec-section .mp-section-head, .mp-spec-layout'
+  );
+  const io = new IntersectionObserver((entries, obs) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      e.target.classList.add('is-visible');
+      obs.unobserve(e.target);
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+  targets.forEach(t => { t.classList.add('mp-reveal'); io.observe(t); });
+})();
