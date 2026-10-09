@@ -343,7 +343,21 @@
   </div>
 </footer>
 
-
+<script>
+(function () {
+  var cards = document.querySelectorAll('.values-grid .val-card');
+  if (!cards.length || !('IntersectionObserver' in window)) return;
+  document.documentElement.classList.add('js-reveal');
+  var io = new IntersectionObserver(function (entries, obs) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      e.target.classList.add('is-visible');
+      obs.unobserve(e.target);
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+  cards.forEach(function (c) { io.observe(c); });
+})();
+</script>
 <script src="js/main.js"></script>
 </body>
 </html>
