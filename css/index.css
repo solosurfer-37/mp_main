@@ -240,7 +240,7 @@ a{ color:inherit; }
   background: var(--paper);
 }
 .mp-intro-left h2{ font-size:clamp(1.9rem, 3.4vw, 2.8rem); font-weight:600; line-height:1.18; }
-.mp-intro-left h2 em{  color:var(--blue); font-weight:800; }
+.mp-intro-left h2 em{  color:var(--blue); font-weight:500; }
 .mp-intro-right p{ font-size:1.02rem; line-height:1.85; color:var(--ink); margin-bottom:24px; }
 .mp-intro-right p:last-child{ margin-bottom:0; }
 
@@ -359,6 +359,75 @@ a{ color:inherit; }
 }
 @media (max-width:700px){ .mp-stats-row{ grid-template-columns:repeat(2,1fr); row-gap:36px; } }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Specialisations – scroll reveal (opacity + transform only) */
+.mp-spec-section .mp-section-head.mp-reveal,
+.mp-spec-layout.mp-reveal .mp-spec-box{
+  opacity:0;
+  transform:translateY(24px);
+}
+.mp-spec-section .mp-section-head.mp-reveal.is-visible{
+  opacity:1;
+  transform:none;
+  transition:
+    opacity 650ms cubic-bezier(.22,1,.36,1),
+    transform 650ms cubic-bezier(.22,1,.36,1);
+}
+.mp-spec-layout.mp-reveal.is-visible .mp-spec-box{
+  opacity:1;
+  transform:none;
+  transition:
+    background .3s ease,
+    opacity 600ms cubic-bezier(.22,1,.36,1) var(--reveal-delay,0ms),
+    transform 600ms cubic-bezier(.22,1,.36,1) var(--reveal-delay,0ms);
+}
+.mp-spec-layout .mp-spec-box:nth-child(2){ --reveal-delay:90ms; }
+.mp-spec-layout .mp-spec-box:nth-child(3){ --reveal-delay:180ms; }
+.mp-spec-layout .mp-spec-box:nth-child(4){ --reveal-delay:270ms; }
+.mp-spec-layout .mp-spec-box:nth-child(5){ --reveal-delay:360ms; }
+
+@media (prefers-reduced-motion:reduce){
+  .mp-spec-section .mp-section-head.mp-reveal,
+  .mp-spec-layout.mp-reveal .mp-spec-box,
+  .mp-spec-section .mp-section-head.mp-reveal.is-visible,
+  .mp-spec-layout.mp-reveal.is-visible .mp-spec-box{
+    opacity:1;
+    transform:none;
+    transition:none;
+  }
+  .mp-spec-layout.mp-reveal .mp-spec-box{ transition:background .3s ease; }
+}
 /* ============================================================
    PRODUCTS
    ============================================================ */
@@ -442,6 +511,30 @@ a{ color:inherit; }
 
 @media (max-width:900px){ .mp-why-grid{ grid-template-columns:1fr; } }
 
+
+/* Why Choose Us – scroll reveal (opacity + transform only) */
+.mp-why-grid.mp-reveal .mp-why-card{
+  opacity:0;
+  transform:translateY(24px);
+}
+.mp-why-grid.mp-reveal.is-visible .mp-why-card{
+  opacity:1;
+  transform:none;
+  transition:
+    opacity 600ms cubic-bezier(.22,1,.36,1) var(--reveal-delay,0ms),
+    transform 600ms cubic-bezier(.22,1,.36,1) var(--reveal-delay,0ms);
+}
+.mp-why-grid .mp-why-card:nth-child(2){ --reveal-delay:90ms; }
+.mp-why-grid .mp-why-card:nth-child(3){ --reveal-delay:180ms; }
+
+@media (prefers-reduced-motion:reduce){
+  .mp-why-grid.mp-reveal .mp-why-card,
+  .mp-why-grid.mp-reveal.is-visible .mp-why-card{
+    opacity:1;
+    transform:none;
+    transition:none;
+  }
+}
 /* ============================================================
    INDUSTRIES — horizontal scroll, CSS snap, no JS arrows
    ============================================================ */
